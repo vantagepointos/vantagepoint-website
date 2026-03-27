@@ -56,8 +56,8 @@ export default function Home() {
           </div>
 
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0f172a] border border-[#c5a059]/30 text-[#c5a059] text-xs font-semibold uppercase tracking-wider mb-8">
-            <ShieldCheck className="h-4 w-4" /> Official Enterprise Meta Tech Provider
-          </div>
+          <ShieldCheck className="h-4 w-4" /> Enterprise Growth & Marketing Platform
+        </div>
           <h1 className="text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-[1.1] mb-8">
             The Enterprise Operating System for <span className="text-[#c5a059]">Physical Therapy</span>
           </h1>
