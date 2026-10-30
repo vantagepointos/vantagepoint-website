@@ -9,8 +9,11 @@ import {
   ShieldCheck, 
   CheckCircle2,
   Building2,
-  Mail
+  Mail,
+  Phone
 } from 'lucide-react';
+import { HomeWaitlistSection } from '@/components/home-waitlist-section';
+import { BUSINESS_PHONE_DISPLAY, BUSINESS_PHONE_HREF } from '@/lib/site';
 
 export default function Home() {
   return (
@@ -32,14 +35,22 @@ export default function Home() {
             <Link href="#ecosystem" className="hover:text-[#c5a059] transition-colors">The Ecosystem</Link>
             <Link href="#story" className="hover:text-[#c5a059] transition-colors">Our Story</Link>
             <Link href="#pricing" className="hover:text-[#c5a059] transition-colors">Enterprise Tiers</Link>
+            <Link href="/waitlist" className="max-lg:hidden rounded-sm hover:text-[#c5a059] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c5a059]">Join the waitlist</Link>
           </nav>
           
           <div className="flex items-center gap-4">
             <Link href="https://app.vantagepointos.com/login" className="hidden md:block text-sm font-medium hover:text-white transition-colors">
               Client Login
             </Link>
-            <Link href="#pricing" className="bg-[#c5a059] hover:bg-[#b08d4f] text-[#020617] px-5 py-2.5 rounded-md font-semibold text-sm transition-all flex items-center gap-2">
+            <Link href="#pricing" className="bg-[#c5a059] hover:bg-[#b08d4f] text-[#020617] px-5 py-2.5 rounded-md font-semibold text-sm transition-all flex items-center gap-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c5a059]">
               Book Demo <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+        <div className="lg:hidden border-t border-slate-800/60">
+          <div className="max-w-[1400px] mx-auto px-4 py-2.5 flex justify-end">
+            <Link href="/waitlist" className="text-sm font-medium text-slate-300 hover:text-[#c5a059] transition-colors rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c5a059]">
+              Join the waitlist
             </Link>
           </div>
         </div>
@@ -184,7 +195,7 @@ export default function Home() {
           <Building2 className="h-12 w-12 text-[#c5a059] mx-auto mb-6" />
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Tailored for Enterprise Growth</h2>
           <p className="text-slate-400 text-lg mb-12 max-w-2xl mx-auto">
-            VantagePoint OS operates on custom-tailored enterprise configurations. We align our platform features, print margins, and AI generation capabilities specifically to your clinic's volume and operational needs.
+            VantagePoint OS operates on custom-tailored enterprise configurations. We align our platform features, print margins, and AI generation capabilities specifically to your clinic&apos;s volume and operational needs.
           </p>
           
           <div className="grid sm:grid-cols-2 gap-6 text-left mb-12">
@@ -217,6 +228,8 @@ export default function Home() {
         </div>
       </section>
 
+      <HomeWaitlistSection />
+
       {/* FOOTER */}
       <footer className="bg-[#020617] border-t border-slate-800 pt-16 pb-8">
         <div className="container mx-auto px-6">
@@ -230,10 +243,13 @@ export default function Home() {
                 The premier clinic management operating system powering the growth of enterprise physical therapy practices.
               </p>
               {/* Added Contact Link in Footer */}
-              <div className="flex gap-4">
-                <Link href="mailto:gabe@vantagepointos.com" className="flex items-center gap-2 text-slate-400 hover:text-[#c5a059] transition-colors text-sm font-medium">
+              <div className="flex flex-col gap-3">
+                <Link href="mailto:gabe@vantagepointos.com" className="flex items-center gap-2 text-slate-400 hover:text-[#c5a059] transition-colors text-sm font-medium w-fit rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c5a059]">
                   <Mail className="h-4 w-4" /> gabe@vantagepointos.com
                 </Link>
+                <a href={BUSINESS_PHONE_HREF} className="flex items-center gap-2 text-slate-400 hover:text-[#c5a059] transition-colors text-sm font-medium w-fit rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c5a059]">
+                  <Phone className="h-4 w-4" /> {BUSINESS_PHONE_DISPLAY}
+                </a>
               </div>
             </div>
             
