@@ -1,46 +1,37 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import { WAITLIST_MEMBERSHIP_COPY, WALKTHROUGH_HREF } from "@/lib/site";
-
-const focusRing =
-  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold";
+import { BookWalkthrough } from "@/components/buttons";
+import { WAITLIST_MEMBERSHIP_COPY } from "@/lib/site";
 
 export function HomeWaitlistSection() {
   return (
     <section
       id="waitlist"
       aria-labelledby="waitlist-heading"
-      className="border-t border-white/10 bg-navy font-brand text-mist"
+      className="border-t border-navy/10 bg-white"
     >
-      <div className="mx-auto max-w-3xl px-6 py-12 md:py-16">
-        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold">
+      <div className="mx-auto max-w-3xl px-6 py-20 md:py-28">
+        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-ink">
           Waitlist
         </p>
         <h2
           id="waitlist-heading"
-          className="mt-3 text-2xl font-semibold tracking-tight text-white md:text-3xl"
+          className="mt-4 text-3xl font-semibold tracking-tight text-navy md:text-4xl"
         >
           Join the waitlist
         </h2>
-        <p className="mt-4 text-base leading-relaxed text-white md:text-lg">
+        <p className="mt-5 text-lg leading-relaxed text-navy">
           {WAITLIST_MEMBERSHIP_COPY}
         </p>
-        <p className="mt-4 text-base leading-relaxed">
+        <p className="mt-4 text-lg leading-relaxed text-ink">
           We&apos;re opening VantagePoint OS owner to owner. Leave your name
           and we&apos;ll be in touch personally as a seat opens. If you&apos;d
           like to see it with someone first, book a walkthrough.
         </p>
         <div className="mt-8 flex flex-col items-start gap-4">
-          <a
-            href={WALKTHROUGH_HREF}
-            className={`inline-flex items-center justify-center gap-2 rounded-md bg-gold px-5 py-3 text-sm font-semibold text-navy transition-colors hover:brightness-95 ${focusRing}`}
-          >
-            Book a walkthrough
-            <ArrowRight className="h-4 w-4" aria-hidden="true" />
-          </a>
+          <BookWalkthrough tone="navy" />
           <Link
             href="/waitlist"
-            className={`text-sm font-medium text-mist underline decoration-white/30 underline-offset-4 hover:text-white hover:decoration-white ${focusRing} rounded-sm`}
+            className="rounded-sm text-sm font-medium text-navy underline decoration-navy/30 underline-offset-4 hover:decoration-navy"
           >
             Join the waitlist
           </Link>
