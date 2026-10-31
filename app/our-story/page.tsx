@@ -34,7 +34,7 @@ export default function OurStoryPage() {
               clinics, three communities.
             </p>
             <p>
-              What we learned is what VantagePoint OS is built on. Own the numbers. Keep
+              The lessons we learned are what VantagePoint OS is built on. Own the numbers. Keep
               marketing on a steady rhythm. Put leadership at the center of the
               team.
             </p>

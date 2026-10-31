@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import Link from "next/link";
 import { Logo } from "@/components/logo";
 import {
@@ -29,11 +30,20 @@ export function SiteFooter() {
           </p>
           <ul className="mt-4 space-y-3">
             {PRIMARY_NAV.map((item) => (
-              <li key={item.href}>
-                <Link href={item.href} className={linkClass}>
-                  {item.label}
-                </Link>
-              </li>
+              <Fragment key={item.href}>
+                <li>
+                  <Link href={item.href} className={linkClass}>
+                    {item.label}
+                  </Link>
+                </li>
+                {item.href === "/platform" ? (
+                  <li>
+                    <Link href="/vantage-lead" className={linkClass}>
+                      VantageLead
+                    </Link>
+                  </li>
+                ) : null}
+              </Fragment>
             ))}
             <li>
               <Link href={BOOK_PATH} className={linkClass}>

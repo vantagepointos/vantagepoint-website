@@ -40,7 +40,6 @@ export const WAITLIST_THANKS_COPY =
 
 export const PRIMARY_NAV = [
   { href: "/platform", label: "Platform" },
-  { href: "/vantage-lead", label: "VantageLead" },
   { href: "/our-story", label: "Our Story" },
 ] as const;
 
