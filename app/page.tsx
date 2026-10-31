@@ -36,6 +36,7 @@ const platforms = [
     key: "pulse" as const,
     name: "VantagePulse",
     href: "/platform#pulse",
+    markClass: "h-auto w-[min(100%,26.125rem)]",
     tagline: "The definitive view of practice health.",
     summary: "Clear scoreboards for everyone who runs the day.",
     points: [
@@ -49,6 +50,7 @@ const platforms = [
     key: "scale" as const,
     name: "VantageScale",
     href: "/platform#scale",
+    markClass: "h-auto w-[min(80.14%,20.94rem)]",
     tagline: "Accelerating growth. Amplifying impact.",
     summary:
       "A steady marketing cadence without the busywork. Plan a campaign, review it, and schedule it in minutes.",
@@ -63,6 +65,7 @@ const platforms = [
     key: "lead" as const,
     name: "VantageLead",
     href: "/vantage-lead",
+    markClass: "h-auto w-[min(84.5%,22.08rem)]",
     tagline: "The roots of enduring leadership.",
     summary:
       "Onboarding and leadership training, on demand, so the standard of your practice can always be referred to and taught.",
@@ -231,9 +234,9 @@ export default function Home() {
               {platforms.map((platform) => (
                 <article
                   key={platform.name}
-                  className="grid gap-8 py-12 md:grid-cols-[minmax(0,16rem)_1fr] md:gap-16 md:py-14"
+                  className="grid items-start gap-8 py-12 md:grid-cols-[minmax(0,27rem)_1fr] md:gap-16 md:py-14"
                 >
-                  <PlatformMark platform={platform.key} className="h-12 w-auto" />
+                  <PlatformMark platform={platform.key} className={platform.markClass} />
                   <div>
                     <h3 className="text-2xl font-semibold tracking-tight text-navy">
                       {platform.name}

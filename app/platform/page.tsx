@@ -18,19 +18,19 @@ export default function PlatformPage() {
           VantagePoint OS
         </p>
         <h1 className="mt-4 text-4xl font-semibold tracking-[-0.035em] text-navy text-balance md:text-6xl md:leading-[1.05]">
-          Everything your practice runs on, in three parts.
+          Everything your practice needs. In one system.
         </h1>
         <p className="mt-6 text-lg leading-relaxed text-ink md:text-xl">
           VantagePulse, VantageScale, and VantageLead. Built for outpatient
-          physical therapy owners who want a clear practice, a steady marketing
-          rhythm, and a team that can carry the standard when you&apos;re not in
-          the room.
+          physical therapy owners who want a clear view of their metrics, a
+          steady marketing rhythm, and a team that can carry the standard when
+          they&apos;re not in the room.
         </p>
       </header>
 
       <section id="pulse" className="mx-auto grid max-w-6xl scroll-mt-28 items-center gap-12 px-6 py-16 md:grid-cols-2 md:py-24" aria-labelledby="pulse-heading">
         <div>
-          <PlatformMark platform="pulse" className="h-12 w-auto" />
+          <PlatformMark platform="pulse" className="h-auto w-[min(100%,28rem)]" />
           <h2 id="pulse-heading" className="mt-8 text-3xl font-semibold tracking-tight text-navy md:text-4xl">
             VantagePulse
           </h2>
@@ -64,7 +64,7 @@ export default function PlatformPage() {
       <section id="scale" className="scroll-mt-28 border-t border-navy/10 bg-white" aria-labelledby="scale-heading">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-2 md:py-24">
           <div className="md:order-2">
-            <PlatformMark platform="scale" className="h-12 w-auto" />
+            <PlatformMark platform="scale" className="h-auto w-[min(80.14%,22.44rem)]" />
             <h2 id="scale-heading" className="mt-8 text-3xl font-semibold tracking-tight text-navy md:text-4xl">
               VantageScale
             </h2>
@@ -89,8 +89,8 @@ export default function PlatformPage() {
               ))}
             </ul>
             <p className="mt-8 leading-relaxed text-ink">
-              It&apos;s built to make a consistent rhythm easier to keep. A steady
-              practice of showing up, not a promise about what comes back.
+              It&apos;s built to make your marketing cadence easy and efficient,
+              instead of marketing only when time allows.
             </p>
           </div>
           <div className="md:order-1">
@@ -102,7 +102,7 @@ export default function PlatformPage() {
       <section id="lead" className="scroll-mt-28 border-t border-navy/10" aria-labelledby="lead-heading">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-2 md:py-24">
           <div>
-            <PlatformMark platform="lead" className="h-12 w-auto" />
+            <PlatformMark platform="lead" className="h-auto w-[min(84.5%,23.66rem)]" />
             <h2 id="lead-heading" className="mt-8 text-3xl font-semibold tracking-tight text-navy md:text-4xl">
               VantageLead
             </h2>
@@ -140,7 +140,7 @@ export default function PlatformPage() {
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-mist">
             We&apos;ll show you how the three platforms fit your practice, and
-            you can decide if it&apos;s right.
+            the impact they could have on it.
           </p>
           <div className="mt-10">
             <BookWalkthrough />
