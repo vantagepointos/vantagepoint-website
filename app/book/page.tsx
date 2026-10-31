@@ -39,13 +39,15 @@ export default function BookPage() {
         </div>
 
         <div className="mt-10 overflow-hidden rounded-3xl bg-white ring-1 ring-navy/10">
-          <iframe
-            title="Schedule a walkthrough with VantagePoint OS"
-            src={BOOKING_EMBED_URL}
-            loading="lazy"
-            className="h-[800px] w-full border-0 md:h-[700px]"
-            style={{ border: 0 }}
-          />
+          <div data-clarity-mask="true">
+            <iframe
+              title="Schedule a walkthrough with VantagePoint OS"
+              src={BOOKING_EMBED_URL}
+              loading="lazy"
+              className="h-[800px] w-full border-0 md:h-[700px]"
+              style={{ border: 0 }}
+            />
+          </div>
           <p className="border-t border-navy/10 px-6 py-4 text-sm text-ink">
             <a
               href={BOOKING_URL}

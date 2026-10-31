@@ -130,6 +130,7 @@ export function WaitlistForm() {
       acceptCharset="UTF-8"
       noValidate
       onSubmit={onSubmit}
+      data-clarity-mask="true"
       className="space-y-5"
     >
       <input type="hidden" name="xnQsjsdp" value={ZOHO_HIDDEN_FIELDS.xnQsjsdp} />
