@@ -9,41 +9,44 @@ const LOCKUPS: Record<Lockup, string> = {
 export function Logo({
   variant = "dark",
   className = "h-9 w-auto",
+  priority = false,
 }: {
   variant?: Lockup;
   className?: string;
+  priority?: boolean;
 }) {
   return (
     // Official outlined SVG lockups. next/image does not optimize these.
     // eslint-disable-next-line @next/next/no-img-element
     <img
       src={LOCKUPS[variant]}
-      alt="VantagePoint OS"
+      alt="VantagePoint OS logo"
       width={1146}
       height={250}
       className={className}
       decoding="async"
+      fetchPriority={priority ? "high" : "auto"}
     />
   );
 }
 
 const PLATFORM_MARKS = {
   pulse: {
-    alt: "VantagePulse",
+    alt: "VantagePulse logo",
     light: "/brand/vantagepulse-horizontal-light.svg",
     dark: "/brand/vantagepulse-horizontal-dark.svg",
     width: 1249,
     height: 215,
   },
   scale: {
-    alt: "VantageScale",
+    alt: "VantageScale logo",
     light: "/brand/vantagescale-horizontal-light.svg",
     dark: "/brand/vantagescale-horizontal-dark.svg",
     width: 1001,
     height: 255,
   },
   lead: {
-    alt: "VantageLead",
+    alt: "VantageLead logo",
     light: "/brand/vantagelead-horizontal-light.svg",
     dark: "/brand/vantagelead-horizontal-dark.svg",
     width: 1045,

@@ -32,7 +32,7 @@ export function SiteHeader() {
     <header className="on-navy sticky top-0 z-50 border-b border-gold/20 bg-night/95 text-mist backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3 md:px-6 lg:py-4">
         <Link href="/" className="rounded-sm" aria-label="VantagePoint OS, home">
-          <Logo className="h-11 w-auto lg:h-14" />
+          <Logo priority className="h-11 w-auto lg:h-14" />
         </Link>
 
         <nav aria-label="Primary" className="hidden items-center gap-7 lg:flex">

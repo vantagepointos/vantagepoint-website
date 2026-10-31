@@ -3,18 +3,49 @@ import { BookWalkthrough, TextLink } from "@/components/buttons";
 import { PhoneLink } from "@/components/phone-link";
 import { PlatformMark } from "@/components/logo";
 import { PlatformPanel } from "@/components/platform-panel";
+import { JsonLd } from "@/components/json-ld";
+import { PAGE_SEO } from "@/lib/page-seo";
 import { pageMetadata } from "@/lib/seo";
+import { breadcrumbJsonLd, softwareAppJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Platform",
+  title: PAGE_SEO.platform.title,
   path: "/platform",
-  description:
-    "VantagePulse, VantageScale, and VantageLead. The three platforms inside VantagePoint OS, one offering for outpatient physical therapy owners.",
+  description: PAGE_SEO.platform.description,
 });
 
 export default function PlatformPage() {
   return (
     <main id="main" className="bg-paper">
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Platform", path: "/platform" },
+        ])}
+      />
+      <JsonLd
+        data={softwareAppJsonLd({
+          name: "VantagePulse",
+          description:
+            "Clear scoreboards of outpatient physical therapy practice health for providers, the front office, clinical directors, and the owner.",
+          path: "/platform#pulse",
+        })}
+      />
+      <JsonLd
+        data={softwareAppJsonLd({
+          name: "VantageScale",
+          description:
+            "A marketing cadence for outpatient physical therapy clinics. Plan a campaign, review it, and schedule it.",
+          path: "/platform#scale",
+        })}
+      />
+      <JsonLd
+        data={softwareAppJsonLd({
+          name: "VantageLead",
+          description: PAGE_SEO.lead.description,
+          path: "/vantage-lead",
+        })}
+      />
       <header className="mx-auto max-w-3xl px-6 pb-8 pt-20 md:pt-28">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink">
           VantagePoint OS

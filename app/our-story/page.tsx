@@ -1,18 +1,26 @@
 import type { Metadata } from "next";
 import { ClosingCta } from "@/components/closing-cta";
 import { Logo } from "@/components/logo";
+import { JsonLd } from "@/components/json-ld";
+import { PAGE_SEO } from "@/lib/page-seo";
 import { pageMetadata } from "@/lib/seo";
+import { breadcrumbJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Our Story",
+  title: PAGE_SEO.story.title,
   path: "/our-story",
-  description:
-    "In 2014 Gabe Harter and his wife opened their first physical therapy clinic. The lessons from building three clinics are what VantagePoint OS is built on.",
+  description: PAGE_SEO.story.description,
 });
 
 export default function OurStoryPage() {
   return (
     <>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Our Story", path: "/our-story" },
+        ])}
+      />
       <main id="main" className="bg-paper">
         <article className="mx-auto max-w-3xl px-6 pb-24 pt-20 md:pb-32 md:pt-28">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink">
@@ -33,7 +41,8 @@ export default function OurStoryPage() {
             <p>
               But running a physical therapy practice is hard. For our first
               ten years, we struggled. Our margins were lower than we&apos;d
-              like to admit, and that strain showed up in our culture too.
+              like to admit, and that strain showed up in our culture too. No
+              matter how hard we worked, nothing seemed to change.
             </p>
             <p>
               In 2018 we opened a second clinic, and in 2022 a third. Three
@@ -70,13 +79,13 @@ export default function OurStoryPage() {
             </p>
             <p>
               If the business side is what keeps you up at night, those three
-              pillars are how you get to work, and how you get back to the work
-              you opened the clinic to do: making people better.
+              pillars are how you get back on track, and back to the work you
+              opened the clinic to do: making people better.
             </p>
             <p>
-              We&apos;ve been there. We&apos;ve struggled, we&apos;ve been
-              stressed, and we came through it. VantagePoint OS is here to help
-              you do the same.
+              We&apos;ve been there. We&apos;ve struggled, and we&apos;ve been
+              stressed. We persevered, and we finally built the practice we
+              always wanted. VantagePoint OS is here to help you do the same.
             </p>
           </div>
           <footer className="mt-14 border-t border-navy/10 pt-8">

@@ -13,6 +13,7 @@ export function pageMetadata({
   index?: boolean;
 }): Metadata {
   const fullTitle = `${title} | ${SITE_NAME}`;
+  const image = `/og?title=${encodeURIComponent(title)}`;
   return {
     title,
     description,
@@ -28,11 +29,13 @@ export function pageMetadata({
       siteName: SITE_NAME,
       type: "website",
       url: path,
+      images: [{ url: image, width: 1200, height: 630, alt: fullTitle }],
     },
     twitter: {
       card: "summary_large_image",
       title: fullTitle,
       description,
+      images: [image],
     },
   };
 }

@@ -2,18 +2,27 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PhoneLink } from "@/components/phone-link";
 import { WaitlistForm } from "@/components/waitlist-form";
+import { JsonLd } from "@/components/json-ld";
+import { PAGE_SEO } from "@/lib/page-seo";
 import { pageMetadata } from "@/lib/seo";
+import { breadcrumbJsonLd } from "@/lib/structured-data";
 import { BOOK_PATH, WAITLIST_MEMBERSHIP_COPY } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Join the waitlist",
+  title: PAGE_SEO.waitlist.title,
   path: "/waitlist",
-  description: `Join the VantagePoint OS waitlist. ${WAITLIST_MEMBERSHIP_COPY}`,
+  description: PAGE_SEO.waitlist.description,
 });
 
 export default function WaitlistPage() {
   return (
     <main id="main" className="on-navy px-5 py-12 md:px-6 md:py-16">
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Waitlist", path: "/waitlist" },
+        ])}
+      />
       <div className="mx-auto max-w-xl">
         <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold">
           VantagePoint OS

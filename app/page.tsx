@@ -3,7 +3,10 @@ import { BookWalkthrough, TextLink } from "@/components/buttons";
 import { ClosingCta } from "@/components/closing-cta";
 import { HomeWaitlistSection } from "@/components/home-waitlist-section";
 import { PlatformMark } from "@/components/logo";
+import { JsonLd } from "@/components/json-ld";
 import { ProductTour } from "@/components/product-tour";
+import { PAGE_SEO } from "@/lib/page-seo";
+import { softwareAppJsonLd } from "@/lib/structured-data";
 import {
   HERO_HEADLINE,
   HERO_HOOK,
@@ -79,6 +82,13 @@ const platforms = [
 export default function Home() {
   return (
     <>
+      <JsonLd
+        data={softwareAppJsonLd({
+          name: "VantagePoint OS",
+          description: PAGE_SEO.home.description,
+          path: "/",
+        })}
+      />
       <main id="main">
         <section className="on-navy relative overflow-hidden bg-deep text-white">
           <div

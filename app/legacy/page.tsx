@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/json-ld";
+import { PAGE_SEO } from "@/lib/page-seo";
 import { pageMetadata } from "@/lib/seo";
+import { breadcrumbJsonLd } from "@/lib/structured-data";
 import {
   BUSINESS_PHONE_DISPLAY,
   BUSINESS_PHONE_HREF,
@@ -9,10 +12,9 @@ import {
 } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Legacy",
+  title: PAGE_SEO.legacy.title,
   path: "/legacy",
-  description:
-    "A private note for practices invited into Legacy membership with VantagePoint OS.",
+  description: PAGE_SEO.legacy.description,
   index: false,
 });
 
@@ -30,6 +32,12 @@ export default function LegacyPage() {
 
   return (
     <main id="main" className="bg-paper">
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Legacy", path: "/legacy" },
+        ])}
+      />
       <article className="mx-auto max-w-2xl px-6 pb-24 pt-20 md:pb-32 md:pt-28">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink">
           A private note

@@ -1,18 +1,28 @@
 import type { Metadata } from "next";
+import { BookVisit } from "@/components/book-visit";
+import { JsonLd } from "@/components/json-ld";
 import { PhoneLink } from "@/components/phone-link";
+import { PAGE_SEO } from "@/lib/page-seo";
 import { pageMetadata } from "@/lib/seo";
+import { breadcrumbJsonLd } from "@/lib/structured-data";
 import { BOOKING_EMBED_URL, BOOKING_URL } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Book a walkthrough",
+  title: PAGE_SEO.book.title,
   path: "/book",
-  description:
-    "Pick a time that works for you. We'll walk through VantagePoint OS together and show you how it fits your practice.",
+  description: PAGE_SEO.book.description,
 });
 
 export default function BookPage() {
   return (
     <main id="main" className="bg-paper">
+      <BookVisit />
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Book a walkthrough", path: "/book" },
+        ])}
+      />
       <div className="mx-auto max-w-4xl px-6 pb-24 pt-20 md:pb-32 md:pt-28">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink">
           VantagePoint OS

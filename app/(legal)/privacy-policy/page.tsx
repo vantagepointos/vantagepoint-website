@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { FileText, Database, Smartphone, Lock, ShieldCheck } from "lucide-react";
+import { JsonLd } from "@/components/json-ld";
+import { PAGE_SEO } from "@/lib/page-seo";
 import { pageMetadata } from "@/lib/seo";
+import { breadcrumbJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Privacy Policy",
+  title: PAGE_SEO.privacy.title,
   path: "/privacy-policy",
-  description:
-    "Privacy Policy for VantagePoint OS. How we collect, use, and safeguard information shared with us.",
+  description: PAGE_SEO.privacy.description,
 });
 
 const card = "rounded-3xl border border-navy/10 bg-white p-8 md:p-10";
@@ -16,6 +18,12 @@ const heading =
 export default function PrivacyPolicy() {
   return (
     <main id="main" className="bg-paper pb-24">
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Privacy Policy", path: "/privacy-policy" },
+        ])}
+      />
       <div className="mx-auto max-w-3xl px-6 pt-20 md:pt-28">
         <div className="mb-12">
           <div className="mb-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink">

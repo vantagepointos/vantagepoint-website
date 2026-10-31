@@ -2,13 +2,15 @@ import type { Metadata } from "next";
 import { BookWalkthrough } from "@/components/buttons";
 import { PhoneLink } from "@/components/phone-link";
 import { PlatformMark } from "@/components/logo";
+import { JsonLd } from "@/components/json-ld";
+import { PAGE_SEO } from "@/lib/page-seo";
 import { pageMetadata } from "@/lib/seo";
+import { breadcrumbJsonLd, softwareAppJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = pageMetadata({
-  title: "VantageLead",
+  title: PAGE_SEO.lead.title,
   path: "/vantage-lead",
-  description:
-    "Onboarding and leadership training, on demand, so the standard of your practice can always be referred to and taught. The first release covers Front Office Onboarding, Provider Onboarding, and Welcome to VantagePoint OS.",
+  description: PAGE_SEO.lead.description,
 });
 
 const paths = [
@@ -32,6 +34,19 @@ const paths = [
 export default function VantageLeadPage() {
   return (
     <main id="main" className="bg-paper">
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "VantageLead", path: "/vantage-lead" },
+        ])}
+      />
+      <JsonLd
+        data={softwareAppJsonLd({
+          name: "VantageLead",
+          description: PAGE_SEO.lead.description,
+          path: "/vantage-lead",
+        })}
+      />
       <header className="mx-auto max-w-3xl px-6 pb-4 pt-20 md:pt-28">
         <PlatformMark platform="lead" className="h-12 w-auto" />
         <h1 className="mt-8 text-4xl font-semibold tracking-[-0.035em] text-navy text-balance md:text-6xl md:leading-[1.05]">

@@ -1,8 +1,12 @@
 import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
+import { JsonLd } from "@/components/json-ld";
+import { SiteAnalytics } from "@/components/site-analytics";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { HERO_HEADLINE, HOME_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
+import { PAGE_SEO } from "@/lib/page-seo";
+import { organizationJsonLd } from "@/lib/structured-data";
+import { SITE_NAME, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -12,19 +16,26 @@ const montserrat = Montserrat({
   weight: ["400", "500", "600", "700"],
 });
 
+const homeImage = `/og?title=${encodeURIComponent(PAGE_SEO.home.title)}`;
+const searchConsole = process.env.NEXT_PUBLIC_GSC_VERIFICATION?.trim();
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${HERO_HEADLINE} | ${SITE_NAME}`,
+    default: `${PAGE_SEO.home.title} | ${SITE_NAME}`,
     template: `%s | ${SITE_NAME}`,
   },
-  description: HOME_DESCRIPTION,
+  description: PAGE_SEO.home.description,
   applicationName: SITE_NAME,
+  ...(searchConsole ? { verification: { google: searchConsole } } : {}),
   openGraph: {
     type: "website",
     locale: "en_US",
     siteName: SITE_NAME,
-    description: HOME_DESCRIPTION,
+    title: `${PAGE_SEO.home.title} | ${SITE_NAME}`,
+    description: PAGE_SEO.home.description,
+    url: "/",
+    images: [{ url: homeImage, width: 1200, height: 630, alt: `${PAGE_SEO.home.title} | ${SITE_NAME}` }],
   },
   alternates: {
     canonical: "/",
@@ -32,6 +43,9 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   twitter: {
     card: "summary_large_image",
+    title: `${PAGE_SEO.home.title} | ${SITE_NAME}`,
+    description: PAGE_SEO.home.description,
+    images: [homeImage],
   },
   icons: {
     icon: [
@@ -50,22 +64,6 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-const organization = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: SITE_NAME,
-  url: SITE_URL,
-  logo: `${SITE_URL}/app-tile-navy-512.png`,
-  email: "gabe@vantagepointos.com",
-  telephone: "+1-316-742-8282",
-  description: HOME_DESCRIPTION,
-  founder: {
-    "@type": "Person",
-    name: "Gabe Harter",
-    jobTitle: "Founder",
-  },
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -79,10 +77,8 @@ export default function RootLayout({
         <a className="skip-link" href="#main">
           Skip to content
         </a>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }}
-        />
+        <JsonLd data={organizationJsonLd(PAGE_SEO.home.description)} />
+        <SiteAnalytics />
         <SiteHeader />
         <div className="flex flex-1 flex-col">{children}</div>
         <SiteFooter />

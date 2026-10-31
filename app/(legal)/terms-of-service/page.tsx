@@ -6,12 +6,15 @@ import {
   Scale,
   ShieldCheck,
 } from "lucide-react";
+import { JsonLd } from "@/components/json-ld";
+import { PAGE_SEO } from "@/lib/page-seo";
 import { pageMetadata } from "@/lib/seo";
+import { breadcrumbJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Terms of Service",
+  title: PAGE_SEO.terms.title,
   path: "/terms-of-service",
-  description: "Terms of Service for using the VantagePoint OS platform.",
+  description: PAGE_SEO.terms.description,
 });
 
 const card = "rounded-3xl border border-navy/10 bg-white p-8 md:p-10";
@@ -21,6 +24,12 @@ const heading =
 export default function TermsOfService() {
   return (
     <main id="main" className="bg-paper pb-24">
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Terms of Service", path: "/terms-of-service" },
+        ])}
+      />
       <div className="mx-auto max-w-3xl px-6 pt-20 md:pt-28">
         <div className="mb-12">
           <div className="mb-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink">
