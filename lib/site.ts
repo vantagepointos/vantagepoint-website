@@ -9,14 +9,17 @@ export const BUSINESS_PHONE_DISPLAY = "(316) 742-8282";
 export const BUSINESS_PHONE_HREF = "tel:+13167428282";
 
 /**
- * Google Calendar appointment-schedule URL.
- * Leave it empty until the calendar is connected.
- * Setting this one string points every "Book a walkthrough" link at it.
+ * Public Google Calendar appointment page.
+ * Used as the "open in a new tab" fallback on /book.
  */
-export const BOOKING_URL = "";
+export const BOOKING_URL = "https://calendar.app.google/bfuaTUMpXvvkjQe88";
 
-/** Where walkthrough CTAs go. The calendar URL when set, otherwise the waitlist. */
-export const BOOK_PATH = BOOKING_URL.trim() || "/waitlist";
+/** Embedded appointment schedule shown on /book. */
+export const BOOKING_EMBED_URL =
+  "https://calendar.google.com/calendar/appointments/schedules/AcZssZ1lEC2Ynohu8wNJHoanQw36EEl1wvIwgOPGOUAPonU79NxNZ4kBdFHKL7oHac22zF_2W3MUhX09?gv=true";
+
+/** Every "Book a walkthrough" CTA. Internal page, same tab. */
+export const BOOK_PATH = "/book";
 
 /** Legacy is an unlisted agreement for the first 10 clinics. */
 export const LEGACY_SEATS_TOTAL = 10;
@@ -49,7 +52,7 @@ export const PUBLIC_SITEMAP_PATHS = [
   "/platform",
   "/vantage-lead",
   "/our-story",
-  ...(BOOKING_URL.trim() ? ["/book"] : []),
+  "/book",
   "/waitlist",
   "/privacy-policy",
   "/terms-of-service",
