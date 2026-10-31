@@ -1,8 +1,8 @@
 import { BookWalkthrough } from "@/components/buttons";
-import { CLOSING_LINE } from "@/lib/site";
+import { CLOSING_LINE, CLOSING_SUPPORT } from "@/lib/site";
 
 export function ClosingCta({
-  supporting = "When you want to see it, we'll sit down with you. A walkthrough, owner to owner.",
+  supporting = CLOSING_SUPPORT,
 }: {
   supporting?: string;
 }) {

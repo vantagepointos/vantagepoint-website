@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { BookWalkthrough } from "@/components/buttons";
-import { WAITLIST_MEMBERSHIP_COPY } from "@/lib/site";
+import { BOOK_PATH, WAITLIST_MEMBERSHIP_COPY } from "@/lib/site";
 
 export function HomeWaitlistSection() {
   return (
@@ -23,17 +22,21 @@ export function HomeWaitlistSection() {
           {WAITLIST_MEMBERSHIP_COPY}
         </p>
         <p className="mt-4 text-lg leading-relaxed text-ink">
-          Add your clinic, and we&apos;ll reach out to learn about your
-          practice and show you what VantagePoint OS can do for it. Want to
-          see it first? Book a walkthrough.
+          Add your clinic, and we&apos;ll reach out to learn about you and your
+          practice, and show you what VantagePoint OS can do for you.
         </p>
-        <div className="mt-8 flex flex-col items-start gap-4">
-          <BookWalkthrough tone="navy" />
+        <div className="mt-8 flex flex-col items-start gap-3">
           <Link
             href="/waitlist"
-            className="rounded-sm text-sm font-medium text-navy underline decoration-navy/30 underline-offset-4 hover:decoration-navy"
+            className="inline-flex items-center justify-center rounded-full bg-navy px-6 py-3 text-sm font-semibold text-white hover:bg-[#243656]"
           >
             Join the waitlist
+          </Link>
+          <Link
+            href={BOOK_PATH}
+            className="rounded-sm text-sm font-medium text-navy underline decoration-navy/30 underline-offset-4 hover:decoration-navy"
+          >
+            Prefer to see it first? Book a walkthrough
           </Link>
         </div>
       </div>

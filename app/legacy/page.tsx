@@ -48,8 +48,8 @@ export default function LegacyPage() {
             build VantagePoint OS with us.
           </p>
           <p>
-            Legacy is a lifetime place in the offering, held owner to owner.
-            It&apos;s a quiet agreement. There&apos;s no promotion attached to it.
+            Legacy is a lifetime place in the offering. It&apos;s a quiet
+            agreement. There&apos;s no promotion attached to it.
           </p>
         </div>
 

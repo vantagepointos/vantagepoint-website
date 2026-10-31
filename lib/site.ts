@@ -33,7 +33,7 @@ export const LEGACY_DEPOSIT_URL =
 export const LEGACY_WELCOME_PATH = "/legacy/welcome";
 
 export const WAITLIST_MEMBERSHIP_COPY =
-  "The first twenty clinics to join become our Legacy and Founding members, with terms reserved only for them.";
+  "The first twenty clinics to join become our Legacy and Founding members, with their pricing locked in.";
 
 export const WAITLIST_THANKS_COPY =
   "You're on the list. We look forward to learning about your practice and showing you what VantagePoint OS can do for it.";
@@ -84,7 +84,10 @@ export const PRODUCT_VIDEO_URL = "";
 /** Optional poster image shown before the video plays. */
 export const PRODUCT_VIDEO_POSTER = "";
 
-export const CLOSING_LINE = "Elevate your practice, own your future.";
+export const CLOSING_LINE =
+  "With the right system, the practice you want becomes reality.";
+
+export const CLOSING_SUPPORT = "Let us show you how.";
 
 /**
  * Returns remaining Legacy seats when at least one seat has been taken.

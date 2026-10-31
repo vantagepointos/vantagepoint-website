@@ -50,7 +50,7 @@ export default function OurStoryPage() {
             <p className="text-ink">Founder</p>
           </footer>
         </article>
-        <ClosingCta supporting="If our story sounds familiar, we'd like to walk through VantagePoint OS with you." />
+        <ClosingCta supporting="If our story sounds familiar, let us show you how VantagePoint OS fits." />
       </main>
     </>
   );
