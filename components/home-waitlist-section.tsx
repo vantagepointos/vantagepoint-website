@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { PhoneLink } from "@/components/phone-link";
 import { BOOK_PATH, WAITLIST_MEMBERSHIP_COPY } from "@/lib/site";
 
 export function HomeWaitlistSection() {
@@ -38,6 +39,7 @@ export function HomeWaitlistSection() {
           >
             Prefer to see it first? Book a walkthrough
           </Link>
+          <PhoneLink />
         </div>
       </div>
     </section>

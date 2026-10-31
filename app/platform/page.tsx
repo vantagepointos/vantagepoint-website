@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { BookWalkthrough, TextLink } from "@/components/buttons";
+import { PhoneLink } from "@/components/phone-link";
 import { PlatformMark } from "@/components/logo";
 import { PlatformPanel } from "@/components/platform-panel";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
   title: "Platform",
+  path: "/platform",
   description:
     "VantagePulse, VantageScale, and VantageLead. The three platforms inside VantagePoint OS, one offering for outpatient physical therapy owners.",
 });
@@ -142,8 +144,9 @@ export default function PlatformPage() {
             We&apos;ll show you how the three platforms fit your practice, and
             the impact they could have on it.
           </p>
-          <div className="mt-10">
+          <div className="mt-10 flex flex-col items-center gap-4">
             <BookWalkthrough />
+            <PhoneLink onNavy />
           </div>
         </div>
       </section>

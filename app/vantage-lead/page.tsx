@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { BookWalkthrough } from "@/components/buttons";
+import { PhoneLink } from "@/components/phone-link";
 import { PlatformMark } from "@/components/logo";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
   title: "VantageLead",
+  path: "/vantage-lead",
   description:
     "Onboarding and leadership training, on demand, so the standard of your practice can always be referred to and taught. The first release covers Front Office Onboarding, Provider Onboarding, and Welcome to VantagePoint OS.",
 });
@@ -96,8 +98,9 @@ export default function VantageLeadPage() {
             We&apos;ll show you the three paths and how a new hire would move
             through them.
           </p>
-          <div className="mt-10">
+          <div className="mt-10 flex flex-col items-center gap-4">
             <BookWalkthrough />
+            <PhoneLink onNavy />
           </div>
         </div>
       </section>

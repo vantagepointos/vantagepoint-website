@@ -10,6 +10,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
   title: "Terms of Service",
+  path: "/terms-of-service",
   description: "Terms of Service for using the VantagePoint OS platform.",
 });
 

@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PhoneLink } from "@/components/phone-link";
 import { WaitlistForm } from "@/components/waitlist-form";
 import { pageMetadata } from "@/lib/seo";
 import { BOOK_PATH, WAITLIST_MEMBERSHIP_COPY } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
   title: "Join the waitlist",
+  path: "/waitlist",
   description: `Join the VantagePoint OS waitlist. ${WAITLIST_MEMBERSHIP_COPY}`,
 });
 
@@ -27,14 +29,19 @@ export default function WaitlistPage() {
           write back personally as onboarding opens. A walkthrough is still the
           best way to see whether VantagePoint OS is the right fit.
         </p>
-        <p className="mt-4">
-          <Link
-            href={BOOK_PATH}
-            className="rounded-sm text-sm font-medium text-white underline decoration-white/30 underline-offset-4 hover:decoration-white"
-          >
-            Book a walkthrough
-          </Link>
-        </p>
+        {BOOK_PATH !== "/waitlist" ? (
+          <p className="mt-4">
+            <Link
+              href={BOOK_PATH}
+              className="rounded-sm text-sm font-medium text-white underline decoration-white/30 underline-offset-4 hover:decoration-white"
+            >
+              Book a walkthrough
+            </Link>
+          </p>
+        ) : null}
+        <div className="mt-4">
+          <PhoneLink onNavy leadIn="Or call" />
+        </div>
         <div className="mt-8">
           <WaitlistForm />
         </div>

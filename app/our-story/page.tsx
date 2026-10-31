@@ -5,6 +5,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
   title: "Our Story",
+  path: "/our-story",
   description:
     "In 2014 Gabe Harter and his wife opened their first physical therapy clinic. VantagePoint OS is what they built so other outpatient PT owners don't have to figure the practice out alone.",
 });

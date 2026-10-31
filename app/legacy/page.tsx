@@ -10,6 +10,7 @@ import {
 
 export const metadata: Metadata = pageMetadata({
   title: "Legacy",
+  path: "/legacy",
   description:
     "A private note for clinics invited into Legacy membership with VantagePoint OS.",
   index: false,

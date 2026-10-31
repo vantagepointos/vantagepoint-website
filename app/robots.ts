@@ -6,7 +6,12 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/legacy", "/legacy/"],
+      disallow: [
+        "/legacy",
+        "/legacy/welcome",
+        "/waitlist/thanks",
+        "/email/signature",
+      ],
     },
     sitemap: `${SITE_URL}/sitemap.xml`,
   };

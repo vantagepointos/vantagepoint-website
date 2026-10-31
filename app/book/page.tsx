@@ -1,20 +1,22 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { redirect } from "next/navigation";
+import { PhoneLink } from "@/components/phone-link";
 import { pageMetadata } from "@/lib/seo";
-import {
-  BOOKING_URL,
-  BUSINESS_PHONE_DISPLAY,
-  BUSINESS_PHONE_HREF,
-} from "@/lib/site";
+import { BOOKING_URL } from "@/lib/site";
+
+const bookingUrl = BOOKING_URL.trim();
 
 export const metadata: Metadata = pageMetadata({
   title: "Book a walkthrough",
+  path: "/book",
   description:
     "Book a walkthrough of VantagePoint OS. One offering for outpatient physical therapy owners: VantagePulse, VantageScale, and VantageLead.",
+  index: Boolean(bookingUrl),
 });
 
 export default function BookPage() {
-  const bookingUrl = BOOKING_URL.trim();
+  if (!bookingUrl) redirect("/waitlist");
 
   return (
     <main id="main" className="bg-paper">
@@ -31,59 +33,33 @@ export default function BookPage() {
           answer them plainly.
         </p>
 
-        <div className="mt-12">
-          {bookingUrl ? (
-            <div className="overflow-hidden rounded-3xl bg-white ring-1 ring-navy/10">
-              <iframe
-                title="Booking calendar"
-                src={bookingUrl}
-                className="h-[760px] w-full"
-              />
-              <p className="border-t border-navy/10 px-6 py-4 text-sm text-ink">
-                <a
-                  href={bookingUrl}
-                  className="font-semibold text-navy underline decoration-navy/30 underline-offset-4"
-                >
-                  Open the calendar
-                </a>
-              </p>
-            </div>
-          ) : (
-            <div className="rounded-3xl border border-dashed border-navy/20 bg-white px-6 py-16 text-center md:px-12">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-ink">
-                Calendar
-              </p>
-              <p className="mt-4 text-2xl font-semibold tracking-tight text-navy">
-                Booking calendar coming soon
-              </p>
-              <p className="mx-auto mt-4 max-w-md leading-relaxed text-ink">
-                The scheduling page isn&apos;t connected yet. Until it&apos;s
-                connected, the waitlist and the phone will reach us.
-              </p>
-            </div>
-          )}
+        <div className="mt-12 overflow-hidden rounded-3xl bg-white ring-1 ring-navy/10">
+          <iframe
+            title="Booking calendar"
+            src={bookingUrl}
+            className="h-[760px] w-full"
+          />
+          <p className="border-t border-navy/10 px-6 py-4 text-sm text-ink">
+            <a
+              href={bookingUrl}
+              className="font-semibold text-navy underline decoration-navy/30 underline-offset-4"
+            >
+              Open the calendar
+            </a>
+          </p>
         </div>
 
-        <div className="mt-12 grid gap-4 sm:grid-cols-2">
+        <div className="mt-8">
+          <PhoneLink />
+        </div>
+        <p className="mt-4">
           <Link
             href="/waitlist"
-            className="rounded-3xl bg-white px-6 py-6 ring-1 ring-navy/10 hover:ring-navy/25"
+            className="text-sm font-medium text-navy underline decoration-navy/30 underline-offset-4"
           >
-            <p className="text-sm font-semibold text-navy">Join the waitlist</p>
-            <p className="mt-2 text-sm leading-relaxed text-ink">
-              Leave your name and we&apos;ll write you as onboarding opens.
-            </p>
+            Join the waitlist
           </Link>
-          <a
-            href={BUSINESS_PHONE_HREF}
-            className="rounded-3xl bg-white px-6 py-6 ring-1 ring-navy/10 hover:ring-navy/25"
-          >
-            <p className="text-sm font-semibold text-navy">Call</p>
-            <p className="mt-2 text-sm leading-relaxed text-ink">
-              {BUSINESS_PHONE_DISPLAY}
-            </p>
-          </a>
-        </div>
+        </p>
       </div>
     </main>
   );

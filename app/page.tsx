@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { BookWalkthrough, TextLink } from "@/components/buttons";
 import { ClosingCta } from "@/components/closing-cta";
-import { FoundingPlaceholder } from "@/components/founding-placeholder";
 import { HomeWaitlistSection } from "@/components/home-waitlist-section";
 import { PlatformMark } from "@/components/logo";
 import { ProductTour } from "@/components/product-tour";
@@ -290,7 +289,6 @@ export default function Home() {
           </div>
         </section>
 
-        <FoundingPlaceholder />
         <HomeWaitlistSection />
         <ClosingCta />
       </main>

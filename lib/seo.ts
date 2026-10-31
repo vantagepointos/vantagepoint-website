@@ -4,16 +4,21 @@ import { SITE_NAME } from "@/lib/site";
 export function pageMetadata({
   title,
   description,
+  path,
   index = true,
 }: {
   title: string;
   description: string;
+  path: string;
   index?: boolean;
 }): Metadata {
   const fullTitle = `${title} | ${SITE_NAME}`;
   return {
     title,
     description,
+    alternates: {
+      canonical: path,
+    },
     robots: index
       ? { index: true, follow: true }
       : { index: false, follow: false },
@@ -22,6 +27,7 @@ export function pageMetadata({
       description,
       siteName: SITE_NAME,
       type: "website",
+      url: path,
     },
     twitter: {
       card: "summary_large_image",

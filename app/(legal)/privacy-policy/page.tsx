@@ -4,6 +4,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
   title: "Privacy Policy",
+  path: "/privacy-policy",
   description:
     "Privacy Policy for VantagePoint OS. How we collect, use, and safeguard information shared with us.",
 });

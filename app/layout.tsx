@@ -26,6 +26,10 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     description: HOME_DESCRIPTION,
   },
+  alternates: {
+    canonical: "/",
+  },
+  robots: { index: true, follow: true },
   twitter: {
     card: "summary_large_image",
   },

@@ -1,4 +1,5 @@
 import { BookWalkthrough } from "@/components/buttons";
+import { PhoneLink } from "@/components/phone-link";
 import { CLOSING_LINE, CLOSING_SUPPORT } from "@/lib/site";
 
 export function ClosingCta({
@@ -18,8 +19,9 @@ export function ClosingCta({
         <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-mist">
           {supporting}
         </p>
-        <div className="mt-10">
+        <div className="mt-10 flex flex-col items-center gap-4">
           <BookWalkthrough />
+          <PhoneLink onNavy />
         </div>
       </div>
     </section>

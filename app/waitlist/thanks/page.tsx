@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PhoneLink } from "@/components/phone-link";
 import { pageMetadata } from "@/lib/seo";
 import { BOOK_PATH, WAITLIST_THANKS_COPY } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
   title: "You're on the list",
+  path: "/waitlist/thanks",
   description: WAITLIST_THANKS_COPY,
   index: false,
 });
@@ -23,6 +25,7 @@ export default function WaitlistThanksPage() {
           >
             Book a walkthrough
           </Link>
+          <PhoneLink onNavy />
           <Link
             href="/"
             className="rounded-sm text-sm font-medium text-mist underline decoration-white/30 underline-offset-4 hover:text-white hover:decoration-white"

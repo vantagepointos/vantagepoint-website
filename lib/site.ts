@@ -8,14 +8,15 @@ export const CLIENT_LOGIN_URL = "https://app.vantagepointos.com/login";
 export const BUSINESS_PHONE_DISPLAY = "(316) 742-8282";
 export const BUSINESS_PHONE_HREF = "tel:+13167428282";
 
-export const BOOK_PATH = "/book";
-
 /**
  * Google Calendar appointment-schedule URL.
- * When this is a non-empty string, /book embeds the page and links to it.
  * Leave it empty until the calendar is connected.
+ * Setting this one string points every "Book a walkthrough" link at it.
  */
 export const BOOKING_URL = "";
+
+/** Where walkthrough CTAs go. The calendar URL when set, otherwise the waitlist. */
+export const BOOK_PATH = BOOKING_URL.trim() || "/waitlist";
 
 /** Legacy is an unlisted agreement for the first 10 clinics. */
 export const LEGACY_SEATS_TOTAL = 10;
@@ -48,7 +49,7 @@ export const PUBLIC_SITEMAP_PATHS = [
   "/platform",
   "/vantage-lead",
   "/our-story",
-  "/book",
+  ...(BOOKING_URL.trim() ? ["/book"] : []),
   "/waitlist",
   "/privacy-policy",
   "/terms-of-service",

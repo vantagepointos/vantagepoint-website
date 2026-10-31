@@ -5,6 +5,7 @@ import { BUSINESS_PHONE_DISPLAY, BUSINESS_PHONE_HREF } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
   title: "Deposit received",
+  path: "/legacy/welcome",
   description:
     "Thank you for reserving a Legacy seat with VantagePoint OS. Here's what happens next.",
   index: false,
