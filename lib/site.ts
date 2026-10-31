@@ -62,7 +62,7 @@ export const HOME_DESCRIPTION =
 export const HERO_EYEBROW = "Built for outpatient PT owners";
 
 export const HERO_HOOK =
-  "You know every patient's progress. Do you know your clinic's?";
+  "Full schedule. Great clinicians. So why does it still feel this hard?";
 
 export const HERO_HEADLINE = "There's a better way to run a PT practice.";
 
