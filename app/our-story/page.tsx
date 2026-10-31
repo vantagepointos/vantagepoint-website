@@ -7,7 +7,7 @@ export const metadata: Metadata = pageMetadata({
   title: "Our Story",
   path: "/our-story",
   description:
-    "In 2014 Gabe Harter and his wife opened their first physical therapy clinic. VantagePoint OS is what they built so other outpatient PT owners don't have to figure the practice out alone.",
+    "In 2014 Gabe Harter and his wife opened their first physical therapy clinic. The lessons from building three clinics are what VantagePoint OS is built on.",
 });
 
 export default function OurStoryPage() {
@@ -23,26 +23,60 @@ export default function OurStoryPage() {
           </h1>
           <div className="mt-10 space-y-6 text-lg leading-relaxed text-ink md:text-xl">
             <p>
-              In 2014, my wife and I opened our first physical therapy clinic
-              with one goal: take exceptional care of our patients and the
-              community we call home. We were focused on the people
-              walking through our doors, and we still are. But running a PT
-              practice is hard, and for a few years we had more patients to be
-              proud of than profits to show for it.
+              In 2014, my wife and I finally decided to open our own physical
+              therapy practice. We started our first clinic with one goal: take
+              exceptional care of our patients in the community we call home.
+              We were focused on the people walking through our doors, and
+              before long, those patients felt like family. Our reputation
+              grew.
+            </p>
+            <p>
+              But running a physical therapy practice is hard. For our first
+              ten years, we struggled. Our margins were lower than we&apos;d
+              like to admit, and that strain showed up in our culture too.
             </p>
             <p>
               In 2018 we opened a second clinic, and in 2022 a third. Three
-              clinics, three communities.
+              clinics, three communities. Through all of it, we worked hard,
+              learned a lot, and studied everything we could about what makes a
+              practice healthy.
             </p>
+            <p className="text-xl font-medium leading-snug text-navy md:text-2xl">
+              The lessons we learned are what VantagePoint OS is built on.
+            </p>
+            <div>
+              <p>They come down to three pillars:</p>
+              <ul className="mt-5 space-y-3 border-y border-navy/10 py-5 text-navy">
+                {[
+                  "Own your metrics.",
+                  "Market consistently.",
+                  "Put leadership training at the center of your team.",
+                ].map((pillar) => (
+                  <li key={pillar} className="flex gap-4 font-medium">
+                    <span
+                      className="mt-[0.7em] h-1.5 w-1.5 shrink-0 rounded-full bg-gold"
+                      aria-hidden="true"
+                    />
+                    <span>{pillar}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
             <p>
-              The lessons we learned are what VantagePoint OS is built on. Own the numbers. Keep
-              marketing on a steady rhythm. Put leadership at the center of the
-              team.
+              Once we understood those three pillars and focused on them above
+              everything else, our practice really took off. Our margins grew,
+              our whole team was happier, and new referral sources seemed to
+              show up every month.
             </p>
             <p>
               If the business side is what keeps you up at night, those three
-              things are how you get back to the work you opened the clinic to
-              do: making people better.
+              pillars are how you get to work, and how you get back to the work
+              you opened the clinic to do: making people better.
+            </p>
+            <p>
+              We&apos;ve been there. We&apos;ve struggled, we&apos;ve been
+              stressed, and we came through it. VantagePoint OS is here to help
+              you do the same.
             </p>
           </div>
           <footer className="mt-14 border-t border-navy/10 pt-8">
