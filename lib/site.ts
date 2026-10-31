@@ -36,7 +36,7 @@ export const WAITLIST_MEMBERSHIP_COPY =
   "The first 10 clinics become Legacy members, clinics 11-20 become Founding members, and everyone after joins onboarding in order.";
 
 export const WAITLIST_THANKS_COPY =
-  "You're on the list. We'll be in touch personally as seats open.";
+  "You're on the list. We'll reach out personally as onboarding opens.";
 
 export const PRIMARY_NAV = [
   { href: "/platform", label: "Platform" },
@@ -59,6 +59,8 @@ export const HOME_DESCRIPTION =
   "VantagePoint OS is the operating system for outpatient PT owners, built around your numbers, your marketing, and your team.";
 
 /** Home hero. Swap any line here without touching the page. */
+export const HERO_EYEBROW = "Built for outpatient PT owners";
+
 export const HERO_QUESTIONS = [
   "Numbers you can't quite trust?",
   "Margins thinner than they should be?",

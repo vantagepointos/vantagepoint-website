@@ -6,7 +6,7 @@ import { BUSINESS_PHONE_DISPLAY, BUSINESS_PHONE_HREF } from "@/lib/site";
 export const metadata: Metadata = pageMetadata({
   title: "Deposit received",
   description:
-    "Thank you for reserving a Legacy seat with VantagePoint OS. Here is what happens next.",
+    "Thank you for reserving a Legacy seat with VantagePoint OS. Here's what happens next.",
   index: false,
 });
 
@@ -28,7 +28,7 @@ export default function LegacyWelcomePage() {
         </h1>
         <p className="mt-6 text-lg leading-relaxed text-ink">
           You reserved a Legacy seat with VantagePoint OS. That matters to us,
-          and we will treat it that way.
+          and we&apos;ll treat it that way.
         </p>
         <h2 className="mt-12 text-2xl font-semibold tracking-tight text-navy">
           What happens next

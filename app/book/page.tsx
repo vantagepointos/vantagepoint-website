@@ -26,8 +26,8 @@ export default function BookPage() {
           Book a walkthrough
         </h1>
         <p className="mt-6 text-lg leading-relaxed text-ink md:text-xl">
-          We will look at the practice with you. Vantage Pulse, Vantage Scale,
-          and Vantage Lead, as one offering. Bring your questions. We will
+          We&apos;ll look at the practice with you. Vantage Pulse, Vantage Scale,
+          and Vantage Lead, as one offering. Bring your questions. We&apos;ll
           answer them plainly.
         </p>
 
@@ -57,8 +57,8 @@ export default function BookPage() {
                 Booking calendar coming soon
               </p>
               <p className="mx-auto mt-4 max-w-md leading-relaxed text-ink">
-                The scheduling page is not connected yet. Until it is, the
-                waitlist and the phone will reach us.
+                The scheduling page isn&apos;t connected yet. Until it&apos;s
+                connected, the waitlist and the phone will reach us.
               </p>
             </div>
           )}
@@ -71,7 +71,7 @@ export default function BookPage() {
           >
             <p className="text-sm font-semibold text-navy">Join the waitlist</p>
             <p className="mt-2 text-sm leading-relaxed text-ink">
-              Leave your name and we will write you as a seat opens.
+              Leave your name and we&apos;ll write you as onboarding opens.
             </p>
           </Link>
           <a

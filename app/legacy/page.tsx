@@ -43,18 +43,18 @@ export default function LegacyPage() {
         ) : null}
         <div className="mt-8 space-y-5 text-lg leading-relaxed text-ink">
           <p>
-            This page is not on the public site. We are sharing it with you
-            because you are one of the first ten clinics we are inviting to
+            This page isn&apos;t on the public site. We&apos;re sharing it with you
+            because you&apos;re one of the first ten clinics we&apos;re inviting to
             build VantagePoint OS with us.
           </p>
           <p>
-            Legacy is a lifetime place in the offering, held owner to owner. It
-            is a quiet agreement. There is no promotion attached to it.
+            Legacy is a lifetime place in the offering, held owner to owner.
+            It&apos;s a quiet agreement. There&apos;s no promotion attached to it.
           </p>
         </div>
 
         <h2 className="mt-12 text-2xl font-semibold tracking-tight text-navy">
-          What you are reserving
+          What you&apos;re reserving
         </h2>
         <ul className="mt-6 space-y-4 border-t border-navy/10 pt-6 text-navy">
           {terms.map((term) => (
@@ -65,9 +65,9 @@ export default function LegacyPage() {
           ))}
         </ul>
         <p className="mt-8 leading-relaxed text-ink">
-          The deposit does not start your billing. It holds the seat while we
-          prepare the letter of intent and the steps toward go-live. Once it
-          is received, we write you personally.
+          The deposit doesn&apos;t start your billing. It holds the seat while we
+          prepare the letter of intent and the steps toward go-live. Once
+          it&apos;s received, we write you personally.
         </p>
 
         <p className="mt-10">

@@ -18,24 +18,24 @@ export default function PlatformPage() {
           VantagePoint OS
         </p>
         <h1 className="mt-4 text-4xl font-semibold tracking-[-0.035em] text-navy text-balance md:text-6xl md:leading-[1.05]">
-          Three platforms. One offering.
+          Everything your practice runs on, in three parts.
         </h1>
         <p className="mt-6 text-lg leading-relaxed text-ink md:text-xl">
           Vantage Pulse, Vantage Scale, and Vantage Lead. Built for outpatient
           physical therapy owners who want a clear practice, a steady marketing
-          rhythm, and a team that can carry the standard when you are not in
+          rhythm, and a team that can carry the standard when you&apos;re not in
           the room.
         </p>
       </header>
 
-      <section className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-2 md:py-24" aria-labelledby="pulse-heading">
+      <section id="pulse" className="mx-auto grid max-w-6xl scroll-mt-24 items-center gap-12 px-6 py-16 md:grid-cols-2 md:py-24" aria-labelledby="pulse-heading">
         <div>
           <PlatformMark platform="pulse" className="h-12 w-auto" />
           <h2 id="pulse-heading" className="mt-8 text-3xl font-semibold tracking-tight text-navy md:text-4xl">
             Vantage Pulse
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-ink">
-            Most owners we know are not short on data. They are short on a
+            Most owners we know aren&apos;t short on data. They&apos;re short on a
             picture they trust. Vantage Pulse is where the North Star practice
             metrics live, visible to the people who need them.
           </p>
@@ -60,7 +60,7 @@ export default function PlatformPage() {
         <PlatformPanel platform="pulse" />
       </section>
 
-      <section className="border-t border-navy/10 bg-white" aria-labelledby="scale-heading">
+      <section id="scale" className="scroll-mt-24 border-t border-navy/10 bg-white" aria-labelledby="scale-heading">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-2 md:py-24">
           <div className="md:order-2">
             <PlatformMark platform="scale" className="h-12 w-auto" />
@@ -68,9 +68,9 @@ export default function PlatformPage() {
               Vantage Scale
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-ink">
-              Marketing slips in a clinic for a boring reason. It is not on the
-              calendar. Vantage Scale is where you keep that cadence: what you
-              will publish, who it is for, and whether it went out.
+              Marketing slips in a clinic for a simple reason. It&apos;s not on the
+              calendar. Vantage Scale is where you keep that cadence: what
+              you&apos;ll publish, who it&apos;s for, and whether it went out.
             </p>
             <ul className="mt-8 space-y-3 text-navy">
               {[
@@ -85,7 +85,7 @@ export default function PlatformPage() {
               ))}
             </ul>
             <p className="mt-8 leading-relaxed text-ink">
-              It is built to make a consistent rhythm easier to keep. A steady
+              It&apos;s built to make a consistent rhythm easier to keep. A steady
               practice of showing up, not a promise about what comes back.
             </p>
           </div>
@@ -95,7 +95,7 @@ export default function PlatformPage() {
         </div>
       </section>
 
-      <section className="border-t border-navy/10" aria-labelledby="lead-heading">
+      <section id="lead" className="scroll-mt-24 border-t border-navy/10" aria-labelledby="lead-heading">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-2 md:py-24">
           <div>
             <PlatformMark platform="lead" className="h-12 w-auto" />
@@ -104,7 +104,7 @@ export default function PlatformPage() {
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-ink">
               Vantage Lead is the onboarding and leadership training platform.
-              Video, in an order, so a new person can learn how your clinic
+              Video lessons, in order, so a new hire learns how your clinic
               actually works.
             </p>
             <ul className="mt-8 space-y-3 text-navy">
@@ -133,8 +133,8 @@ export default function PlatformPage() {
             Walk through it together.
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-mist">
-            One offering. We will show you how the three platforms sit in a
-            practice, and you can decide if it fits.
+            We&apos;ll show you how the three platforms fit your practice, and
+            you can decide if it&apos;s right.
           </p>
           <div className="mt-10">
             <BookWalkthrough />

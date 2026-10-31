@@ -25,7 +25,7 @@ export default function WaitlistPage() {
         </p>
         <p className="mt-4 text-base leading-relaxed">
           Tell us a little about your clinics. We read every note ourselves and
-          write back personally as a seat opens. A walkthrough is still the
+          write back personally as onboarding opens. A walkthrough is still the
           best way to see whether VantagePoint OS is the right fit.
         </p>
         <p className="mt-4">

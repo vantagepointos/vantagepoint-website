@@ -23,7 +23,7 @@ const paths = [
   {
     index: "03",
     title: "Welcome to VantagePoint OS",
-    body: "How the team uses VantagePoint OS itself, so the metrics, the marketing cadence, and the training are not a mystery to anyone but the owner.",
+    body: "How the team uses VantagePoint OS itself, so the metrics, the marketing cadence, and the training aren't a mystery to anyone but the owner.",
   },
 ];
 
@@ -45,10 +45,10 @@ export default function VantageLeadPage() {
 
       <section className="mx-auto max-w-3xl px-6 py-16 md:py-24" aria-labelledby="launch-heading">
         <h2 id="launch-heading" className="text-3xl font-semibold tracking-tight text-navy md:text-4xl">
-          What is in the first release.
+          What&apos;s in the first release.
         </h2>
         <p className="mt-5 text-lg leading-relaxed text-ink">
-          Three paths. We would rather these be clear and useful than pretend
+          Three paths. We&apos;d rather these be clear and useful than pretend
           the library is larger than it is.
         </p>
         <ol className="mt-12">
@@ -69,7 +69,7 @@ export default function VantageLeadPage() {
       <section className="border-t border-navy/10 bg-white" aria-labelledby="why-heading">
         <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-2 md:py-28">
           <h2 id="why-heading" className="text-3xl font-semibold tracking-tight text-navy md:text-4xl">
-            So the standard does not depend on you being in every room.
+            So the standard doesn&apos;t depend on you being in every room.
           </h2>
           <div className="space-y-5 text-lg leading-relaxed text-ink">
             <p>
@@ -92,7 +92,7 @@ export default function VantageLeadPage() {
             See the films in a walkthrough.
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-mist">
-            We will show you the three paths and how a new hire would move
+            We&apos;ll show you the three paths and how a new hire would move
             through them.
           </p>
           <div className="mt-10">

@@ -24,7 +24,7 @@ export function HomeWaitlistSection() {
         </p>
         <p className="mt-4 text-lg leading-relaxed text-ink">
           We&apos;re opening VantagePoint OS owner to owner. Leave your name
-          and we&apos;ll be in touch personally as a seat opens. If you&apos;d
+          and we&apos;ll reach out personally as onboarding opens. If you&apos;d
           like to see it with someone first, book a walkthrough.
         </p>
         <div className="mt-8 flex flex-col items-start gap-4">

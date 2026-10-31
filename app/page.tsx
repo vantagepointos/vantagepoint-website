@@ -6,6 +6,7 @@ import { HomeWaitlistSection } from "@/components/home-waitlist-section";
 import { PlatformMark } from "@/components/logo";
 import { ProductTour } from "@/components/product-tour";
 import {
+  HERO_EYEBROW,
   HERO_HEADLINE,
   HERO_QUESTIONS,
   HERO_SUB,
@@ -27,7 +28,7 @@ const pillars = [
   {
     index: "03",
     title: "Leadership at the center",
-    body: "Teach the way you lead, so the team can carry the standard of care. It should not live only with the owner.",
+    body: "Teach the way you lead, so the team can carry the standard of care. It shouldn't live only with you.",
   },
 ];
 
@@ -35,9 +36,8 @@ const platforms = [
   {
     key: "pulse" as const,
     name: "Vantage Pulse",
-    href: "/platform",
-    summary:
-      "The practice metrics. Scoreboards the people who run the day can actually use, from the front office to the owner.",
+    href: "/platform#pulse",
+    summary: "Clear scoreboards for everyone who runs the day",
     points: [
       "Provider stat grid and pace",
       "Front office measures, including arrivals",
@@ -48,7 +48,7 @@ const platforms = [
   {
     key: "scale" as const,
     name: "Vantage Scale",
-    href: "/platform",
+    href: "/platform#scale",
     summary:
       "The marketing rhythm. A place to plan and publish the work that keeps your community in touch with the clinic.",
     points: ["Social publishing", "Email", "Digital and print newsletters"],
@@ -78,7 +78,10 @@ export default function Home() {
           />
           <div className="relative mx-auto max-w-6xl px-6 pb-20 pt-16 md:pb-28 md:pt-24">
             <div className="mx-auto max-w-3xl text-center">
-              <ul className="space-y-1 text-base font-medium text-gold md:text-lg">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
+                {HERO_EYEBROW}
+              </p>
+              <ul className="mt-5 space-y-1 text-base font-medium text-gold md:text-lg">
                 {HERO_QUESTIONS.map((question) => (
                   <li key={question}>{question}</li>
                 ))}
@@ -116,8 +119,8 @@ export default function Home() {
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-ink md:text-xl">
                 You opened a clinic to make people&apos;s lives better. Then
-                you found that running the practice is the hard part. That is
-                why VantagePoint OS exists.
+                you found the business side is harder. That&apos;s why
+                VantagePoint OS exists.
               </p>
             </div>
             <ul className="mt-16 grid gap-10 md:grid-cols-3 md:gap-12">
@@ -126,7 +129,7 @@ export default function Home() {
                   North Star metrics
                 </p>
                 <h3 className="mt-3 text-lg font-semibold text-navy">
-                  Numbers you can&apos;t quite trust
+                  Reports that don&apos;t agree
                 </h3>
                 <p className="mt-3 leading-relaxed text-ink">
                   The reports don&apos;t agree, so the practice is hard to
@@ -139,11 +142,11 @@ export default function Home() {
                   A marketing cadence
                 </p>
                 <h3 className="mt-3 text-lg font-semibold text-navy">
-                  Margins thinner than they should be
+                  Marketing that starts and stops
                 </h3>
                 <p className="mt-3 leading-relaxed text-ink">
-                  Growth that only happens in bursts leaves the practice thin.
-                  A steady marketing rhythm is how the work keeps moving.
+                  When marketing only happens in a slow week, growth comes in
+                  bursts. A steady rhythm keeps it moving.
                 </p>
               </li>
               <li>
@@ -151,11 +154,11 @@ export default function Home() {
                   Leadership at the center
                 </p>
                 <h3 className="mt-3 text-lg font-semibold text-navy">
-                  Always patching up your team
+                  A standard that lives only with you
                 </h3>
                 <p className="mt-3 leading-relaxed text-ink">
-                  When the standard lives only with you, you are always filling
-                  the gaps. Teach it, and the team can carry it.
+                  When the standard lives only with you, you&apos;re always
+                  filling the gaps. Teach it, and the team can carry it.
                 </p>
               </li>
             </ul>
@@ -175,8 +178,8 @@ export default function Home() {
                 What we came back to.
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-ink">
-                When our own practice turned, it was not a trick. It was three
-                things, held with some consistency.
+                When our own clinics turned around, it came down to three
+                things, done with consistency.
               </p>
             </div>
             <ol className="mt-16 grid gap-14 md:grid-cols-3">
@@ -208,9 +211,8 @@ export default function Home() {
                 One offering. Three platforms.
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-ink">
-                VantagePoint OS is a single offering. Vantage Pulse, Vantage
-                Scale, and Vantage Lead are how it shows up in the practice.
-                They are meant to be used together.
+                It has three parts, Vantage Pulse, Vantage Scale, and Vantage
+                Lead, built to work together.
               </p>
             </div>
             <div className="mt-16 divide-y divide-navy/10 border-y border-navy/10">
@@ -240,9 +242,7 @@ export default function Home() {
                     </ul>
                     <p className="mt-6">
                       <TextLink href={platform.href}>
-                        {platform.key === "lead"
-                          ? "Explore Vantage Lead"
-                          : "Explore the platform"}
+                        {`Explore ${platform.name}`}
                       </TextLink>
                     </p>
                   </div>
