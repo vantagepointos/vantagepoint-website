@@ -44,7 +44,7 @@ export default function TermsOfService() {
               <Scale className="h-6 w-6 text-navy" aria-hidden="true" /> 1. Acceptance of Terms
             </h2>
             <p className="mb-4">
-              By accessing or using the VantagePoint OS platform (including VantageScale OS, VantagePulse OS, and VantageLead OS), you agree to be bound by these Terms of Service. If you do not agree to these terms, you may not use our services.
+              By accessing or using the VantagePoint OS platform (including VantageScale, VantagePulse, and VantageLead), you agree to be bound by these Terms of Service. If you do not agree to these terms, you may not use our services.
             </p>
             <p>
               VantagePoint OS provides a suite of operational, marketing, and leadership tools specifically designed for physical therapy clinics and healthcare providers. 
@@ -59,7 +59,7 @@ export default function TermsOfService() {
               <MessageSquare className="h-6 w-6 text-navy" aria-hidden="true" /> 2. SMS and Communications Policy
             </h2>
             <p className="mb-4">
-              VantageScale OS allows users to send SMS text messages and email campaigns to their patients and leads. By utilizing these features, you agree to the following mandatory carrier requirements:
+              VantageScale allows users to send SMS text messages and email campaigns to their patients and leads. By utilizing these features, you agree to the following mandatory carrier requirements:
             </p>
             <ul className="mb-6 ml-4 list-disc list-inside space-y-2">
               <li>
@@ -91,7 +91,7 @@ export default function TermsOfService() {
               While VantagePoint OS provides secure tools for managing patient data and marketing, <strong className="text-navy">you (the clinic or healthcare provider) are solely responsible for ensuring that your use of the platform complies with all applicable local, state, and federal healthcare laws, including the Health Insurance Portability and Accountability Act (HIPAA).</strong>
             </p>
             <p>
-              You agree not to use our marketing tools (VantageScale OS) to transmit Protected Health Information (PHI) through unencrypted channels such as standard SMS or social media publishing unless explicitly permitted by law and authorized by the patient.
+              You agree not to use our marketing tools (VantageScale) to transmit Protected Health Information (PHI) through unencrypted channels such as standard SMS or social media publishing unless explicitly permitted by law and authorized by the patient.
             </p>
           </section>
 

@@ -80,15 +80,15 @@ export default function Home() {
             className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(214,164,69,0.16),transparent_52%)]"
             aria-hidden="true"
           />
-          <div className="relative mx-auto flex min-h-[90vh] max-w-6xl flex-col px-6 pb-8 pt-8 md:pb-10 md:pt-10 lg:min-h-[90vh]">
-            <div className="mx-auto max-w-3xl text-center">
+          <div className="relative mx-auto flex min-h-[88vh] max-w-6xl flex-col px-6 pb-6 pt-6 md:min-h-[90vh] md:pb-8 md:pt-8 lg:min-h-[90vh]">
+            <div className="mx-auto w-full max-w-5xl text-center">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
                 {HERO_EYEBROW}
               </p>
-              <p className="mt-4 text-base font-medium text-gold md:text-lg">
+              <p className="mx-auto mt-5 max-w-5xl text-balance text-2xl font-medium leading-snug tracking-[-0.03em] text-gold sm:text-[1.7rem] lg:max-w-none lg:text-[2rem] lg:leading-tight">
                 {HERO_HOOK}
               </p>
-              <h1 className="mt-4 text-[2.5rem] font-semibold leading-[1.05] tracking-[-0.04em] text-balance sm:text-6xl lg:text-7xl">
+              <h1 className="mx-auto mt-5 max-w-3xl text-[2.5rem] font-semibold leading-[1.05] tracking-[-0.04em] text-balance sm:text-6xl lg:text-7xl">
                 {HERO_HEADLINE}
               </h1>
               <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-mist md:text-lg">

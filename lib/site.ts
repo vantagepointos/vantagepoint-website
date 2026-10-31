@@ -61,7 +61,8 @@ export const HOME_DESCRIPTION =
 /** Home hero. Swap any line here without touching the page. */
 export const HERO_EYEBROW = "Built for outpatient PT owners";
 
-export const HERO_HOOK = "Busy schedule. Thin margins. Do you know why?";
+export const HERO_HOOK =
+  "You know every patient's progress. Do you know your clinic's?";
 
 export const HERO_HEADLINE = "There's a better way to run a PT practice.";
 
