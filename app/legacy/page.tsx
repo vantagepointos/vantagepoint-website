@@ -12,7 +12,7 @@ export const metadata: Metadata = pageMetadata({
   title: "Legacy",
   path: "/legacy",
   description:
-    "A private note for clinics invited into Legacy membership with VantagePoint OS.",
+    "A private note for practices invited into Legacy membership with VantagePoint OS.",
   index: false,
 });
 
@@ -39,13 +39,13 @@ export default function LegacyPage() {
         </h1>
         {remaining !== null ? (
           <p className="mt-6 text-sm font-medium text-navy">
-            {remaining} of {LEGACY_SEATS_TOTAL} Legacy seats remaining
+            {remaining} of {LEGACY_SEATS_TOTAL} practices remaining
           </p>
         ) : null}
         <div className="mt-8 space-y-5 text-lg leading-relaxed text-ink">
           <p>
             This page isn&apos;t on the public site. We&apos;re sharing it with you
-            because you&apos;re one of the first ten clinics we&apos;re inviting to
+            because you&apos;re one of the first ten practices we&apos;re inviting to
             build VantagePoint OS with us.
           </p>
           <p>

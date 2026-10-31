@@ -21,12 +21,12 @@ export const BOOKING_EMBED_URL =
 /** Every "Book a walkthrough" CTA. Internal page, same tab. */
 export const BOOK_PATH = "/book";
 
-/** Legacy is an unlisted agreement for the first 10 clinics. */
+/** Legacy is an unlisted agreement for the first 10 practices. */
 export const LEGACY_SEATS_TOTAL = 10;
 
 /**
- * Seats already reserved. Leave at 0 to hide the seat line.
- * The line "X of 10 Legacy seats remaining" renders only when this is above 0.
+ * Practices already reserved. Leave at 0 to hide the seat line.
+ * The line "X of 10 practices remaining" renders only when this is above 0.
  */
 export const LEGACY_SEATS_TAKEN = 0;
 
@@ -37,7 +37,7 @@ export const LEGACY_DEPOSIT_URL =
 export const LEGACY_WELCOME_PATH = "/legacy/welcome";
 
 export const WAITLIST_MEMBERSHIP_COPY =
-  "The first twenty clinics to join become our Legacy and Founding members, with their pricing locked in.";
+  "The first twenty practices to join become our Legacy and Founding members, with their pricing locked in.";
 
 export const WAITLIST_THANKS_COPY =
   "You're on the list. We look forward to learning about your practice and showing you what VantagePoint OS can do for it.";
