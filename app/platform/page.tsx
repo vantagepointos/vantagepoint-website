@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { BookWalkthrough, TextLink } from "@/components/buttons";
 import { PlatformMark } from "@/components/logo";
-import { LeadVisual, PulseVisual, ScaleVisual } from "@/components/visuals";
+import { PlatformPanel } from "@/components/platform-panel";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
@@ -57,7 +57,7 @@ export default function PlatformPage() {
             numbers start to mean something in the day to day.
           </p>
         </div>
-        <PulseVisual />
+        <PlatformPanel platform="pulse" />
       </section>
 
       <section className="border-t border-navy/10 bg-white" aria-labelledby="scale-heading">
@@ -90,7 +90,7 @@ export default function PlatformPage() {
             </p>
           </div>
           <div className="md:order-1">
-            <ScaleVisual />
+            <PlatformPanel platform="scale" />
           </div>
         </div>
       </section>
@@ -123,7 +123,7 @@ export default function PlatformPage() {
               <TextLink href="/vantage-lead">Read about Vantage Lead</TextLink>
             </p>
           </div>
-          <LeadVisual />
+          <PlatformPanel platform="lead" />
         </div>
       </section>
 

@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { HOME_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
+import { HERO_HEADLINE, HOME_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -15,7 +15,7 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `See your whole practice clearly | ${SITE_NAME}`,
+    default: `${HERO_HEADLINE} | ${SITE_NAME}`,
     template: `%s | ${SITE_NAME}`,
   },
   description: HOME_DESCRIPTION,

@@ -31,19 +31,17 @@ export default function OurStoryPage() {
             </p>
             <p>
               In 2018 we opened a second clinic, and in 2022 a third. Three
-              communities, and the same aim we started with.
+              communities.
             </p>
             <p>
-              We turned the practice around by owning the numbers, keeping a
-              steady marketing rhythm, and putting leadership at the center of
-              the team, so the way we care for people could be taught.
+              What we learned is what this is built on. Own the numbers. Keep
+              marketing on a steady rhythm. Put leadership at the center of the
+              team.
             </p>
             <p>
-              VantagePoint OS is that work, shaped into something another owner
-              can use. We care deeply about helping you improve the business,
-              support your community, and spend more of your time doing what
-              you do best, which is making people better. You should not have
-              to figure it out alone.
+              If that is the part of the practice keeping you up, those three
+              things are how you get back to the work you opened the clinic to
+              do: making people better.
             </p>
           </div>
           <footer className="mt-14 border-t border-navy/10 pt-8">

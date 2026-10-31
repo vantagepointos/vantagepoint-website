@@ -4,7 +4,14 @@ import { ClosingCta } from "@/components/closing-cta";
 import { FoundingPlaceholder } from "@/components/founding-placeholder";
 import { HomeWaitlistSection } from "@/components/home-waitlist-section";
 import { PlatformMark } from "@/components/logo";
-import { PracticeBoard } from "@/components/visuals";
+import { ProductTour } from "@/components/product-tour";
+import {
+  HERO_HEADLINE,
+  HERO_QUESTIONS,
+  HERO_SUB,
+  STORY_TEASER_BODY,
+  STORY_TEASER_HEADING,
+} from "@/lib/site";
 
 const pillars = [
   {
@@ -71,17 +78,16 @@ export default function Home() {
           />
           <div className="relative mx-auto max-w-6xl px-6 pb-20 pt-16 md:pb-28 md:pt-24">
             <div className="mx-auto max-w-3xl text-center">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
-                Built for outpatient PT owners
-              </p>
-              <h1 className="mt-6 text-[2.65rem] font-semibold leading-[1.05] tracking-[-0.04em] text-balance sm:text-6xl md:text-7xl">
-                See your whole practice clearly.
+              <ul className="space-y-1 text-base font-medium text-gold md:text-lg">
+                {HERO_QUESTIONS.map((question) => (
+                  <li key={question}>{question}</li>
+                ))}
+              </ul>
+              <h1 className="mt-8 text-[2.65rem] font-semibold leading-[1.05] tracking-[-0.04em] text-balance sm:text-6xl md:text-7xl">
+                {HERO_HEADLINE}
               </h1>
               <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-mist md:text-xl">
-                VantagePoint OS is the operating system we built for the
-                business side of an outpatient practice. The numbers that
-                matter, a marketing rhythm you can keep, and leadership your
-                team can learn. One offering, built owner to owner.
+                {HERO_SUB}
               </p>
               <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <BookWalkthrough />
@@ -93,8 +99,8 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="mx-auto mt-16 max-w-4xl md:mt-20">
-              <PracticeBoard />
+            <div className="mt-16 md:mt-20">
+              <ProductTour />
             </div>
           </div>
         </section>
@@ -109,38 +115,47 @@ export default function Home() {
                 The care was never the hard part.
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-ink md:text-xl">
-                You opened a clinic to make people better. The practice around
-                that work is what wears an owner down. You can be proud of the
-                people you serve and still feel unsure about the business.
-                We&apos;ve been where you are.
+                You opened a clinic to make people&apos;s lives better. Then
+                you found that running the practice is the hard part. That is
+                why VantagePoint OS exists.
               </p>
             </div>
             <ul className="mt-16 grid gap-10 md:grid-cols-3 md:gap-12">
               <li>
-                <h3 className="text-lg font-semibold text-navy">
-                  Numbers everywhere
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-ink">
+                  North Star metrics
+                </p>
+                <h3 className="mt-3 text-lg font-semibold text-navy">
+                  Numbers you can&apos;t quite trust
                 </h3>
                 <p className="mt-3 leading-relaxed text-ink">
-                  Reports live in different places, and they rarely tell the
-                  same story. A clear practice starts with a picture you trust.
+                  The reports don&apos;t agree, so the practice is hard to
+                  steer. Owning a few North Star numbers gives you a picture
+                  you can actually use.
                 </p>
               </li>
               <li>
-                <h3 className="text-lg font-semibold text-navy">
-                  Marketing in bursts
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-ink">
+                  A marketing cadence
+                </p>
+                <h3 className="mt-3 text-lg font-semibold text-navy">
+                  Margins thinner than they should be
                 </h3>
                 <p className="mt-3 leading-relaxed text-ink">
-                  It gets attention when the schedule thins out, then it goes
-                  quiet again. A community needs a steadier rhythm than that.
+                  Growth that only happens in bursts leaves the practice thin.
+                  A steady marketing rhythm is how the work keeps moving.
                 </p>
               </li>
               <li>
-                <h3 className="text-lg font-semibold text-navy">
-                  Leadership in your head
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-ink">
+                  Leadership at the center
+                </p>
+                <h3 className="mt-3 text-lg font-semibold text-navy">
+                  Always patching up your team
                 </h3>
                 <p className="mt-3 leading-relaxed text-ink">
-                  The way you want people cared for is real. If it is not
-                  taught, it leaves the building when you do.
+                  When the standard lives only with you, you are always filling
+                  the gaps. Teach it, and the team can carry it.
                 </p>
               </li>
             </ul>
@@ -246,16 +261,13 @@ export default function Home() {
               id="story-teaser-heading"
               className="mt-4 text-4xl font-semibold tracking-[-0.03em] text-navy text-balance md:text-5xl"
             >
-              Built by owners, for owners.
+              {STORY_TEASER_HEADING}
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-ink">
-              In 2014 we opened our first clinic to take exceptional care of
-              our patients and the community we call home. Running the practice
-              was harder than caring for people. We built VantagePoint OS so
-              another owner would not have to figure that out alone.
+              {STORY_TEASER_BODY}
             </p>
             <p className="mt-8">
-              <TextLink href="/our-story">Read our story</TextLink>
+              <TextLink href="/our-story">Read why we built it</TextLink>
             </p>
           </div>
         </section>

@@ -56,7 +56,35 @@ export const PUBLIC_SITEMAP_PATHS = [
 ] as const;
 
 export const HOME_DESCRIPTION =
-  "VantagePoint OS is built for outpatient physical therapy clinic owners. One offering for North Star practice metrics, a steady marketing cadence, and leadership at the center of the team.";
+  "VantagePoint OS is the operating system for outpatient PT owners, built around your numbers, your marketing, and your team.";
+
+/** Home hero. Swap any line here without touching the page. */
+export const HERO_QUESTIONS = [
+  "Numbers you can't quite trust?",
+  "Margins thinner than they should be?",
+  "Always patching up your team?",
+] as const;
+
+export const HERO_HEADLINE = "There's a better way to run a PT practice.";
+
+export const HERO_SUB =
+  "VantagePoint OS is the operating system for outpatient PT owners, built around the three things that make or break a practice: your numbers, your marketing, and your team.";
+
+export const STORY_TEASER_HEADING =
+  "Built by PT owners who've sat in your chair.";
+
+export const STORY_TEASER_BODY =
+  "We know what it's like to give your patients everything and still lose sleep over the business. VantagePoint OS is the system we wish we'd had, built so you can get back to what you do best: making people better.";
+
+/**
+ * Direct URL of the product-tour video file (for example an mp4).
+ * Leave empty until the screencast is ready.
+ * When set, the media frame plays it muted, looping, and inline.
+ */
+export const PRODUCT_VIDEO_URL = "";
+
+/** Optional poster image shown before the video plays. */
+export const PRODUCT_VIDEO_POSTER = "";
 
 export const CLOSING_LINE = "Elevate your practice, own your future.";
 
