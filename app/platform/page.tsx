@@ -55,7 +55,7 @@ export default function PlatformPage() {
           </ul>
           <p className="mt-8 leading-relaxed text-ink">
             The aim is simple. Everyone looks at the same practice, and the
-            numbers start to mean something in the day to day.
+            numbers and goals become clear.
           </p>
         </div>
         <PlatformPanel platform="pulse" />
