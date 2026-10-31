@@ -1,283 +1,296 @@
-import React from 'react';
-import Link from 'next/link';
-import { 
-  ArrowRight, 
-  Activity, 
-  BarChart3, 
-  Megaphone, 
-  Users, 
-  ShieldCheck, 
-  CheckCircle2,
-  Building2,
-  Mail,
-  Phone
-} from 'lucide-react';
-import { HomeWaitlistSection } from '@/components/home-waitlist-section';
-import { BUSINESS_PHONE_DISPLAY, BUSINESS_PHONE_HREF } from '@/lib/site';
+import Link from "next/link";
+import { BookWalkthrough, TextLink } from "@/components/buttons";
+import { ClosingCta } from "@/components/closing-cta";
+import { FoundingPlaceholder } from "@/components/founding-placeholder";
+import { HomeWaitlistSection } from "@/components/home-waitlist-section";
+import { PlatformMark } from "@/components/logo";
+import { ProductTour } from "@/components/product-tour";
+import {
+  HERO_HEADLINE,
+  HERO_HOOK,
+  HERO_SUB,
+  STORY_TEASER_BODY,
+  STORY_TEASER_HEADING,
+} from "@/lib/site";
+
+const pillars = [
+  {
+    index: "01",
+    title: "North Star metrics",
+    body: "Own the few numbers that tell you whether the practice is healthy. Not a bigger pile of reports. A picture you and your team can share.",
+  },
+  {
+    index: "02",
+    title: "A marketing cadence",
+    body: "Show up for your community on a rhythm. The work is planned and sent, instead of reinvented when the front office gets quiet.",
+  },
+  {
+    index: "03",
+    title: "Leadership at the center",
+    body: "Teach the way you lead, so the whole team carries the culture. Grow your people, and your people grow the practice.",
+  },
+];
+
+const platforms = [
+  {
+    key: "pulse" as const,
+    name: "VantagePulse",
+    href: "/platform#pulse",
+    tagline: "The definitive view of practice health.",
+    summary: "Clear scoreboards for everyone who runs the day.",
+    points: [
+      "Provider stat grid and pace",
+      "Front office measures, including arrival rates",
+      "A specialized view for clinical directors",
+      "A specialized dashboard for the owner",
+    ],
+  },
+  {
+    key: "scale" as const,
+    name: "VantageScale",
+    href: "/platform#scale",
+    tagline: "Accelerating growth. Amplifying impact.",
+    summary:
+      "A steady marketing cadence without the busywork. Plan a campaign, review it, and schedule it in minutes.",
+    points: [
+      "Campaign builder: choose how many posts and how many weeks, and a full campaign is drafted in about a minute, ready to review and schedule",
+      "Email copy drafted fast, so a month of emails is scheduled in minutes",
+      "Smart Funnels: describe the goal, generate, review, and launch",
+      "Digital and print newsletters",
+    ],
+  },
+  {
+    key: "lead" as const,
+    name: "VantageLead",
+    href: "/vantage-lead",
+    tagline: "The roots of enduring leadership.",
+    summary:
+      "Onboarding and leadership training, on demand, so the standard of your practice can always be referred to and taught.",
+    points: [
+      "Front Office Onboarding",
+      "Provider Onboarding",
+      "Welcome to VantagePoint OS",
+    ],
+  },
+];
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#020617] text-slate-200 selection:bg-[#c5a059] selection:text-[#020617] font-sans">
-      
-      {/* NAVBAR */}
-      <header className="sticky top-0 z-50 w-full border-b border-slate-800/60 bg-[#020617]/80 backdrop-blur-md">
-        {/* Adjusted from px-6 to px-4 to push the logo further to the left edge, max-w-[1400px] expands the bar */}
-        <div className="max-w-[1400px] mx-auto px-4 h-20 flex items-center justify-between">
-          
-          {/* TOP LEFT HORIZONTAL LOGO */}
-          <div className="flex items-center">
-            {/* Changed from h-18 (invalid class) to h-16 (standard 64px) or h-[72px] for proper rendering */}
-            <img src="/images/vantagepoint_horizontal.png" alt="VantagePoint OS" className="h-[72px] w-auto object-contain" /> 
-          </div>
-
-          {/* Fixed the missing gap number (gap-8) to improve navbar spacing */}
-          <nav className="hidden md:flex items-center gap-8 lg:gap-12 text-sm font-medium text-slate-300">
-            <Link href="#ecosystem" className="hover:text-[#c5a059] transition-colors">The Ecosystem</Link>
-            <Link href="#story" className="hover:text-[#c5a059] transition-colors">Our Story</Link>
-            <Link href="#pricing" className="hover:text-[#c5a059] transition-colors">Enterprise Tiers</Link>
-            <Link href="/waitlist" className="max-lg:hidden rounded-sm hover:text-[#c5a059] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c5a059]">Join the waitlist</Link>
-          </nav>
-          
-          <div className="flex items-center gap-4">
-            <Link href="https://app.vantagepointos.com/login" className="hidden md:block text-sm font-medium hover:text-white transition-colors">
-              Client Login
-            </Link>
-            <Link href="#pricing" className="bg-[#c5a059] hover:bg-[#b08d4f] text-[#020617] px-5 py-2.5 rounded-md font-semibold text-sm transition-all flex items-center gap-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c5a059]">
-              Book Demo <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-        </div>
-        <div className="lg:hidden border-t border-slate-800/60">
-          <div className="max-w-[1400px] mx-auto px-4 py-2.5 flex justify-end">
-            <Link href="/waitlist" className="text-sm font-medium text-slate-300 hover:text-[#c5a059] transition-colors rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c5a059]">
-              Join the waitlist
-            </Link>
-          </div>
-        </div>
-      </header>
-
-      {/* HERO SECTION */}
-      <section className="relative pt-12 pb-20 md:pt-16 md:pb-32 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#0f172a] via-[#020617] to-[#020617] -z-10"></div>
-        <div className="container mx-auto px-6 text-center max-w-5xl">
-          
-          {/* NEW LARGE HERO LOGO */}
-          <div className="flex justify-center mb-2">
-             <img src="/images/vantagepoint.png" alt="VantagePoint OS" className="h-20 md:h-58 w-auto object-contain drop-shadow-2xl" />
-          </div>
-
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0f172a] border border-[#c5a059]/30 text-[#c5a059] text-xs font-semibold uppercase tracking-wider mb-8">
-          <ShieldCheck className="h-4 w-4" /> Enterprise Growth & Marketing Platform
-        </div>
-          <h1 className="text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-[1.1] mb-8">
-            The Enterprise Operating System for <span className="text-[#c5a059]">Physical Therapy</span>
-          </h1>
-          <p className="text-lg md:text-xl text-slate-400 mb-10 max-w-3xl mx-auto leading-relaxed">
-            VantagePoint OS provides multi-location clinics with the ultimate software infrastructure to manage operational data, <strong className="text-slate-200 font-semibold">omnichannel marketing, social media publishing, and unified communications</strong>—all from one secure dashboard.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="#pricing" className="w-full sm:w-auto bg-[#c5a059] hover:bg-[#b08d4f] text-[#020617] px-8 py-4 rounded-md font-bold text-lg transition-all flex items-center justify-center gap-2">
-              Request Enterprise Demo
-            </Link>
-            <Link href="#ecosystem" className="w-full sm:w-auto bg-[#0f172a] hover:bg-slate-800 border border-slate-700 text-white px-8 py-4 rounded-md font-semibold text-lg transition-all">
-              Explore The Platform
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* FOUNDER STORY SECTION */}
-      <section id="story" className="py-24 bg-[#0f172a] border-y border-slate-800">
-        <div className="container mx-auto px-6 max-w-5xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Built by Clinic Owners, <br/><span className="text-[#c5a059]">For Clinic Owners.</span></h2>
-              <p className="text-slate-400 leading-relaxed mb-6">
-                After 12 years of running a physical therapy clinic, navigating the ups and downs of a healthcare business, we discovered that sustainable, scalable growth always comes down to three core pillars: <strong>Gathering Proper Data, A Sound Marketing Strategy, and A Culture of Leadership.</strong>
+    <>
+      <main id="main">
+        <section className="on-navy relative overflow-hidden bg-deep text-white">
+          <div
+            className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,#111729_0%,#0B0F1D_100%)]"
+            aria-hidden="true"
+          />
+          <div
+            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(214,164,69,0.16),transparent_52%)]"
+            aria-hidden="true"
+          />
+          <div className="relative mx-auto flex min-h-[88vh] max-w-6xl flex-col px-6 pb-6 pt-8 md:min-h-[90vh] md:pb-8 md:pt-12 lg:min-h-[90vh]">
+            <div className="mx-auto w-full max-w-5xl text-center">
+              <p className="mx-auto max-w-5xl text-balance text-2xl font-medium leading-snug tracking-[-0.03em] text-gold sm:text-[1.7rem] lg:max-w-none lg:text-[2rem] lg:leading-tight">
+                {HERO_HOOK}
               </p>
-              <p className="text-slate-400 leading-relaxed">
-                When we mastered these pillars, our business experienced substantial growth. We built VantagePoint OS to give other clinic owners the exact same competitive advantage. By providing this operating system, we aim to support the success and elevation of the entire PT profession.
+              <h1 className="mx-auto mt-5 max-w-3xl text-[2.5rem] font-semibold leading-[1.05] tracking-[-0.04em] text-balance sm:text-6xl lg:mt-6 lg:text-7xl">
+                {HERO_HEADLINE}
+              </h1>
+              <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-mist md:text-lg">
+                {HERO_SUB}
               </p>
-            </div>
-            <div className="bg-[#020617] p-8 rounded-2xl border border-slate-800">
-              <h3 className="text-xl font-bold text-white mb-6 border-b border-slate-800 pb-4">The 3 Pillars of Success</h3>
-              <ul className="space-y-6">
-                <li className="flex gap-4">
-                  <div className="bg-[#0f172a] p-3 rounded-lg text-[#c5a059] h-fit"><BarChart3 className="h-6 w-6"/></div>
-                  <div>
-                    <strong className="text-white block mb-1">1. Proper Data (VantagePulse)</strong>
-                    <span className="text-sm text-slate-400">Real-time metrics, behavioral impact, and clinical efficiency tracking.</span>
-                  </div>
-                </li>
-                <li className="flex gap-4">
-                  <div className="bg-[#0f172a] p-3 rounded-lg text-[#c5a059] h-fit"><Megaphone className="h-6 w-6"/></div>
-                  <div>
-                    <strong className="text-white block mb-1">2. Sound Marketing (VantageScale)</strong>
-                    <span className="text-sm text-slate-400">Omnichannel patient acquisition, social publishing, and ROI analytics.</span>
-                  </div>
-                </li>
-                <li className="flex gap-4">
-                  <div className="bg-[#0f172a] p-3 rounded-lg text-[#c5a059] h-fit"><Users className="h-6 w-6"/></div>
-                  <div>
-                    <strong className="text-white block mb-1">3. Leadership Culture (VantageLead)</strong>
-                    <span className="text-sm text-slate-400">Automated onboarding, clinical director training, and CEO modules.</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* THE ECOSYSTEM SECTION */}
-      <section id="ecosystem" className="py-24 bg-[#020617]">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">The Complete PT Ecosystem</h2>
-            <p className="text-slate-400 text-lg">Three powerful, deeply interconnected platforms designed to work together, feeding data seamlessly from the front desk to your marketing campaigns.</p>
-          </div>
-
-          <div className="grid lg:grid-cols-3 gap-8">
-            
-            {/* PLATFORM 1: VANTAGEPULSE OS */}
-            <div className="bg-[#0f172a] border border-slate-800 p-8 rounded-2xl flex flex-col hover:border-slate-600 transition-colors">
-              <div className="mb-6">
-                {/* Changed h-26 (invalid class) to h-24 (96px) so it renders predictably */}
-                <img src="/images/vantagepulse.png" alt="VantagePulse OS" className="h-24 w-auto object-contain mb-4" /> 
-                <p className="text-sm text-[#c5a059] font-semibold uppercase tracking-wider mb-2">The Operational Heartbeat</p>
-                <p className="text-slate-400 text-sm leading-relaxed">Live metric tracking and compelling scoreboards designed for behavioral impact. Takes providers less than 1 minute per day to track efficiency.</p>
-              </div>
-              <ul className="space-y-3 text-sm text-slate-300 mt-auto pt-6 border-t border-slate-800/60">
-                <li className="flex items-start gap-2"><CheckCircle2 className="h-4 w-4 text-[#c5a059] shrink-0 mt-0.5" /> Provider Stat Grid & Pace Boxes</li>
-                <li className="flex items-start gap-2"><CheckCircle2 className="h-4 w-4 text-[#c5a059] shrink-0 mt-0.5" /> Front Office KPI & Arrival Rates</li>
-                <li className="flex items-start gap-2"><CheckCircle2 className="h-4 w-4 text-[#c5a059] shrink-0 mt-0.5" /> Clinical Director & Owner Dashboards</li>
-                <li className="flex items-start gap-2"><CheckCircle2 className="h-4 w-4 text-[#c5a059] shrink-0 mt-0.5" /> Seamless Patient Tracker Integration</li>
-              </ul>
-            </div>
-
-            {/* PLATFORM 2: VANTAGESCALE OS */}
-            <div className="bg-[#0f172a] border border-[#c5a059]/50 p-8 rounded-2xl flex flex-col relative transform lg:-translate-y-4 shadow-2xl shadow-[#c5a059]/5">
-              <div className="mb-6 mt-2">
-                <img src="/images/vantagescale.png" alt="VantageScale OS" className="h-36 w-auto object-contain mb-4" />
-                <p className="text-sm text-[#c5a059] font-semibold uppercase tracking-wider mb-2">The Growth Engine</p>  
-                <p className="text-slate-400 text-sm leading-relaxed">The ultimate omnichannel marketing platform. Create, organize, and automate your entire clinic growth strategy from a unified communication hub.</p>
-              </div>
-              <ul className="space-y-3 text-sm text-slate-300 mt-auto pt-6 border-t border-slate-800/60">
-                <li className="flex items-start gap-2"><CheckCircle2 className="h-4 w-4 text-[#c5a059] shrink-0 mt-0.5" /> Meta Social Media Publishing</li>
-                <li className="flex items-start gap-2"><CheckCircle2 className="h-4 w-4 text-[#c5a059] shrink-0 mt-0.5" /> Automated Email & SMS Campaigns</li>
-                <li className="flex items-start gap-2"><CheckCircle2 className="h-4 w-4 text-[#c5a059] shrink-0 mt-0.5" /> Digital & Print Newsletters (Postgrid)</li>
-                <li className="flex items-start gap-2"><CheckCircle2 className="h-4 w-4 text-[#c5a059] shrink-0 mt-0.5" /> Smart Funnels & ROI Analytics</li>
-              </ul>
-            </div>
-
-            {/* PLATFORM 3: VANTAGELEAD OS */}
-            <div className="bg-[#0f172a] border border-slate-800 p-8 rounded-2xl flex flex-col hover:border-slate-600 transition-colors">
-              <div className="mb-6">
-                <img src="/images/vantagelead.png" alt="VantageLead OS" className="h-36 w-auto object-contain mb-4 -ml-2" />
-                <p className="text-sm text-[#c5a059] font-semibold uppercase tracking-wider mb-2">The Culture Engine</p>
-                <p className="text-slate-400 text-sm leading-relaxed">The roots and growth of your company culture. Role-based training modules designed to create an unbreakable culture of leadership within your clinics.</p>
-              </div>
-              <ul className="space-y-3 text-sm text-slate-300 mt-auto pt-6 border-t border-slate-800/60">
-                <li className="flex items-start gap-2"><CheckCircle2 className="h-4 w-4 text-[#c5a059] shrink-0 mt-0.5" /> New Hire Onboarding Modules</li>
-                <li className="flex items-start gap-2"><CheckCircle2 className="h-4 w-4 text-[#c5a059] shrink-0 mt-0.5" /> Clinical Director Training Paths</li>
-                <li className="flex items-start gap-2"><CheckCircle2 className="h-4 w-4 text-[#c5a059] shrink-0 mt-0.5" /> Owner & CEO Leadership Masterclass</li>
-                <li className="flex items-start gap-2"><CheckCircle2 className="h-4 w-4 text-[#c5a059] shrink-0 mt-0.5" /> Customizable Role-Based Access</li>
-              </ul>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* ENTERPRISE PRICING / DEMO SECTION */}
-      <section id="pricing" className="py-24 bg-[#0f172a] border-t border-slate-800">
-        <div className="container mx-auto px-6 max-w-4xl text-center">
-          <Building2 className="h-12 w-12 text-[#c5a059] mx-auto mb-6" />
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Tailored for Enterprise Growth</h2>
-          <p className="text-slate-400 text-lg mb-12 max-w-2xl mx-auto">
-            VantagePoint OS operates on custom-tailored enterprise configurations. We align our platform features, print margins, and AI generation capabilities specifically to your clinic&apos;s volume and operational needs.
-          </p>
-          
-          <div className="grid sm:grid-cols-2 gap-6 text-left mb-12">
-            <div className="bg-[#020617] p-8 rounded-xl border border-slate-800">
-              <h3 className="text-2xl font-bold text-white mb-2">Momentum Tier</h3>
-              <p className="text-slate-400 text-sm mb-6">Built for growing multi-location clinics ready to consolidate their marketing and operational stack.</p>
-              <ul className="space-y-2 text-sm text-slate-300">
-                <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#c5a059]" /> Full VantageScale Ecosystem</li>
-                <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#c5a059]" /> Standard Print-to-Mail Margins</li>
-                <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#c5a059]" /> Baseline AI Content Allocations</li>
-              </ul>
-            </div>
-            <div className="bg-[#020617] p-8 rounded-xl border border-[#c5a059]/30">
-              <h3 className="text-2xl font-bold text-[#c5a059] mb-2">Pinnacle Tier</h3>
-              <p className="text-slate-400 text-sm mb-6">The ultimate infrastructure for enterprise organizations requiring maximum scale and AI leverage.</p>
-              <ul className="space-y-2 text-sm text-slate-300">
-                <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#c5a059]" /> Preferred Enterprise Print Margins</li>
-                <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#c5a059]" /> Unlimited AI Text & Image Generation</li>
-                <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#c5a059]" /> Dedicated AI Video Allocations</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="inline-block p-1 rounded-lg bg-gradient-to-r from-[#0f172a] via-[#c5a059] to-[#0f172a]">
-             {/* DIRECT EMAIL LINK */}
-             <Link href="mailto:gabe@vantagepointos.com?subject=Enterprise Demo Request" className="block bg-[#020617] hover:bg-[#0f172a] text-white px-10 py-4 rounded-md font-bold text-lg transition-all">
-               Request Enterprise Pricing & Demo
-             </Link>
-          </div>
-        </div>
-      </section>
-
-      <HomeWaitlistSection />
-
-      {/* FOOTER */}
-      <footer className="bg-[#020617] border-t border-slate-800 pt-16 pb-8">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-            <div className="col-span-1 md:col-span-2">
-              <div className="flex items-center gap-2 mb-4">
-                <Activity className="h-6 w-6 text-[#c5a059]" />
-                <span className="text-xl font-bold text-white tracking-tight">VantagePoint <span className="text-[#c5a059]">OS</span></span>
-              </div>
-              <p className="text-slate-400 text-sm max-w-sm mb-6">
-                The premier clinic management operating system powering the growth of enterprise physical therapy practices.
-              </p>
-              {/* Added Contact Link in Footer */}
-              <div className="flex flex-col gap-3">
-                <Link href="mailto:gabe@vantagepointos.com" className="flex items-center gap-2 text-slate-400 hover:text-[#c5a059] transition-colors text-sm font-medium w-fit rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c5a059]">
-                  <Mail className="h-4 w-4" /> gabe@vantagepointos.com
+              <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                <BookWalkthrough />
+                <Link
+                  href="/platform"
+                  className="inline-flex items-center justify-center rounded-full border border-gold/40 px-6 py-3 text-sm font-semibold text-white hover:bg-navy"
+                >
+                  See the platform
                 </Link>
-                <a href={BUSINESS_PHONE_HREF} className="flex items-center gap-2 text-slate-400 hover:text-[#c5a059] transition-colors text-sm font-medium w-fit rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c5a059]">
-                  <Phone className="h-4 w-4" /> {BUSINESS_PHONE_DISPLAY}
-                </a>
               </div>
             </div>
-            
-            <div>
-              <h4 className="text-white font-semibold mb-4">Platform</h4>
-              <ul className="space-y-3 text-sm text-slate-400">
-                <li><Link href="#ecosystem" className="hover:text-[#c5a059] transition-colors">The Ecosystem</Link></li>
-                <li><Link href="#pricing" className="hover:text-[#c5a059] transition-colors">Enterprise Tiers</Link></li>
-                <li><Link href="https://app.vantagepointos.com/login" className="hover:text-[#c5a059] transition-colors">Client Login</Link></li>
-              </ul>
+            <div className="mt-8 md:mt-10">
+              <ProductTour />
             </div>
+          </div>
+        </section>
 
-            <div>
-              <h4 className="text-white font-semibold mb-4">Legal & Compliance</h4>
-              <ul className="space-y-3 text-sm text-slate-400">
-                <li><Link href="/privacy-policy" className="hover:text-[#c5a059] transition-colors">Privacy Policy</Link></li>
-                <li><Link href="/terms-of-service" className="hover:text-[#c5a059] transition-colors">Terms of Service</Link></li>
-                <li><Link href="/privacy-policy#data-deletion" className="hover:text-[#c5a059] transition-colors">Data Deletion Instructions</Link></li>
-              </ul>
+        <section className="bg-paper" aria-labelledby="problem-heading">
+          <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+            <div className="max-w-3xl">
+              <h2
+                id="problem-heading"
+                className="text-4xl font-semibold tracking-[-0.03em] text-navy text-balance md:text-5xl"
+              >
+                The care was never the hard part.
+              </h2>
+              <p className="mt-6 text-lg leading-relaxed text-ink md:text-xl">
+                You opened a clinic to make people&apos;s lives better. Then
+                the business started running you. That&apos;s why VantagePoint
+                OS exists.
+              </p>
+            </div>
+            <ul className="mt-16 grid gap-10 md:grid-cols-2 md:gap-12">
+              <li>
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-ink">
+                  North Star metrics
+                </p>
+                <h3 className="mt-3 text-lg font-semibold text-navy">
+                  Reports that don&apos;t agree, so the practice is hard to
+                  steer.
+                </h3>
+              </li>
+              <li>
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-ink">
+                  Practice health
+                </p>
+                <h3 className="mt-3 text-lg font-semibold text-navy">
+                  So many metrics. Which ones actually move your practice&apos;s
+                  health?
+                </h3>
+              </li>
+              <li>
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-ink">
+                  A marketing cadence
+                </p>
+                <h3 className="mt-3 text-lg font-semibold text-navy">
+                  Marketing that starts and stops
+                </h3>
+                <p className="mt-3 leading-relaxed text-ink">
+                  When marketing only happens when you have time, growth stalls.
+                  A steady cadence keeps growth consistent.
+                </p>
+              </li>
+              <li>
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-ink">
+                  Leadership at the center
+                </p>
+                <h3 className="mt-3 text-lg font-semibold text-navy">
+                  A culture that lives only with you
+                </h3>
+                <p className="mt-3 leading-relaxed text-ink">
+                  When the culture lives only with you, you&apos;re always
+                  filling the gaps. Culture can be taught and trained, so the
+                  whole team can carry it.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section className="border-t border-navy/10 bg-white" aria-labelledby="pillars-heading">
+          <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+            <div className="max-w-2xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink">
+                The three pillars
+              </p>
+              <h2
+                id="pillars-heading"
+                className="mt-4 text-4xl font-semibold tracking-[-0.03em] text-navy text-balance md:text-5xl"
+              >
+                What we came back to.
+              </h2>
+              <p className="mt-6 text-lg leading-relaxed text-ink">
+                When our own clinics turned around, it came down to three
+                things, done with consistency.
+              </p>
+            </div>
+            <ol className="mt-16 grid gap-14 md:grid-cols-3">
+              {pillars.map((pillar) => (
+                <li key={pillar.index}>
+                  <p className="text-sm font-semibold tracking-[0.16em] text-ink">
+                    {pillar.index}
+                  </p>
+                  <h3 className="mt-4 text-2xl font-semibold tracking-tight text-navy">
+                    {pillar.title}
+                  </h3>
+                  <p className="mt-4 leading-relaxed text-ink">{pillar.body}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+
+        <section className="border-t border-navy/10 bg-paper" aria-labelledby="platforms-heading">
+          <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+            <div className="max-w-2xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink">
+                The system
+              </p>
+              <h2
+                id="platforms-heading"
+                className="mt-4 text-4xl font-semibold tracking-[-0.03em] text-navy md:text-5xl"
+              >
+                One system. Three platforms.
+              </h2>
+              <p className="mt-6 text-lg leading-relaxed text-ink">
+                VantagePulse, VantageScale, and VantageLead, built to work
+                together.
+              </p>
+            </div>
+            <div className="mt-16 divide-y divide-navy/10 border-y border-navy/10">
+              {platforms.map((platform) => (
+                <article
+                  key={platform.name}
+                  className="grid gap-8 py-12 md:grid-cols-[minmax(0,16rem)_1fr] md:gap-16 md:py-14"
+                >
+                  <PlatformMark platform={platform.key} className="h-12 w-auto" />
+                  <div>
+                    <h3 className="text-2xl font-semibold tracking-tight text-navy">
+                      {platform.name}
+                    </h3>
+                    <p className="mt-2 text-lg font-medium leading-snug text-navy">
+                      {platform.tagline}
+                    </p>
+                    <p className="mt-3 max-w-xl leading-relaxed text-ink">
+                      {platform.summary}
+                    </p>
+                    <ul className="mt-6 space-y-2 text-sm text-navy">
+                      {platform.points.map((point) => (
+                        <li key={point} className="flex gap-3">
+                          <span
+                            className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-navy"
+                            aria-hidden="true"
+                          />
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="mt-6">
+                      <TextLink href={platform.href}>
+                        {`Explore ${platform.name}`}
+                      </TextLink>
+                    </p>
+                  </div>
+                </article>
+              ))}
             </div>
           </div>
-          
-          <div className="border-t border-slate-800/60 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500">
-            <p>&copy; {new Date().getFullYear()} VantagePoint OS. All rights reserved.</p>
-            <p className="mt-2 md:mt-0">Built for Enterprise Physical Therapy.</p>
+        </section>
+
+        <section className="bg-white" aria-labelledby="story-teaser-heading">
+          <div className="mx-auto max-w-3xl px-6 py-24 md:py-32">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink">
+              Our story
+            </p>
+            <h2
+              id="story-teaser-heading"
+              className="mt-4 text-4xl font-semibold tracking-[-0.03em] text-navy text-balance md:text-5xl"
+            >
+              {STORY_TEASER_HEADING}
+            </h2>
+            <p className="mt-6 text-lg leading-relaxed text-ink">
+              {STORY_TEASER_BODY}
+            </p>
+            <p className="mt-8">
+              <TextLink href="/our-story">Read why we built it</TextLink>
+            </p>
           </div>
-        </div>
-      </footer>
-    </div>
+        </section>
+
+        <FoundingPlaceholder />
+        <HomeWaitlistSection />
+        <ClosingCta />
+      </main>
+    </>
   );
 }
