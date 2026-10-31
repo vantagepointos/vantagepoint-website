@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import Link from "next/link";
+import { CookieSettingsLink } from "@/components/cookie-settings-link";
 import { Logo } from "@/components/logo";
 import {
   BOOK_PATH,
@@ -83,6 +84,11 @@ export function SiteFooter() {
                 Terms of Service
               </Link>
             </li>
+            {/^[a-z0-9]+$/i.test(process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID?.trim() ?? "") ? (
+              <li>
+                <CookieSettingsLink className={`${linkClass} text-left`} />
+              </li>
+            ) : null}
           </ul>
         </div>
       </div>

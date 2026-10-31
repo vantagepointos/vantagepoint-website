@@ -38,7 +38,7 @@ All of these are optional. Leave them unset and the related tag is omitted. None
 | `NEXT_PUBLIC_GSC_VERIFICATION` | Adds the Google Search Console site-verification meta tag. |
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Loads GA4 (`G-…`) and sends `waitlist_submit` and `book_visit`. Uses cookies, so a consent banner belongs with it. |
 | `NEXT_PUBLIC_VERCEL_ANALYTICS` | Set to `1` to load Vercel Analytics and the same two conversion events. |
-| `NEXT_PUBLIC_CLARITY_PROJECT_ID` | Loads the Microsoft Clarity tag. The waitlist form and the booking calendar are masked in recordings. |
+| `NEXT_PUBLIC_CLARITY_PROJECT_ID` | Shows the cookie banner. Clarity loads only after Accept, and the choice is stored in localStorage. It never loads on `/waitlist`, `/legacy`, or any page with a form. The waitlist form and the booking calendar stay masked. |
 
 Set them in the Vercel project for production. They are read at build time.
 

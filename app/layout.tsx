@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
+import { ClarityConsent } from "@/components/clarity-consent";
 import { JsonLd } from "@/components/json-ld";
 import { SiteAnalytics } from "@/components/site-analytics";
 import { SiteFooter } from "@/components/site-footer";
@@ -81,6 +82,7 @@ export default function RootLayout({
         </a>
         <JsonLd data={organizationJsonLd(PAGE_SEO.home.description)} />
         <SiteAnalytics />
+        <ClarityConsent />
         <SiteHeader />
         <div className="flex flex-1 flex-col">{children}</div>
         <SiteFooter />
