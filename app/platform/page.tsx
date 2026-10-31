@@ -7,7 +7,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "Platform",
   description:
-    "Vantage Pulse, Vantage Scale, and Vantage Lead. The three platforms inside VantagePoint OS, one offering for outpatient physical therapy owners.",
+    "VantagePulse, VantageScale, and VantageLead. The three platforms inside VantagePoint OS, one offering for outpatient physical therapy owners.",
 });
 
 export default function PlatformPage() {
@@ -21,7 +21,7 @@ export default function PlatformPage() {
           Everything your practice runs on, in three parts.
         </h1>
         <p className="mt-6 text-lg leading-relaxed text-ink md:text-xl">
-          Vantage Pulse, Vantage Scale, and Vantage Lead. Built for outpatient
+          VantagePulse, VantageScale, and VantageLead. Built for outpatient
           physical therapy owners who want a clear practice, a steady marketing
           rhythm, and a team that can carry the standard when you&apos;re not in
           the room.
@@ -32,11 +32,11 @@ export default function PlatformPage() {
         <div>
           <PlatformMark platform="pulse" className="h-12 w-auto" />
           <h2 id="pulse-heading" className="mt-8 text-3xl font-semibold tracking-tight text-navy md:text-4xl">
-            Vantage Pulse
+            VantagePulse
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-ink">
             Most owners we know aren&apos;t short on data. They&apos;re short on a
-            picture they trust. Vantage Pulse is where the North Star practice
+            picture they trust. VantagePulse is where the North Star practice
             metrics live, visible to the people who need them.
           </p>
           <ul className="mt-8 space-y-3 text-navy">
@@ -65,11 +65,11 @@ export default function PlatformPage() {
           <div className="md:order-2">
             <PlatformMark platform="scale" className="h-12 w-auto" />
             <h2 id="scale-heading" className="mt-8 text-3xl font-semibold tracking-tight text-navy md:text-4xl">
-              Vantage Scale
+              VantageScale
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-ink">
               Marketing slips in a clinic for a simple reason. It&apos;s not on the
-              calendar. Vantage Scale is where you keep that cadence: what
+              calendar. VantageScale is where you keep that cadence: what
               you&apos;ll publish, who it&apos;s for, and whether it went out.
             </p>
             <ul className="mt-8 space-y-3 text-navy">
@@ -100,10 +100,10 @@ export default function PlatformPage() {
           <div>
             <PlatformMark platform="lead" className="h-12 w-auto" />
             <h2 id="lead-heading" className="mt-8 text-3xl font-semibold tracking-tight text-navy md:text-4xl">
-              Vantage Lead
+              VantageLead
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-ink">
-              Vantage Lead is the onboarding and leadership training platform.
+              VantageLead is the onboarding and leadership training platform.
               Video lessons, in order, so a new hire learns how your clinic
               actually works.
             </p>
@@ -120,7 +120,7 @@ export default function PlatformPage() {
               ))}
             </ul>
             <p className="mt-8">
-              <TextLink href="/vantage-lead">Read about Vantage Lead</TextLink>
+              <TextLink href="/vantage-lead">Read about VantageLead</TextLink>
             </p>
           </div>
           <PlatformPanel platform="lead" />

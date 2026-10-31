@@ -29,21 +29,21 @@ export function Logo({
 
 const PLATFORM_MARKS = {
   pulse: {
-    alt: "Vantage Pulse",
+    alt: "VantagePulse",
     light: "/brand/vantagepulse-horizontal-light.svg",
     dark: "/brand/vantagepulse-horizontal-dark.svg",
     width: 1249,
     height: 215,
   },
   scale: {
-    alt: "Vantage Scale",
+    alt: "VantageScale",
     light: "/brand/vantagescale-horizontal-light.svg",
     dark: "/brand/vantagescale-horizontal-dark.svg",
     width: 1001,
     height: 255,
   },
   lead: {
-    alt: "Vantage Lead",
+    alt: "VantageLead",
     light: "/brand/vantagelead-horizontal-light.svg",
     dark: "/brand/vantagelead-horizontal-dark.svg",
     width: 1045,

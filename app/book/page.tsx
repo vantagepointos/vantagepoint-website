@@ -10,7 +10,7 @@ import {
 export const metadata: Metadata = pageMetadata({
   title: "Book a walkthrough",
   description:
-    "Book a walkthrough of VantagePoint OS. One offering for outpatient physical therapy owners: Vantage Pulse, Vantage Scale, and Vantage Lead.",
+    "Book a walkthrough of VantagePoint OS. One offering for outpatient physical therapy owners: VantagePulse, VantageScale, and VantageLead.",
 });
 
 export default function BookPage() {
@@ -26,8 +26,8 @@ export default function BookPage() {
           Book a walkthrough
         </h1>
         <p className="mt-6 text-lg leading-relaxed text-ink md:text-xl">
-          We&apos;ll look at the practice with you. Vantage Pulse, Vantage Scale,
-          and Vantage Lead, as one offering. Bring your questions. We&apos;ll
+          We&apos;ll look at the practice with you. VantagePulse, VantageScale,
+          and VantageLead, as one offering. Bring your questions. We&apos;ll
           answer them plainly.
         </p>
 

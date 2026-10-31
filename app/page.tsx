@@ -8,7 +8,7 @@ import { ProductTour } from "@/components/product-tour";
 import {
   HERO_EYEBROW,
   HERO_HEADLINE,
-  HERO_QUESTIONS,
+  HERO_HOOK,
   HERO_SUB,
   STORY_TEASER_BODY,
   STORY_TEASER_HEADING,
@@ -35,7 +35,7 @@ const pillars = [
 const platforms = [
   {
     key: "pulse" as const,
-    name: "Vantage Pulse",
+    name: "VantagePulse",
     href: "/platform#pulse",
     summary: "Clear scoreboards for everyone who runs the day",
     points: [
@@ -47,7 +47,7 @@ const platforms = [
   },
   {
     key: "scale" as const,
-    name: "Vantage Scale",
+    name: "VantageScale",
     href: "/platform#scale",
     summary:
       "The marketing rhythm. A place to plan and publish the work that keeps your community in touch with the clinic.",
@@ -55,7 +55,7 @@ const platforms = [
   },
   {
     key: "lead" as const,
-    name: "Vantage Lead",
+    name: "VantageLead",
     href: "/vantage-lead",
     summary:
       "Onboarding and leadership training, on video, so the standard of the practice can be taught.",
@@ -80,23 +80,21 @@ export default function Home() {
             className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(214,164,69,0.16),transparent_52%)]"
             aria-hidden="true"
           />
-          <div className="relative mx-auto max-w-6xl px-6 pb-20 pt-16 md:pb-28 md:pt-24">
+          <div className="relative mx-auto flex min-h-[90vh] max-w-6xl flex-col px-6 pb-8 pt-8 md:pb-10 md:pt-10 lg:min-h-[90vh]">
             <div className="mx-auto max-w-3xl text-center">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
                 {HERO_EYEBROW}
               </p>
-              <ul className="mt-5 space-y-1 text-base font-medium text-gold md:text-lg">
-                {HERO_QUESTIONS.map((question) => (
-                  <li key={question}>{question}</li>
-                ))}
-              </ul>
-              <h1 className="mt-8 text-[2.65rem] font-semibold leading-[1.05] tracking-[-0.04em] text-balance sm:text-6xl md:text-7xl">
+              <p className="mt-4 text-base font-medium text-gold md:text-lg">
+                {HERO_HOOK}
+              </p>
+              <h1 className="mt-4 text-[2.5rem] font-semibold leading-[1.05] tracking-[-0.04em] text-balance sm:text-6xl lg:text-7xl">
                 {HERO_HEADLINE}
               </h1>
-              <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-mist md:text-xl">
+              <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-mist md:text-lg">
                 {HERO_SUB}
               </p>
-              <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <BookWalkthrough />
                 <Link
                   href="/platform"
@@ -106,7 +104,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="mt-16 md:mt-20">
+            <div className="mt-8 md:mt-10">
               <ProductTour />
             </div>
           </div>
@@ -123,23 +121,28 @@ export default function Home() {
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-ink md:text-xl">
                 You opened a clinic to make people&apos;s lives better. Then
-                you found the business side is harder. That&apos;s why
-                VantagePoint OS exists.
+                the business started running you. That&apos;s why VantagePoint
+                OS exists.
               </p>
             </div>
-            <ul className="mt-16 grid gap-10 md:grid-cols-3 md:gap-12">
+            <ul className="mt-16 grid gap-10 md:grid-cols-2 md:gap-12">
               <li>
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-ink">
                   North Star metrics
                 </p>
                 <h3 className="mt-3 text-lg font-semibold text-navy">
-                  Reports that don&apos;t agree
+                  Reports that don&apos;t agree, so the practice is hard to
+                  steer.
                 </h3>
-                <p className="mt-3 leading-relaxed text-ink">
-                  The reports don&apos;t agree, so the practice is hard to
-                  steer. Owning a few North Star numbers gives you a picture
-                  you can actually use.
+              </li>
+              <li>
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-ink">
+                  Practice health
                 </p>
+                <h3 className="mt-3 text-lg font-semibold text-navy">
+                  So many metrics. Which ones actually move your practice&apos;s
+                  health?
+                </h3>
               </li>
               <li>
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-ink">
@@ -215,8 +218,8 @@ export default function Home() {
                 One offering. Three platforms.
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-ink">
-                It has three parts, Vantage Pulse, Vantage Scale, and Vantage
-                Lead, built to work together.
+                It has three parts, VantagePulse, VantageScale, and
+                VantageLead, built to work together.
               </p>
             </div>
             <div className="mt-16 divide-y divide-navy/10 border-y border-navy/10">

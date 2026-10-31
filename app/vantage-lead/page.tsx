@@ -4,9 +4,9 @@ import { PlatformMark } from "@/components/logo";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Vantage Lead",
+  title: "VantageLead",
   description:
-    "Vantage Lead is the onboarding and leadership training video platform in VantagePoint OS. The first release covers Front Office Onboarding, Provider Onboarding, and Welcome to VantagePoint OS.",
+    "VantageLead is the onboarding and leadership training video platform in VantagePoint OS. The first release covers Front Office Onboarding, Provider Onboarding, and Welcome to VantagePoint OS.",
 });
 
 const paths = [
@@ -36,7 +36,7 @@ export default function VantageLeadPage() {
           Teach the way you lead.
         </h1>
         <p className="mt-6 text-lg leading-relaxed text-ink md:text-xl">
-          Vantage Lead is the onboarding and leadership training video platform
+          VantageLead is the onboarding and leadership training video platform
           inside VantagePoint OS. It gives a new person on your team a way to
           learn how the clinic actually works. Not a binder on a shelf. Films,
           in an order, for the roles that hold the day together.
@@ -74,11 +74,11 @@ export default function VantageLeadPage() {
           <div className="space-y-5 text-lg leading-relaxed text-ink">
             <p>
               Owners we know are excellent at the work and tired of being the
-              only copy of the culture. Vantage Lead is how that standard gets
+              only copy of the culture. VantageLead is how that standard gets
               out of your head and into the team, at the moment someone joins.
             </p>
             <p>
-              It sits with Vantage Pulse and Vantage Scale as one offering.
+              It sits with VantagePulse and VantageScale as one offering.
               Metrics, marketing, and leadership. The same practice, seen from
               three sides.
             </p>

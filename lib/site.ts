@@ -40,7 +40,7 @@ export const WAITLIST_THANKS_COPY =
 
 export const PRIMARY_NAV = [
   { href: "/platform", label: "Platform" },
-  { href: "/vantage-lead", label: "Vantage Lead" },
+  { href: "/vantage-lead", label: "VantageLead" },
   { href: "/our-story", label: "Our Story" },
 ] as const;
 
@@ -61,11 +61,7 @@ export const HOME_DESCRIPTION =
 /** Home hero. Swap any line here without touching the page. */
 export const HERO_EYEBROW = "Built for outpatient PT owners";
 
-export const HERO_QUESTIONS = [
-  "Numbers you can't quite trust?",
-  "Margins thinner than they should be?",
-  "Always patching up your team?",
-] as const;
+export const HERO_HOOK = "Busy schedule. Thin margins. Do you know why?";
 
 export const HERO_HEADLINE = "There's a better way to run a PT practice.";
 

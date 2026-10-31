@@ -32,7 +32,7 @@ export function SiteHeader() {
     <header className="on-navy sticky top-0 z-50 border-b border-gold/20 bg-night/95 text-mist backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3 md:px-6">
         <Link href="/" className="rounded-sm" aria-label="VantagePoint OS, home">
-          <Logo className="h-8 w-auto sm:h-9" />
+          <Logo className="h-9 w-auto lg:h-11" />
         </Link>
 
         <nav aria-label="Primary" className="hidden items-center gap-7 lg:flex">
@@ -41,7 +41,7 @@ export function SiteHeader() {
               key={item.href}
               href={item.href}
               aria-current={current(pathname, item.href) ? "page" : undefined}
-              className={`rounded-md px-2 py-1 text-sm font-medium hover:bg-navy ${
+              className={`inline-flex min-h-11 items-center rounded-md px-2 text-sm font-medium hover:bg-navy ${
                 current(pathname, item.href)
                   ? "text-white"
                   : "text-mist hover:text-white"
@@ -52,7 +52,7 @@ export function SiteHeader() {
           ))}
           <a
             href={CLIENT_LOGIN_URL}
-            className="rounded-md px-2 py-1 text-sm font-medium text-mist hover:bg-navy hover:text-white"
+            className="inline-flex min-h-11 items-center rounded-md px-2 text-sm font-medium text-mist hover:bg-navy hover:text-white"
           >
             Client Login
           </a>
