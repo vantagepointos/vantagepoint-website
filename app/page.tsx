@@ -29,7 +29,7 @@ const pillars = [
   {
     index: "03",
     title: "Leadership at the center",
-    body: "Teach the way you lead, so the whole team carries the culture. Grow your people, and your people grow the practice.",
+    body: "Great practices don't depend on one leader. Make leadership a core principle for your whole team, and the standard rises, even when you're not in the room.",
   },
 ];
 
