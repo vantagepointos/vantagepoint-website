@@ -4,7 +4,7 @@ export default function WaitlistLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex flex-1 flex-col bg-navy font-brand text-mist selection:bg-gold selection:text-navy">
+    <div className="flex flex-1 flex-col bg-night font-brand text-mist selection:bg-gold selection:text-navy">
       {children}
     </div>
   );

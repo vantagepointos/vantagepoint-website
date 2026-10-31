@@ -71,9 +71,13 @@ export default function Home() {
   return (
     <>
       <main id="main">
-        <section className="on-navy relative overflow-hidden bg-navy text-white">
+        <section className="on-navy relative overflow-hidden bg-deep text-white">
           <div
-            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(214,164,69,0.14),transparent_58%)]"
+            className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,#111729_0%,#0B0F1D_100%)]"
+            aria-hidden="true"
+          />
+          <div
+            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(214,164,69,0.16),transparent_52%)]"
             aria-hidden="true"
           />
           <div className="relative mx-auto max-w-6xl px-6 pb-20 pt-16 md:pb-28 md:pt-24">
@@ -96,7 +100,7 @@ export default function Home() {
                 <BookWalkthrough />
                 <Link
                   href="/platform"
-                  className="inline-flex items-center justify-center rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-white hover:border-white/60"
+                  className="inline-flex items-center justify-center rounded-full border border-gold/40 px-6 py-3 text-sm font-semibold text-white hover:bg-navy"
                 >
                   See the platform
                 </Link>

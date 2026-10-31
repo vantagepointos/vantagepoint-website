@@ -11,6 +11,8 @@
   --color-foreground: var(--foreground);
   --color-paper: #f4f3ef;
   --color-navy: #192b45;
+  --color-night: #111729;
+  --color-deep: #0b0f1d;
   --color-gold: #d6a445;
   --color-ink: #5e6670;
   --color-mist: #c5cbd4;

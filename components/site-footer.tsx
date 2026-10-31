@@ -12,7 +12,7 @@ const linkClass = "rounded-sm text-sm text-mist hover:text-white";
 
 export function SiteFooter() {
   return (
-    <footer className="on-navy border-t border-white/10 bg-navy text-mist">
+    <footer className="on-navy border-t border-gold/15 bg-deep text-mist">
       <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 md:grid-cols-[minmax(0,1.4fr)_1fr_1fr] md:px-6">
         <div>
           <Link href="/" className="inline-flex rounded-sm" aria-label="VantagePoint OS, home">
@@ -76,7 +76,7 @@ export function SiteFooter() {
           </ul>
         </div>
       </div>
-      <div className="border-t border-white/10">
+      <div className="border-t border-gold/15">
         <p className="mx-auto max-w-6xl px-5 py-6 text-xs text-mist md:px-6">
           &copy; {new Date().getFullYear()} VantagePoint OS
         </p>

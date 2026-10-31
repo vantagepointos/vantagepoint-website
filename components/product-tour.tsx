@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { OverviewPreview } from "@/components/product-preview";
 import { PRODUCT_VIDEO_POSTER, PRODUCT_VIDEO_URL } from "@/lib/site";
 
 function subscribeToReducedMotion(onChange: () => void) {
@@ -15,13 +16,11 @@ function reducedMotionSnapshot() {
 
 function Frame({ children }: { children: React.ReactNode }) {
   return (
-    <figure className="mx-auto w-full max-w-4xl">
-      <div className="rounded-[28px] bg-white p-2 shadow-[0_40px_80px_-48px_rgba(25,43,69,0.7)] ring-1 ring-white/20 sm:p-2.5">
-        <div className="relative aspect-video overflow-hidden rounded-[20px] bg-navy">
-          {children}
-        </div>
+    <div className="rounded-[24px] border border-gold/30 bg-deep p-1.5 shadow-[0_0_70px_-24px_rgba(214,164,69,0.55)] sm:p-2">
+      <div className="relative aspect-video overflow-hidden rounded-[18px] bg-night">
+        {children}
       </div>
-    </figure>
+    </div>
   );
 }
 
@@ -62,12 +61,19 @@ export function ProductTour() {
 
   if (!url) {
     return (
-      <Frame>
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 px-6 text-center">
-          <TourMark />
-          <p className="text-sm text-mist">Product tour coming soon</p>
-        </div>
-      </Frame>
+      <figure className="mx-auto w-full max-w-4xl">
+        <Frame>
+          <OverviewPreview />
+        </Frame>
+        <figcaption className="mt-4 text-center text-xs tracking-wide text-mist">
+          <span className="sr-only">
+            Illustrative preview of an executive overview and provider
+            scoreboard in VantagePoint OS. The figures are sample data, not a
+            clinic.
+          </span>
+          <span aria-hidden="true">Illustrative data.</span>
+        </figcaption>
+      </figure>
     );
   }
 
@@ -80,6 +86,7 @@ export function ProductTour() {
   const showPlay = reduceMotion && !started;
 
   return (
+    <figure className="mx-auto w-full max-w-4xl">
     <Frame>
       <video
         ref={videoRef}
@@ -94,7 +101,7 @@ export function ProductTour() {
         aria-label="VantagePoint OS product tour"
       />
       {showPlay ? (
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-navy">
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-night">
           <TourMark />
           <button
             type="button"
@@ -109,5 +116,6 @@ export function ProductTour() {
         </div>
       ) : null}
     </Frame>
+    </figure>
   );
 }

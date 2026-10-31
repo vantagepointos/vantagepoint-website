@@ -7,7 +7,7 @@ export function ClosingCta({
   supporting?: string;
 }) {
   return (
-    <section className="on-navy bg-navy text-white" aria-labelledby="closing-heading">
+    <section className="on-navy bg-night text-white" aria-labelledby="closing-heading">
       <div className="mx-auto max-w-4xl px-6 py-24 text-center md:py-36">
         <h2
           id="closing-heading"

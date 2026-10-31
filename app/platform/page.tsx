@@ -127,7 +127,7 @@ export default function PlatformPage() {
         </div>
       </section>
 
-      <section className="on-navy bg-navy text-white">
+      <section className="on-navy bg-night text-white">
         <div className="mx-auto max-w-3xl px-6 py-24 text-center md:py-28">
           <h2 className="text-3xl font-semibold tracking-tight md:text-5xl">
             Walk through it together.
