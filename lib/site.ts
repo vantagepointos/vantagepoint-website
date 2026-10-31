@@ -33,10 +33,10 @@ export const LEGACY_DEPOSIT_URL =
 export const LEGACY_WELCOME_PATH = "/legacy/welcome";
 
 export const WAITLIST_MEMBERSHIP_COPY =
-  "The first 10 clinics become Legacy members, clinics 11-20 become Founding members, and everyone after joins onboarding in order.";
+  "The first twenty clinics to join become our Legacy and Founding members, with terms reserved only for them.";
 
 export const WAITLIST_THANKS_COPY =
-  "You're on the list. We'll reach out personally as onboarding opens.";
+  "You're on the list. We look forward to learning about your practice and showing you what VantagePoint OS can do for it.";
 
 export const PRIMARY_NAV = [
   { href: "/platform", label: "Platform" },
@@ -55,19 +55,18 @@ export const PUBLIC_SITEMAP_PATHS = [
   "/terms-of-service",
 ] as const;
 
-export const HOME_DESCRIPTION =
-  "VantagePoint OS is the operating system for outpatient PT owners, built around your numbers, your marketing, and your team.";
+/** Third pillar named in the home hero and the default meta description. */
+export const HERO_PILLAR_THREE = "culture";
+
+export const HOME_DESCRIPTION = `VantagePoint OS is the operating system for outpatient PT owners, built around your metrics, your marketing, and your ${HERO_PILLAR_THREE}.`;
 
 /** Home hero. Swap any line here without touching the page. */
-export const HERO_EYEBROW = "Built for outpatient PT owners";
-
 export const HERO_HOOK =
   "Full schedule. Great clinicians. So why does it still feel this hard?";
 
 export const HERO_HEADLINE = "There's a better way to run a PT practice.";
 
-export const HERO_SUB =
-  "VantagePoint OS is the operating system for outpatient PT owners, built around the three things that make or break a practice: your numbers, your marketing, and your team.";
+export const HERO_SUB = `VantagePoint OS is the operating system for outpatient PT owners, built around the three things that make or break a practice: your metrics, your marketing, and your ${HERO_PILLAR_THREE}.`;
 
 export const STORY_TEASER_HEADING =
   "Built by PT owners who've sat in your chair.";

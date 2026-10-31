@@ -28,23 +28,24 @@ export default function PlatformPage() {
         </p>
       </header>
 
-      <section id="pulse" className="mx-auto grid max-w-6xl scroll-mt-24 items-center gap-12 px-6 py-16 md:grid-cols-2 md:py-24" aria-labelledby="pulse-heading">
+      <section id="pulse" className="mx-auto grid max-w-6xl scroll-mt-28 items-center gap-12 px-6 py-16 md:grid-cols-2 md:py-24" aria-labelledby="pulse-heading">
         <div>
           <PlatformMark platform="pulse" className="h-12 w-auto" />
           <h2 id="pulse-heading" className="mt-8 text-3xl font-semibold tracking-tight text-navy md:text-4xl">
             VantagePulse
           </h2>
-          <p className="mt-5 text-lg leading-relaxed text-ink">
-            Most owners we know aren&apos;t short on data. They&apos;re short on a
-            picture they trust. VantagePulse is where the North Star practice
-            metrics live, visible to the people who need them.
+          <p className="mt-3 text-xl font-medium leading-snug text-navy">
+            The definitive view of practice health.
+          </p>
+          <p className="mt-4 text-lg leading-relaxed text-ink">
+            Clear scoreboards for everyone who runs the day.
           </p>
           <ul className="mt-8 space-y-3 text-navy">
             {[
-              "A provider stat grid and pace",
-              "Front office measures, including arrivals",
-              "A view for the clinical director",
-              "A view for the owner",
+              "Provider stat grid and pace",
+              "Front office measures, including arrival rates",
+              "A specialized view for clinical directors",
+              "A specialized dashboard for the owner",
             ].map((item) => (
               <li key={item} className="flex gap-3">
                 <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-navy" aria-hidden="true" />
@@ -60,22 +61,25 @@ export default function PlatformPage() {
         <PlatformPanel platform="pulse" />
       </section>
 
-      <section id="scale" className="scroll-mt-24 border-t border-navy/10 bg-white" aria-labelledby="scale-heading">
+      <section id="scale" className="scroll-mt-28 border-t border-navy/10 bg-white" aria-labelledby="scale-heading">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-2 md:py-24">
           <div className="md:order-2">
             <PlatformMark platform="scale" className="h-12 w-auto" />
             <h2 id="scale-heading" className="mt-8 text-3xl font-semibold tracking-tight text-navy md:text-4xl">
               VantageScale
             </h2>
-            <p className="mt-5 text-lg leading-relaxed text-ink">
-              Marketing slips in a clinic for a simple reason. It&apos;s not on the
-              calendar. VantageScale is where you keep that cadence: what
-              you&apos;ll publish, who it&apos;s for, and whether it went out.
+            <p className="mt-3 text-xl font-medium leading-snug text-navy">
+              Accelerating growth. Amplifying impact.
+            </p>
+            <p className="mt-4 text-lg leading-relaxed text-ink">
+              A steady marketing cadence without the busywork. Plan a campaign,
+              review it, and schedule it in minutes.
             </p>
             <ul className="mt-8 space-y-3 text-navy">
               {[
-                "Social publishing, including Meta",
-                "Email for the people you want to stay close to",
+                "Campaign builder: choose how many posts and how many weeks, and a full campaign is drafted in about a minute, ready to review and schedule",
+                "Email copy drafted fast, so a month of emails is scheduled in minutes",
+                "Smart Funnels: describe the goal, generate, review, and launch",
                 "Digital and print newsletters",
               ].map((item) => (
                 <li key={item} className="flex gap-3">
@@ -95,17 +99,19 @@ export default function PlatformPage() {
         </div>
       </section>
 
-      <section id="lead" className="scroll-mt-24 border-t border-navy/10" aria-labelledby="lead-heading">
+      <section id="lead" className="scroll-mt-28 border-t border-navy/10" aria-labelledby="lead-heading">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-2 md:py-24">
           <div>
             <PlatformMark platform="lead" className="h-12 w-auto" />
             <h2 id="lead-heading" className="mt-8 text-3xl font-semibold tracking-tight text-navy md:text-4xl">
               VantageLead
             </h2>
-            <p className="mt-5 text-lg leading-relaxed text-ink">
-              VantageLead is the onboarding and leadership training platform.
-              Video lessons, in order, so a new hire learns how your clinic
-              actually works.
+            <p className="mt-3 text-xl font-medium leading-snug text-navy">
+              The roots of enduring leadership.
+            </p>
+            <p className="mt-4 text-lg leading-relaxed text-ink">
+              Onboarding and leadership training, on demand, so the standard of
+              your practice can always be referred to and taught.
             </p>
             <ul className="mt-8 space-y-3 text-navy">
               {[

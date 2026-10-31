@@ -23,9 +23,9 @@ export function HomeWaitlistSection() {
           {WAITLIST_MEMBERSHIP_COPY}
         </p>
         <p className="mt-4 text-lg leading-relaxed text-ink">
-          We&apos;re opening VantagePoint OS owner to owner. Leave your name
-          and we&apos;ll reach out personally as onboarding opens. If you&apos;d
-          like to see it with someone first, book a walkthrough.
+          Add your clinic, and we&apos;ll reach out to learn about your
+          practice and show you what VantagePoint OS can do for it. Want to
+          see it first? Book a walkthrough.
         </p>
         <div className="mt-8 flex flex-col items-start gap-4">
           <BookWalkthrough tone="navy" />

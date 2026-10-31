@@ -6,7 +6,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "VantageLead",
   description:
-    "VantageLead is the onboarding and leadership training video platform in VantagePoint OS. The first release covers Front Office Onboarding, Provider Onboarding, and Welcome to VantagePoint OS.",
+    "Onboarding and leadership training, on demand, so the standard of your practice can always be referred to and taught. The first release covers Front Office Onboarding, Provider Onboarding, and Welcome to VantagePoint OS.",
 });
 
 const paths = [
@@ -35,11 +35,12 @@ export default function VantageLeadPage() {
         <h1 className="mt-8 text-4xl font-semibold tracking-[-0.035em] text-navy text-balance md:text-6xl md:leading-[1.05]">
           Teach the way you lead.
         </h1>
-        <p className="mt-6 text-lg leading-relaxed text-ink md:text-xl">
-          VantageLead is the onboarding and leadership training video platform
-          inside VantagePoint OS. It gives a new person on your team a way to
-          learn how the clinic actually works. Not a binder on a shelf. Films,
-          in an order, for the roles that hold the day together.
+        <p className="mt-5 text-xl font-medium leading-snug text-navy md:text-2xl">
+          The roots of enduring leadership.
+        </p>
+        <p className="mt-5 text-lg leading-relaxed text-ink md:text-xl">
+          Onboarding and leadership training, on demand, so the standard of
+          your practice can always be referred to and taught.
         </p>
       </header>
 
@@ -89,7 +90,7 @@ export default function VantageLeadPage() {
       <section className="on-navy bg-night text-white">
         <div className="mx-auto max-w-3xl px-6 py-24 text-center">
           <h2 className="text-3xl font-semibold tracking-tight md:text-5xl">
-            See the films in a walkthrough.
+            See the training in a walkthrough.
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-mist">
             We&apos;ll show you the three paths and how a new hire would move

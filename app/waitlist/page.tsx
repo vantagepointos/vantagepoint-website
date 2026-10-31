@@ -6,8 +6,7 @@ import { BOOK_PATH, WAITLIST_MEMBERSHIP_COPY } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
   title: "Join the waitlist",
-  description:
-    "Join the VantagePoint OS waitlist. The first 10 clinics become Legacy members, clinics 11-20 become Founding members, and everyone after joins onboarding in order.",
+  description: `Join the VantagePoint OS waitlist. ${WAITLIST_MEMBERSHIP_COPY}`,
 });
 
 export default function WaitlistPage() {
