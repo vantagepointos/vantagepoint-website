@@ -19,12 +19,12 @@ const pillars = [
   {
     index: "01",
     title: "North Star metrics",
-    body: "Own the few numbers that tell you whether the practice is healthy. Not a bigger pile of reports. A picture you and your team can share.",
+    body: "Own the few numbers that tell you whether the practice is healthy. Not a bigger pile of reports. A true picture you and your team can share.",
   },
   {
     index: "02",
     title: "A marketing cadence",
-    body: "Show up for your community on a rhythm. The work is planned and sent, instead of reinvented when the front office gets quiet.",
+    body: "Effective marketing doesn't have to take up your whole week. Consistent, efficient outreach keeps your name in front of patients and referral sources, in busy months and slow ones.",
   },
   {
     index: "03",
