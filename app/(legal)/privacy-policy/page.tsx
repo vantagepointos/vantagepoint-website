@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { FileText, Database, Smartphone, Lock, ShieldCheck } from "lucide-react";
+import { BarChart3, FileText, Database, Lock, ShieldCheck, Smartphone } from "lucide-react";
 import { JsonLd } from "@/components/json-ld";
 import { PAGE_SEO } from "@/lib/page-seo";
 import { pageMetadata } from "@/lib/seo";
@@ -33,12 +33,7 @@ export default function PrivacyPolicy() {
             Privacy Policy
           </h1>
           <p className="text-ink">
-            Last Updated:{" "}
-            {new Date().toLocaleDateString("en-US", {
-              month: "long",
-              day: "numeric",
-              year: "numeric",
-            })}
+            Last Updated: October 31, 2026
           </p>
         </div>
 
@@ -79,10 +74,26 @@ export default function PrivacyPolicy() {
 
           <section className={card}>
             <h2 className={heading}>
-              <Smartphone className="h-6 w-6 text-navy" aria-hidden="true" /> 3. SMS and Communication Policy
+              <Smartphone className="h-6 w-6 text-navy" aria-hidden="true" /> 3. Text messages
             </h2>
             <p>
-              No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. All other categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.
+              If you text our business line, we use your number and messages only to respond to you. We don&apos;t sell mobile numbers, and we don&apos;t share mobile numbers or text-message consent with third parties or affiliates for their marketing.
+            </p>
+          </section>
+
+          <section className={card}>
+            <h2 className={heading}>
+              <BarChart3 className="h-6 w-6 text-navy" aria-hidden="true" /> 4. Analytics
+            </h2>
+            <p className="mb-4">
+              We use Vercel Web Analytics to understand site traffic. It doesn&apos;t use cookies and collects general usage data such as pages visited, referring site, device type and country. With your consent, we also use Microsoft Clarity, which uses cookies and similar technology to record how visitors use our site (clicks, scrolling and pages viewed) as heatmaps and session recordings. We set Clarity to mask what you type into forms. Microsoft processes this data under the{" "}
+              <a
+                href="https://privacy.microsoft.com/privacystatement"
+                className="font-semibold text-navy underline decoration-navy/30 underline-offset-4"
+              >
+                Microsoft Privacy Statement
+              </a>
+              . You can decline or withdraw consent at any time through Cookie settings. Our website doesn&apos;t collect patient or health information.
             </p>
           </section>
 
@@ -91,7 +102,7 @@ export default function PrivacyPolicy() {
               Required Meta Notice
             </div>
             <h2 className={heading}>
-              <Lock className="h-6 w-6 text-navy" aria-hidden="true" /> 4. Meta (Facebook/Instagram) Data Deletion
+              <Lock className="h-6 w-6 text-navy" aria-hidden="true" /> 5. Meta (Facebook/Instagram) Data Deletion
             </h2>
             <p className="mb-4">
               VantageScale uses Facebook Login and Meta Graph APIs to provide social media publishing features. If you want to delete your activity or disconnect your Facebook/Instagram account from VantageScale, please follow these exact steps:

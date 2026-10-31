@@ -19,12 +19,9 @@ export const metadata: Metadata = pageMetadata({
 });
 
 const terms = [
-  "$699 a month, per clinic, for life.",
+  "$699 a month, per clinic, for as long as your subscription is active.",
   "Half the setup fee.",
-  "A $500 deposit reserves your seat. The deposit is refundable.",
   "Billing starts at go-live.",
-  "If VantagePoint OS ends the letter of intent, only the $500 deposit is refunded.",
-  "Setup fees are non-refundable.",
 ];
 
 export default function LegacyPage() {
@@ -57,8 +54,11 @@ export default function LegacyPage() {
             build VantagePoint OS with us.
           </p>
           <p>
-            Legacy is a lifetime place in the offering. It&apos;s a quiet
-            agreement. There&apos;s no promotion attached to it.
+            Legacy pricing is locked at $699 per clinic per month for as long
+            as your practice keeps an active subscription in good standing,
+            including every clinic you add. It&apos;s our thank-you to the
+            practices that help build VantagePoint OS from the start. Legacy
+            pricing doesn&apos;t transfer if the practice is sold.
           </p>
         </div>
 
@@ -74,9 +74,17 @@ export default function LegacyPage() {
           ))}
         </ul>
         <p className="mt-8 leading-relaxed text-ink">
+          Your $500 deposit reserves your Legacy spot and is credited toward
+          your setup fee. It&apos;s fully refundable if you cancel before
+          onboarding kickoff. Setup fees are otherwise non-refundable,
+          including if the go-live date moves, but if VantagePoint OS
+          doesn&apos;t launch, we refund all setup fees. Full terms are in your
+          Letter of Intent.
+        </p>
+        <p className="mt-5 leading-relaxed text-ink">
           The deposit doesn&apos;t start your billing. It holds the seat while we
           prepare the letter of intent and the steps toward go-live. Once
-          it&apos;s received, we write you personally.
+          it&apos;s received, we&apos;ll be in touch to plan next steps.
         </p>
 
         <p className="mt-10">
