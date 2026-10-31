@@ -1,13 +1,13 @@
-/** Search titles are the unique part. The layout template adds " | VantagePoint OS". */
+/** Search titles. " | VantagePoint OS" is added only when the full title stays within 60 characters. */
 
 export const PAGE_SEO = {
   home: {
-    title: "PT Practice Management OS",
+    title: "PT Practice Growth Platform: Metrics, Marketing & Leadership",
     description:
       "Operating system for outpatient physical therapy owners. Clear practice metrics, a steady marketing cadence, and leadership training for the team.",
   },
   platform: {
-    title: "PT Practice Management Software",
+    title: "PT Practice Growth Platform: Three Platforms, One System",
     description:
       "VantagePulse, VantageScale, and VantageLead for outpatient PT owners. Practice health, a marketing cadence, and leadership training in one system.",
   },
@@ -39,7 +39,7 @@ export const PAGE_SEO = {
   privacy: {
     title: "Privacy Policy",
     description:
-      "How VantagePoint OS collects, uses, and safeguards information shared with the practice management, marketing, and training platform.",
+      "How VantagePoint OS collects, uses, and safeguards information shared with the metrics, marketing, and leadership training platform.",
   },
   terms: {
     title: "Terms of Service",

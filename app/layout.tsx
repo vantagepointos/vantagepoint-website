@@ -5,6 +5,7 @@ import { SiteAnalytics } from "@/components/site-analytics";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { PAGE_SEO } from "@/lib/page-seo";
+import { documentTitle } from "@/lib/seo";
 import { organizationJsonLd } from "@/lib/structured-data";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 import "./globals.css";
@@ -16,13 +17,14 @@ const montserrat = Montserrat({
   weight: ["400", "500", "600", "700"],
 });
 
+const homeTitle = documentTitle(PAGE_SEO.home.title);
 const homeImage = `/og?title=${encodeURIComponent(PAGE_SEO.home.title)}`;
 const searchConsole = process.env.NEXT_PUBLIC_GSC_VERIFICATION?.trim();
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${PAGE_SEO.home.title} | ${SITE_NAME}`,
+    default: homeTitle,
     template: `%s | ${SITE_NAME}`,
   },
   description: PAGE_SEO.home.description,
@@ -32,10 +34,10 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: SITE_NAME,
-    title: `${PAGE_SEO.home.title} | ${SITE_NAME}`,
+    title: homeTitle,
     description: PAGE_SEO.home.description,
     url: "/",
-    images: [{ url: homeImage, width: 1200, height: 630, alt: `${PAGE_SEO.home.title} | ${SITE_NAME}` }],
+    images: [{ url: homeImage, width: 1200, height: 630, alt: homeTitle }],
   },
   alternates: {
     canonical: "/",
@@ -43,7 +45,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   twitter: {
     card: "summary_large_image",
-    title: `${PAGE_SEO.home.title} | ${SITE_NAME}`,
+    title: homeTitle,
     description: PAGE_SEO.home.description,
     images: [homeImage],
   },
