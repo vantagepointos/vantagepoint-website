@@ -60,7 +60,14 @@ export default function PrivacyPolicy() {
               </li>
             </ul>
             <p>
-              If you connect your Meta (Facebook and Instagram) accounts, VantageScale retrieves limited performance metrics, such as reach, impressions and clicks for your posts, and impressions, clicks, spend and leads for your ads, and displays them in your VantageScale dashboard. We access this data only with your permission and use it only to provide VantageScale to you. You can remove VantageScale&apos;s access at any time in your Meta account settings.
+              When you connect a Facebook Page, Instagram business account or Meta ad account, we store an access token and account identifiers, along with performance metrics for your posts and ads (such as reach, impressions, clicks, video views, spend and leads) and any past posts you choose to import. We use this data only to provide VantageScale to you. Disconnecting an account in VantagePoint&nbsp;OS doesn&apos;t currently end our access or delete data we&apos;ve already stored. To end our access and have your Meta data deleted, email{" "}
+              <a
+                href="mailto:support@vantagepointos.com"
+                className="font-semibold text-navy underline decoration-navy/30 underline-offset-4"
+              >
+                support@vantagepointos.com
+              </a>
+              . We&apos;ll delete it within 30 days and confirm by email. Removing our app in your Facebook settings ends our access at Meta, but it doesn&apos;t by itself delete data we&apos;ve already stored.
             </p>
             <div className="mt-6 rounded-2xl bg-paper px-4 py-4">
               <p className="text-center font-semibold text-navy">
@@ -102,7 +109,7 @@ export default function PrivacyPolicy() {
               <Lock className="h-6 w-6 text-navy" aria-hidden="true" /> 5. Meta (Facebook/Instagram) Data Deletion
             </h2>
             <p className="mb-4">
-              If you connected a Meta account, you can remove VantageScale&apos;s access in your Facebook settings. If you want to delete your activity or disconnect your Facebook/Instagram account from VantageScale, please follow these exact steps:
+              If you connected a Meta account, you can remove VantageScale&apos;s access in your Facebook settings:
             </p>
             <ol className="mb-6 list-decimal list-inside space-y-3 rounded-2xl bg-paper p-6">
               <li>
@@ -116,9 +123,6 @@ export default function PrivacyPolicy() {
               </li>
               <li>
                 Scroll down and click <strong className="text-navy">Remove</strong>.
-              </li>
-              <li>
-                In the confirmation box, check the box to delete posts/videos published by the app, and click <strong className="text-navy">Remove</strong>.
               </li>
             </ol>
             <p className="text-sm">
