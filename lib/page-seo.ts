@@ -19,7 +19,7 @@ export const PAGE_SEO = {
   story: {
     title: "Our Physical Therapy Story",
     description:
-      "In 2014, we opened our first physical therapy clinic. The lessons from building three clinics are what VantagePoint OS is built on.",
+      "In 2014, we opened our own physical therapy practice. The lessons from building three clinics are what VantagePoint OS is built on.",
   },
   book: {
     title: "Book a PT Practice Walkthrough",
