@@ -1,4 +1,4 @@
-import { RATING_VALUES, US_STATE_VALUES } from "./waitlist-options";
+import { US_STATE_VALUES } from "./waitlist-options";
 
 export type WaitlistFieldValues = {
   firstName: string;
@@ -8,7 +8,6 @@ export type WaitlistFieldValues = {
   phone: string;
   clinics: string;
   state: string;
-  rating: string;
 };
 
 export type WaitlistFieldName = keyof WaitlistFieldValues;
@@ -26,6 +25,19 @@ export function isAcceptableEmail(email: string): boolean {
 export function isAcceptablePhone(phone: string): boolean {
   const digits = phone.replace(/\D/g, "");
   return digits.length >= 10 && digits.length <= 15;
+}
+
+/** Formats a phone field as the visitor types, like (316) 742-8282. */
+export function formatPhoneInput(raw: string): string {
+  const digits = raw.replace(/\D/g, "").slice(0, 15);
+  const core = digits.slice(0, 10);
+  const extra = digits.slice(10);
+  let formatted = "";
+  if (core.length === 0) formatted = "";
+  else if (core.length < 4) formatted = `(${core}`;
+  else if (core.length < 7) formatted = `(${core.slice(0, 3)}) ${core.slice(3)}`;
+  else formatted = `(${core.slice(0, 3)}) ${core.slice(3, 6)}-${core.slice(6)}`;
+  return extra ? `${formatted} ${extra}` : formatted;
 }
 
 export function validateWaitlist(values: WaitlistFieldValues): WaitlistErrors {
@@ -64,10 +76,6 @@ export function validateWaitlist(values: WaitlistFieldValues): WaitlistErrors {
     errors.state = "Please choose a state.";
   }
 
-  if (values.rating && !RATING_VALUES.has(values.rating)) {
-    errors.rating = "Please choose which you're interested in.";
-  }
-
   return errors;
 }
 
@@ -78,5 +86,4 @@ export const FIELD_FOCUS_ORDER: WaitlistFieldName[] = [
   "phone",
   "clinics",
   "state",
-  "rating",
 ];

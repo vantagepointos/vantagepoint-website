@@ -1,19 +1,31 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { PhoneLink } from "@/components/phone-link";
 import { WaitlistForm } from "@/components/waitlist-form";
-import { WAITLIST_MEMBERSHIP_COPY } from "@/lib/site";
+import { JsonLd } from "@/components/json-ld";
+import { PAGE_SEO } from "@/lib/page-seo";
+import { pageMetadata } from "@/lib/seo";
+import { breadcrumbJsonLd } from "@/lib/structured-data";
+import { BOOK_PATH, WAITLIST_MEMBERSHIP_COPY } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Join the waitlist | VantagePoint OS",
-  description:
-    "Join the VantagePoint OS waitlist. The first 10 clinics become Legacy members, clinics 11-20 become Founding members, and everyone after joins onboarding in order.",
-};
+export const metadata: Metadata = pageMetadata({
+  title: PAGE_SEO.waitlist.title,
+  path: "/waitlist",
+  description: PAGE_SEO.waitlist.description,
+});
 
 export default function WaitlistPage() {
   return (
-    <main className="px-5 py-12 md:px-6 md:py-16">
+    <main id="main" className="on-navy px-5 py-12 md:px-6 md:py-16">
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Waitlist", path: "/waitlist" },
+        ])}
+      />
       <div className="mx-auto max-w-xl">
         <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold">
-          VantagePoint OS
+          VantagePoint&nbsp;OS
         </p>
         <h1 className="mt-3 text-3xl font-semibold tracking-tight text-white md:text-4xl">
           Join the waitlist
@@ -23,9 +35,20 @@ export default function WaitlistPage() {
         </p>
         <p className="mt-4 text-base leading-relaxed">
           Tell us a little about your clinics. We read every note ourselves and
-          write back personally as a seat opens. A walkthrough is still the
-          best way to see whether VantagePoint OS is the right fit.
+          write back personally as onboarding opens. A walkthrough is still the
+          best way to see whether VantagePoint&nbsp;OS is the right fit.
         </p>
+        <p className="mt-4">
+          <Link
+            href={BOOK_PATH}
+            className="rounded-sm text-sm font-medium text-white underline decoration-white/30 underline-offset-4 hover:decoration-white"
+          >
+            Book a walkthrough
+          </Link>
+        </p>
+        <div className="mt-4">
+          <PhoneLink onNavy leadIn="Or call" />
+        </div>
         <div className="mt-8">
           <WaitlistForm />
         </div>
