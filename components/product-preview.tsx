@@ -17,154 +17,6 @@ const BORDER: Record<Tone, string> = {
   below: "border-[#FB7185]/45",
 };
 
-const KPIS: {
-  label: string;
-  value: string;
-  goal: string;
-  tone: Tone;
-  icon: "pulse" | "calendar" | "cancel" | "heart" | "evals";
-}[] = [
-  {
-    label: "Units/Visit",
-    value: "3.2",
-    goal: "Goal ≥ 3.5",
-    tone: "close",
-    icon: "pulse",
-  },
-  {
-    label: "Schedule utilization",
-    value: "84%",
-    goal: "Goal ≥ 80%",
-    tone: "met",
-    icon: "calendar",
-  },
-  {
-    label: "Cancel rate",
-    value: "12%",
-    goal: "Goal ≤ 8%",
-    tone: "below",
-    icon: "cancel",
-  },
-  {
-    label: "NPS",
-    value: "76",
-    goal: "Goal ≥ 70",
-    tone: "met",
-    icon: "heart",
-  },
-  {
-    label: "Monthly evals",
-    value: "28",
-    goal: "Goal ≥ 40",
-    tone: "below",
-    icon: "evals",
-  },
-];
-
-const ROWS: {
-  rank: number;
-  name: string;
-  units: string;
-  unitsTone: Tone;
-  cancel: string;
-  cancelTone: Tone;
-  nps: string;
-  npsTone: Tone;
-}[] = [
-  {
-    rank: 1,
-    name: "Provider A",
-    units: "4.0",
-    unitsTone: "met",
-    cancel: "5%",
-    cancelTone: "met",
-    nps: "84",
-    npsTone: "met",
-  },
-  {
-    rank: 2,
-    name: "Provider D",
-    units: "3.9",
-    unitsTone: "met",
-    cancel: "7%",
-    cancelTone: "met",
-    nps: "71",
-    npsTone: "met",
-  },
-  {
-    rank: 3,
-    name: "Provider B",
-    units: "3.3",
-    unitsTone: "close",
-    cancel: "9%",
-    cancelTone: "close",
-    nps: "66",
-    npsTone: "close",
-  },
-  {
-    rank: 4,
-    name: "Provider C",
-    units: "2.8",
-    unitsTone: "below",
-    cancel: "13%",
-    cancelTone: "below",
-    nps: "52",
-    npsTone: "below",
-  },
-];
-
-function MetricIcon({ name }: { name: (typeof KPIS)[number]["icon"] }) {
-  const common = "h-3.5 w-3.5 shrink-0";
-  if (name === "pulse") {
-    return (
-      <svg className={common} viewBox="0 0 16 16" aria-hidden="true">
-        <path
-          d="M1 8h3l1.5-4 3 8 1.5-4H15"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.4"
-          strokeLinejoin="round"
-        />
-      </svg>
-    );
-  }
-  if (name === "calendar") {
-    return (
-      <svg className={common} viewBox="0 0 16 16" aria-hidden="true">
-        <rect x="2" y="3" width="12" height="11" rx="1.5" fill="none" stroke="currentColor" strokeWidth="1.4" />
-        <path d="M2 6.5h12M5 2v2.5M11 2v2.5" fill="none" stroke="currentColor" strokeWidth="1.4" />
-      </svg>
-    );
-  }
-  if (name === "cancel") {
-    return (
-      <svg className={common} viewBox="0 0 16 16" aria-hidden="true">
-        <circle cx="8" cy="8" r="5.5" fill="none" stroke="currentColor" strokeWidth="1.4" />
-        <path d="M5.5 5.5l5 5" stroke="currentColor" strokeWidth="1.4" />
-      </svg>
-    );
-  }
-  if (name === "heart") {
-    return (
-      <svg className={common} viewBox="0 0 16 16" aria-hidden="true">
-        <path
-          d="M8 13s-4.5-2.8-4.5-6A2.5 2.5 0 0 1 8 5.2 2.5 2.5 0 0 1 12.5 7C12.5 10.2 8 13 8 13z"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.4"
-        />
-      </svg>
-    );
-  }
-  return (
-    <svg className={common} viewBox="0 0 16 16" aria-hidden="true">
-      <circle cx="6" cy="6" r="2" fill="none" stroke="currentColor" strokeWidth="1.4" />
-      <circle cx="11" cy="7" r="1.6" fill="none" stroke="currentColor" strokeWidth="1.4" />
-      <path d="M2.5 13c.4-2 1.8-3 3.5-3s3.1 1 3.5 3M10 10.2c.8-.2 1.7 0 2.4.6.6.6.9 1.4.9 2.2" fill="none" stroke="currentColor" strokeWidth="1.4" />
-    </svg>
-  );
-}
-
 function Chevron({ direction }: { direction: "left" | "right" }) {
   return (
     <svg className="h-3 w-3" viewBox="0 0 12 12" aria-hidden="true">
@@ -180,11 +32,16 @@ function Chevron({ direction }: { direction: "left" | "right" }) {
 
 export function OverviewPreview() {
   return (
-    <div aria-hidden="true" className="absolute inset-0 flex flex-col gap-2 p-2.5 sm:gap-3 sm:p-4">
-      <div className="flex shrink-0 items-center justify-between gap-2">
-        <p className="text-sm font-bold tracking-tight text-white sm:text-xl">
-          Executive Overview
-        </p>
+    <div aria-hidden="true" className="absolute inset-0 flex flex-col gap-2 p-2.5 sm:gap-2.5 sm:p-4">
+      <div className="flex shrink-0 items-start justify-between gap-2">
+        <div>
+          <p className="text-sm font-bold tracking-tight text-white sm:text-xl">
+            Executive Overview
+          </p>
+          <p className="text-[10px] font-medium text-mist sm:text-xs">
+            Your Company&apos;s VantagePoint
+          </p>
+        </div>
         <div className="inline-flex items-center gap-1 rounded-full border border-white/15 bg-deep px-1.5 py-1 text-[10px] text-mist sm:gap-1.5 sm:px-2.5 sm:text-xs">
           <Chevron direction="left" />
           <svg className="h-3 w-3" viewBox="0 0 16 16" aria-hidden="true">
@@ -196,72 +53,59 @@ export function OverviewPreview() {
         </div>
       </div>
 
-      <div className="grid min-h-0 flex-1 grid-cols-2 gap-1.5 sm:grid-cols-5 sm:gap-2">
-        {KPIS.map((kpi, index) => (
-          <div
-            key={kpi.label}
-            className={`flex h-full flex-col justify-between rounded-xl border bg-deep px-2 py-2 sm:px-3 sm:py-3 ${BORDER[kpi.tone]} ${
-              index > 1 ? "hidden sm:flex" : ""
-            }`}
-          >
-            <div className="flex items-center gap-1.5 text-mist">
-              <MetricIcon name={kpi.icon} />
-              <span className="text-[9px] font-semibold uppercase leading-tight tracking-[0.12em] sm:text-[10px]">
-                {kpi.label}
-              </span>
-            </div>
-            <p className={`text-2xl font-bold leading-none tracking-tight sm:text-3xl ${TONE[kpi.tone]}`}>
-              {kpi.value}
-            </p>
-            <p className="text-[9px] text-mist sm:text-[11px]">{kpi.goal}</p>
+      <div className="grid min-h-0 flex-1 grid-cols-2 gap-1.5 sm:grid-cols-4 sm:gap-2">
+        <div className={`flex flex-col justify-between rounded-xl border bg-deep px-2 py-2 sm:px-3 ${BORDER.met}`}>
+          <div className="flex items-start justify-between gap-1">
+            <span className="text-[9px] font-semibold uppercase leading-tight tracking-[0.12em] text-mist sm:text-[10px]">
+              Profit Margin
+            </span>
+            <span className="shrink-0 text-[8px] font-semibold text-gold sm:text-[10px]">Target &gt; 20%</span>
           </div>
-        ))}
+          <p className={`text-xl font-bold leading-none sm:text-3xl ${TONE.met}`}>22.4% YTD</p>
+          <p className="text-[9px] text-mist sm:text-[11px]">This quarter 21.1% · This month 19.4%</p>
+        </div>
+        <div className={`flex flex-col justify-between rounded-xl border bg-deep px-2 py-2 sm:px-3 ${BORDER.met}`}>
+          <div className="flex items-start justify-between gap-1">
+            <span className="text-[9px] font-semibold uppercase leading-tight tracking-[0.12em] text-mist sm:text-[10px]">
+              Revenue Multiple
+            </span>
+            <span className="shrink-0 text-[8px] font-semibold text-gold sm:text-[10px]">Target &gt; 3.0x</span>
+          </div>
+          <p className={`text-xl font-bold leading-none sm:text-3xl ${TONE.met}`}>3.2x</p>
+          <p className="text-[9px] text-mist sm:text-[11px]">Illustrative</p>
+        </div>
+        <div className={`hidden flex-col justify-between rounded-xl border bg-deep px-2 py-2 sm:flex sm:px-3 ${BORDER.close}`}>
+          <div className="flex items-start justify-between gap-1">
+            <span className="text-[9px] font-semibold uppercase leading-tight tracking-[0.12em] text-mist sm:text-[10px]">
+              Monthly Eval Target
+            </span>
+            <span className="shrink-0 text-[8px] font-semibold text-gold sm:text-[10px]">To hit margin</span>
+          </div>
+          <p className={`text-xl font-bold leading-none sm:text-3xl ${TONE.close}`}>150 evals</p>
+          <p className="text-[9px] leading-tight text-mist sm:text-[11px]">
+            This month 96 · YTD 1,104. Evals needed to hit the profit margin target.
+          </p>
+        </div>
+        <div className={`hidden flex-col justify-between rounded-xl border bg-deep px-2 py-2 sm:flex sm:px-3 ${BORDER.met}`}>
+          <div className="flex items-start justify-between gap-1">
+            <span className="text-[9px] font-semibold uppercase leading-tight tracking-[0.12em] text-mist sm:text-[10px]">
+              Schedule Utilization
+            </span>
+            <span className="shrink-0 text-[8px] font-semibold text-gold sm:text-[10px]">Target &gt; 85%</span>
+          </div>
+          <p className={`text-xl font-bold leading-none sm:text-3xl ${TONE.met}`}>87%</p>
+          <p className="text-[9px] text-mist sm:text-[11px]">Illustrative</p>
+        </div>
       </div>
 
-      <div className="hidden shrink-0 items-center gap-3 rounded-lg border border-[#FB7185]/35 bg-deep px-3 py-2 sm:flex">
-        <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[#FB7185]">
-          Pending stat entry (2)
+      <div className="flex shrink-0 flex-wrap items-center gap-x-3 gap-y-1 rounded-xl border border-[#FB7185]/40 bg-deep px-2.5 py-2 sm:px-3">
+        <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-mist">Visit Pace</span>
+        <span className="text-xs font-semibold text-white sm:text-sm">Day 14 of 22</span>
+        <span className="text-xs text-white sm:text-sm">Evals 96 / 150</span>
+        <span className="rounded-full bg-[#FB7185]/15 px-2 py-0.5 text-[10px] font-semibold text-[#FB7185]">
+          Behind 6
         </span>
-        <span className="text-xs text-mist">Provider B · 1 of 4 days</span>
-        <span className="text-xs text-mist">Provider D · 2 of 5 days</span>
-      </div>
-
-      <div className="flex min-h-0 flex-[1.15] flex-col overflow-hidden rounded-xl border border-white/10 bg-deep">
-        <div className="grid shrink-0 grid-cols-[2.75rem_1fr_4.5rem] gap-2 px-2 py-1.5 text-[9px] font-semibold uppercase tracking-[0.12em] text-mist sm:grid-cols-[3.25rem_1.4fr_1fr_1fr_1fr] sm:px-3 sm:text-[10px]">
-          <span>Rank</span>
-          <span>Provider</span>
-          <span>Units/Visit</span>
-          <span className="hidden sm:block">Cancel rate</span>
-          <span className="hidden sm:block">NPS</span>
-        </div>
-        <div className="grid min-h-0 flex-1 grid-rows-3 sm:grid-rows-4">
-          {ROWS.map((row) => (
-            <div
-              key={row.name}
-              className={`grid grid-cols-[2.75rem_1fr_4.5rem] items-center gap-2 border-t border-white/10 px-2 text-[11px] sm:grid-cols-[3.25rem_1.4fr_1fr_1fr_1fr] sm:px-3 sm:text-sm ${
-                row.rank > 3 ? "hidden sm:grid" : ""
-              }`}
-            >
-              <span>
-                {row.rank === 1 ? (
-                  <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-gold text-[10px] font-bold text-navy">
-                    1
-                  </span>
-                ) : (
-                  <span className="pl-1.5 text-mist">{row.rank}</span>
-                )}
-              </span>
-              <span className="font-medium text-white">{row.name}</span>
-              <span className={`font-semibold ${TONE[row.unitsTone]}`}>{row.units}</span>
-              <span className={`hidden font-semibold sm:block ${TONE[row.cancelTone]}`}>
-                {row.cancel}
-              </span>
-              <span className={`hidden font-semibold sm:block ${TONE[row.npsTone]}`}>
-                {row.nps}
-              </span>
-            </div>
-          ))}
-        </div>
+        <span className="text-[10px] text-mist sm:text-xs">Need 7/day · 8 days left</span>
       </div>
     </div>
   );
@@ -299,30 +143,46 @@ function VignetteRows({
   );
 }
 
+const MY_PERFORMANCE: { label: string; value: string; goal: string; tone: Tone }[] = [
+  { label: "Rev Multiple", value: "3.2x", goal: "Goal: >= 3.0", tone: "met" },
+  { label: "Efficiency", value: "91%", goal: "Goal: >= 85%", tone: "met" },
+  { label: "Units/Visit", value: "3.2", goal: "Goal: >= 3.5", tone: "below" },
+  { label: "Cancel Rate", value: "6%", goal: "Goal: >= 8%", tone: "met" },
+  { label: "NPS Score", value: "74", goal: "Goal: >= 70", tone: "met" },
+];
+
 export function PulseVignette() {
   return (
     <div aria-hidden="true" className="flex flex-col gap-3">
-      <Label>Clinic averages</Label>
-      <div className="grid grid-cols-3 gap-2">
-        {KPIS.slice(0, 3).map((kpi) => (
-          <div key={kpi.label} className={`rounded-xl border bg-deep px-2.5 py-3 shadow-[0_0_28px_-16px_rgba(214,164,69,0.9)] ${BORDER[kpi.tone]}`}>
+      <Label>My Performance</Label>
+      <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+        {MY_PERFORMANCE.map((card) => (
+          <div key={card.label} className={`rounded-xl border bg-deep px-2.5 py-3 shadow-[0_0_28px_-16px_rgba(214,164,69,0.9)] ${BORDER[card.tone]}`}>
             <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-mist">
-              {kpi.label}
+              {card.label}
             </p>
-            <p className={`mt-1 text-2xl font-bold tracking-tight ${TONE[kpi.tone]}`}>
-              {kpi.value}
+            <p className={`mt-1 text-2xl font-bold tracking-tight ${TONE[card.tone]}`}>
+              {card.value}
             </p>
+            <p className="mt-1 text-[10px] text-mist">{card.goal}</p>
           </div>
         ))}
       </div>
-      <ul className={`${quietCard} divide-y divide-white/10`}>
-        {ROWS.slice(0, 3).map((row) => (
-          <li key={row.name} className="flex items-center justify-between px-3 py-2 text-sm">
-            <span className="text-white">{row.name}</span>
-            <span className={`font-semibold ${TONE[row.unitsTone]}`}>{row.units}</span>
-          </li>
-        ))}
-      </ul>
+      <div className={`${quietCard} px-3 py-3`}>
+        <div className="flex items-center justify-between gap-3">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-mist">
+            Week-to-Date Progress
+          </p>
+          <p className="text-xs text-mist">Goal: 80 WCUs</p>
+        </div>
+        <div className="mt-2 h-2 overflow-hidden rounded-full bg-white/10">
+          <div className="h-full w-[72%] rounded-full bg-gold" />
+        </div>
+        <div className="mt-2 flex items-center justify-between text-sm">
+          <span className="font-semibold text-white">Estimated Bonus $180</span>
+          <span className="text-mist">22 WCUs to go</span>
+        </div>
+      </div>
     </div>
   );
 }

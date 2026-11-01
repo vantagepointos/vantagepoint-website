@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { BookWalkthrough, TextLink } from "@/components/buttons";
 import { PhoneLink } from "@/components/phone-link";
 import { PlatformMark } from "@/components/logo";
@@ -43,7 +44,7 @@ export default function PlatformPage() {
         data={softwareAppJsonLd({
           name: "VantageLead",
           description: PAGE_SEO.lead.description,
-          path: "/vantage-lead",
+          path: "/platform#lead",
         })}
       />
       <header className="mx-auto max-w-3xl px-6 pb-8 pt-20 md:pt-28">
@@ -169,8 +170,13 @@ export default function PlatformPage() {
                 </li>
               ))}
             </ul>
-            <p className="mt-8">
-              <TextLink href="/vantage-lead">Read about VantageLead</TextLink>
+            <p className="mt-6 leading-relaxed text-ink">
+              The first release is three paths every team needs, front office,
+              providers, and how the team uses VantagePoint OS, with more
+              tracks and leadership training on the way.
+            </p>
+            <p className="mt-6">
+              <TextLink href="/book">See VantageLead in a walkthrough</TextLink>
             </p>
           </div>
           <PlatformPanel platform="lead" />
@@ -188,6 +194,12 @@ export default function PlatformPage() {
           </p>
           <div className="mt-10 flex flex-col items-center gap-4">
             <BookWalkthrough />
+            <p className="text-sm text-mist">
+              Not ready to talk yet?{" "}
+              <Link href="/waitlist" className="underline decoration-white/30 underline-offset-4 hover:text-white hover:decoration-white">
+                Join the waitlist.
+              </Link>
+            </p>
             <PhoneLink onNavy />
           </div>
         </div>

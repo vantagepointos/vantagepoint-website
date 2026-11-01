@@ -50,7 +50,6 @@ export const PRIMARY_NAV = [
 export const PUBLIC_SITEMAP_PATHS = [
   "/",
   "/platform",
-  "/vantage-lead",
   "/our-story",
   "/book",
   "/waitlist",

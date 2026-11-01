@@ -24,7 +24,7 @@ const pillars = [
   {
     index: "02",
     title: "A marketing cadence",
-    body: "Most owners know they should market. The hard part is knowing what to do, how to do it, and finding the time, so it slips while you put out other fires. Consistent, efficient outreach that fits your practice keeps your name in front of patients and referral sources.",
+    body: "Most owners know they should market. The hard part is knowing what to do, how to do it, and finding the time in a busy schedule. Consistent, efficient outreach that fits your practice keeps your name in front of patients and referral sources.",
   },
   {
     index: "03",
@@ -68,7 +68,7 @@ const platforms = [
   {
     key: "lead" as const,
     name: "VantageLead",
-    href: "/vantage-lead",
+    href: "/platform#lead",
     markClass: "h-auto w-[min(84.5%,22.08rem)]",
     tagline: "The roots of enduring leadership.",
     summary:
@@ -121,6 +121,14 @@ export default function Home() {
                   See the platform
                 </Link>
               </div>
+              <p className="mt-3">
+                <Link
+                  href="/waitlist"
+                  className="text-sm text-mist underline decoration-white/30 underline-offset-4 hover:text-white hover:decoration-white"
+                >
+                  Or join the waitlist for one of the first 20 spots
+                </Link>
+              </p>
             </div>
             <div className="mt-8 md:mt-10">
               <ProductTour />

@@ -5,7 +5,12 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/vantagelead",
-        destination: "/vantage-lead",
+        destination: "/platform#lead",
+        permanent: true,
+      },
+      {
+        source: "/vantage-lead",
+        destination: "/platform#lead",
         permanent: true,
       },
     ];
