@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import { BookVisit } from "@/components/book-visit";
 import { JsonLd } from "@/components/json-ld";
-import { PhoneLink } from "@/components/phone-link";
 import { PAGE_SEO } from "@/lib/page-seo";
 import { pageMetadata } from "@/lib/seo";
 import { breadcrumbJsonLd } from "@/lib/structured-data";
-import { BOOKING_EMBED_URL, BOOKING_URL } from "@/lib/site";
+import { BOOKING_EMBED_URL, BOOKING_URL, BUSINESS_PHONE_DISPLAY, BUSINESS_PHONE_HREF } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
   title: PAGE_SEO.book.title,
@@ -34,9 +33,16 @@ export default function BookPage() {
           Pick a time that works for you. We&apos;ll walk through VantagePoint
           OS together and show you how it fits your practice.
         </p>
-        <div className="mt-6">
-          <PhoneLink leadIn="Or call" />
-        </div>
+        <p className="mt-6 max-w-2xl text-sm leading-relaxed text-navy">
+          Don&apos;t see a time that works? Call us at{" "}
+          <a
+            href={BUSINESS_PHONE_HREF}
+            className="underline decoration-navy/30 underline-offset-4 hover:decoration-navy"
+          >
+            {BUSINESS_PHONE_DISPLAY}
+          </a>{" "}
+          and we&apos;ll find a time that fits your schedule.
+        </p>
 
         <div className="mt-10 overflow-hidden rounded-3xl bg-white ring-1 ring-navy/10">
           <div data-clarity-mask="true">

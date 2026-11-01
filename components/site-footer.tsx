@@ -21,7 +21,7 @@ export function SiteFooter() {
             <Logo className="h-9 w-auto" />
           </Link>
           <p className="mt-6 max-w-xs text-sm leading-relaxed text-mist">
-            Built for outpatient physical therapy clinic owners.
+            Built by PT owners, for PT owners.
           </p>
         </div>
 
@@ -37,13 +37,6 @@ export function SiteFooter() {
                     {item.label}
                   </Link>
                 </li>
-                {item.href === "/platform" ? (
-                  <li>
-                    <Link href="/vantage-lead" className={linkClass}>
-                      VantageLead
-                    </Link>
-                  </li>
-                ) : null}
               </Fragment>
             ))}
             <li>

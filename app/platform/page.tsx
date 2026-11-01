@@ -71,14 +71,15 @@ export default function PlatformPage() {
             The definitive view of practice health.
           </p>
           <p className="mt-4 text-lg leading-relaxed text-ink">
-            Clear scoreboards for everyone who runs the day.
+            Clear scoreboards for everyone who runs the day, so every clinician
+            knows their numbers, cares about them, and wants to move them.
           </p>
           <ul className="mt-8 space-y-3 text-navy">
             {[
-              "Provider stat grid and pace",
+              "Every clinician logs in to their own My Performance view",
+              "Efficiency, units per visit, cancellation rate, NPS, bonus progress and revenue multiple, color-coded against your clinic's goals",
               "Front office measures, including arrival rates",
-              "A specialized view for clinical directors",
-              "A specialized dashboard for the owner",
+              "AI coaching that helps owners and clinical directors turn each clinician's numbers into next steps",
             ].map((item) => (
               <li key={item} className="flex gap-3">
                 <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-navy" aria-hidden="true" />
@@ -87,8 +88,11 @@ export default function PlatformPage() {
             ))}
           </ul>
           <p className="mt-8 leading-relaxed text-ink">
-            The aim is simple. Everyone looks at the same practice, and the
-            numbers and goals become clear.
+            The aim is simple. Everyone looks at the same practice, knows their
+            part in it, and has a reason to improve it.
+          </p>
+          <p className="mt-6">
+            <TextLink href="/book">See VantagePulse in a walkthrough</TextLink>
           </p>
         </div>
         <PlatformPanel platform="pulse" />
@@ -105,14 +109,16 @@ export default function PlatformPage() {
               Accelerating growth. Amplifying impact.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-ink">
-              A steady marketing cadence without the busywork. Plan a campaign,
-              review it, and schedule it in minutes.
+              A steady marketing cadence without the busywork. See what people
+              in your county are searching for, choose what to market, then
+              plan, review and schedule your campaign.
             </p>
             <ul className="mt-8 space-y-3 text-navy">
               {[
-                "Campaign builder: choose how many posts and how many weeks, and a full campaign is drafted in about a minute, ready to review and schedule",
-                "Email copy drafted fast, so a month of emails is scheduled in minutes",
-                "Smart Funnels: describe the goal, generate, review, and launch",
+                "Local search trends: see which pain and condition topics people in your county are searching for",
+                "Campaign builder: choose how many posts and how many weeks, and a full campaign is drafted in about a minute, ready for you to review",
+                "Email copy drafted for you, ready to review and schedule",
+                "Smart Funnels: pick a workshop, an open house or free screening, a campaign to bring past patients back, or a community education series. VantageScale drafts the landing page, email series, social posts and confirmation email. You review and publish.",
                 "Digital and print newsletters",
               ].map((item) => (
                 <li key={item} className="flex gap-3">
@@ -122,8 +128,12 @@ export default function PlatformPage() {
               ))}
             </ul>
             <p className="mt-8 leading-relaxed text-ink">
-              It&apos;s built to make your marketing cadence easy and efficient,
-              instead of marketing only when time allows.
+              It&apos;s built to make marketing easy, efficient and right for
+              your practice, instead of something that only happens when time
+              allows.
+            </p>
+            <p className="mt-6">
+              <TextLink href="/book">See VantageScale in a walkthrough</TextLink>
             </p>
           </div>
           <div className="md:order-1">
@@ -143,8 +153,9 @@ export default function PlatformPage() {
               The roots of enduring leadership.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-ink">
-              Onboarding and leadership training, on demand, so the standard of
-              your practice can always be referred to and taught.
+              Onboarding and leadership training, on demand, that builds a
+              culture of ownership across your whole team, not just the people
+              with leadership titles.
             </p>
             <ul className="mt-8 space-y-3 text-navy">
               {[

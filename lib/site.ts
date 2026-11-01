@@ -75,7 +75,7 @@ export const STORY_TEASER_HEADING =
   "Built by PT owners who've sat in your chair.";
 
 export const STORY_TEASER_BODY =
-  "We know what it's like to give your patients everything and still lose sleep over the business. VantagePoint OS is the system we wish we'd had, built so you can get back to what you do best: making people better.";
+  "We know what it's like to give your patients everything and still lose sleep over the business. VantagePoint OS is the system we wish we'd had, built so you can spend your time where it matters most to you: with your patients, your team, or the next stage of your practice.";
 
 /**
  * Direct URL of the product-tour video file (for example an mp4).

@@ -66,8 +66,9 @@ export default function VantageLeadPage() {
           What&apos;s in the first release.
         </h2>
         <p className="mt-5 text-lg leading-relaxed text-ink">
-          Three paths. We&apos;d rather these be clear and useful than pretend
-          the library is larger than it is.
+          Our first release is focused on purpose: three paths that cover the
+          essentials every team needs, with more tracks and leadership training
+          on the way.
         </p>
         <ol className="mt-12">
           {paths.map((path) => (
@@ -91,14 +92,16 @@ export default function VantageLeadPage() {
           </h2>
           <div className="space-y-5 text-lg leading-relaxed text-ink">
             <p>
-              Owners we know are excellent at the work and tired of being the
-              only copy of the culture. VantageLead is how that standard gets
-              out of your head and into the team, at the moment someone joins.
+              The owners who need leadership most rarely think of it as
+              leadership training. What they want is a team that takes
+              ownership. VantageLead starts there, teaching your standard from
+              day one and helping it grow across the company. That means less
+              on your plate and your directors&apos;, and a healthier business.
             </p>
             <p>
-              It sits with VantagePulse and VantageScale as one offering.
-              Metrics, marketing, and leadership. The same practice, seen from
-              three sides.
+              VantageLead works together with VantagePulse and VantageScale as
+              one system. Metrics, marketing and leadership. The same practice,
+              seen from three sides.
             </p>
           </div>
         </div>

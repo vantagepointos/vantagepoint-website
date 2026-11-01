@@ -19,12 +19,12 @@ const pillars = [
   {
     index: "01",
     title: "North Star metrics",
-    body: "Own the few numbers that tell you whether the practice is healthy. Not a bigger pile of reports. A true picture you and your team can share.",
+    body: "It took us years to learn which numbers matter. We'll help you get there faster, and give every person on your team their own numbers to own. Ownership, not another report, is what moves a practice.",
   },
   {
     index: "02",
     title: "A marketing cadence",
-    body: "Effective marketing doesn't have to take up your whole week. Consistent, efficient outreach keeps your name in front of patients and referral sources, in busy months and slow ones.",
+    body: "Most owners know they should market. The hard part is knowing what to do, how to do it, and finding the time, so it slips while you put out other fires. Consistent, efficient outreach that fits your practice keeps your name in front of patients and referral sources.",
   },
   {
     index: "03",
@@ -40,12 +40,13 @@ const platforms = [
     href: "/platform#pulse",
     markClass: "h-auto w-[min(100%,26.125rem)]",
     tagline: "The definitive view of practice health.",
-    summary: "Clear scoreboards for everyone who runs the day.",
+    summary:
+      "Clear scoreboards for everyone who runs the day, so every clinician knows their numbers, cares about them, and wants to move them.",
     points: [
-      "Provider stat grid and pace",
+      "Every clinician logs in to their own My Performance view",
+      "Efficiency, units per visit, cancellation rate, NPS, bonus progress and revenue multiple, color-coded against your clinic's goals",
       "Front office measures, including arrival rates",
-      "A specialized view for clinical directors",
-      "A specialized dashboard for the owner",
+      "AI coaching that helps owners and clinical directors turn each clinician's numbers into next steps",
     ],
   },
   {
@@ -55,11 +56,12 @@ const platforms = [
     markClass: "h-auto w-[min(80.14%,20.94rem)]",
     tagline: "Accelerating growth. Amplifying impact.",
     summary:
-      "A steady marketing cadence without the busywork. Plan a campaign, review it, and schedule it in minutes.",
+      "A steady marketing cadence without the busywork. See what people in your county are searching for, choose what to market, then plan, review and schedule your campaign.",
     points: [
-      "Campaign builder: choose how many posts and how many weeks, and a full campaign is drafted in about a minute, ready to review and schedule",
-      "Email copy drafted fast, so a month of emails is scheduled in minutes",
-      "Smart Funnels: describe the goal, generate, review, and launch",
+      "Local search trends: see which pain and condition topics people in your county are searching for",
+      "Campaign builder: choose how many posts and how many weeks, and a full campaign is drafted in about a minute, ready for you to review",
+      "Email copy drafted for you, ready to review and schedule",
+      "Smart Funnels: ready-made campaigns for a workshop, an event, bringing past patients back, or community education",
       "Digital and print newsletters",
     ],
   },
@@ -156,8 +158,8 @@ export default function Home() {
                   Practice health
                 </p>
                 <h3 className="mt-3 text-lg font-semibold text-navy">
-                  So many metrics. Which ones actually move your practice&apos;s
-                  health?
+                  So many metrics. Which ones actually move your practice, and
+                  what do you do about them?
                 </h3>
               </li>
               <li>
@@ -202,8 +204,9 @@ export default function Home() {
                 What we came back to.
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-ink">
-                When our own clinics turned around, it came down to three
-                things, done with consistency.
+                For nearly a decade, we worked harder and nothing changed.
+                What finally turned our practice around was three things, done
+                with consistency.
               </p>
             </div>
             <ol className="mt-16 grid gap-14 md:grid-cols-3">

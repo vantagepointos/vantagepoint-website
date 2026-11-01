@@ -1,9 +1,8 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import {
-  RATING_OPTIONS,
   US_STATES,
   ZOHO_FORM_ACTION,
   ZOHO_HIDDEN_FIELDS,
@@ -11,6 +10,7 @@ import {
 import { trackConversion } from "@/lib/track";
 import {
   FIELD_FOCUS_ORDER,
+  formatPhoneInput,
   WaitlistErrors,
   WaitlistFieldName,
   validateWaitlist,
@@ -29,7 +29,6 @@ const FIELD_IDS: Record<WaitlistFieldName, string> = {
   phone: "phone",
   clinics: "clinics",
   state: "state",
-  rating: "rating",
 };
 
 function readValue(form: HTMLFormElement, name: string): string {
@@ -63,9 +62,7 @@ export function WaitlistForm() {
     const form = event.currentTarget;
 
     const stateField = form.elements.namedItem("Address - State / Province");
-    const ratingField = form.elements.namedItem("Rating");
     if (stateField instanceof HTMLSelectElement) stateField.disabled = false;
-    if (ratingField instanceof HTMLSelectElement) ratingField.disabled = false;
 
     trimInput(form, "First Name");
     trimInput(form, "Last Name");
@@ -81,7 +78,6 @@ export function WaitlistForm() {
       phone: readValue(form, "Phone"),
       clinics: readValue(form, "No of Employees"),
       state: readValue(form, "Address - State / Province"),
-      rating: readValue(form, "Rating"),
     };
 
     const nextErrors = validateWaitlist(values);
@@ -107,9 +103,6 @@ export function WaitlistForm() {
     // document.charset throws because that property is read-only.
     if (stateField instanceof HTMLSelectElement && stateField.value === "") {
       stateField.disabled = true;
-    }
-    if (ratingField instanceof HTMLSelectElement && ratingField.value === "") {
-      ratingField.disabled = true;
     }
 
     setErrors({});
@@ -226,7 +219,12 @@ export function WaitlistForm() {
         inputMode="tel"
         maxLength={30}
         error={errors.phone}
-        onChange={() => clearError("phone")}
+        onChange={(event) => {
+          if (event?.currentTarget) {
+            event.currentTarget.value = formatPhoneInput(event.currentTarget.value);
+          }
+          clearError("phone");
+        }}
       />
 
       <Field
@@ -271,39 +269,6 @@ export function WaitlistForm() {
         {errors.state ? (
           <p id="state-error" className="mt-2 text-sm text-[#F6D0D0]">
             {errors.state}
-          </p>
-        ) : null}
-      </div>
-
-      <div>
-        <label htmlFor="rating" className="block text-sm font-medium text-white">
-          Which are you interested in?
-        </label>
-        <div className="relative mt-2">
-          <select
-            id="rating"
-            name="Rating"
-            defaultValue=""
-            aria-invalid={errors.rating ? true : undefined}
-            aria-describedby={errors.rating ? "rating-error" : undefined}
-            className={`${controlClass} appearance-none pr-10`}
-            onChange={() => clearError("rating")}
-          >
-            <option value="">Select one</option>
-            {RATING_OPTIONS.map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
-          <ChevronDown
-            className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink"
-            aria-hidden="true"
-          />
-        </div>
-        {errors.rating ? (
-          <p id="rating-error" className="mt-2 text-sm text-[#F6D0D0]">
-            {errors.rating}
           </p>
         ) : null}
       </div>
@@ -358,7 +323,7 @@ function Field({
   step?: number;
   spellCheck?: boolean;
   error?: string;
-  onChange: () => void;
+  onChange: (event?: ChangeEvent<HTMLInputElement>) => void;
 }) {
   const errorId = `${id}-error`;
   return (

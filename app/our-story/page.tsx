@@ -39,16 +39,20 @@ export default function OurStoryPage() {
               grew.
             </p>
             <p>
-              But running a physical therapy practice is hard. For our first
-              ten years, we struggled. Our margins were lower than we&apos;d
-              like to admit, and that strain showed up in our culture too. No
-              matter how hard we worked, nothing seemed to change.
+              But running a physical therapy practice is hard. So is managing
+              growth, and knowing when and how to scale. For our first ten
+              years, we struggled. Our margins were lower than we&apos;d like
+              to admit, and that strain showed up in our culture too. We
+              couldn&apos;t reward our team the way we wanted to. Our time went
+              to putting out fires. We were always doing our best, and never
+              quite feeling like we were succeeding at any of it. No matter how
+              hard we worked, nothing seemed to change.
             </p>
             <p>
               In 2018 we opened a second clinic, and in 2022 a third. Three
-              clinics, three communities. Through all of it, we worked hard,
-              learned a lot, and studied everything we could about what makes a
-              practice healthy.
+              clinics, three communities. Some things we did well, and some we
+              didn&apos;t. Through all of it, we worked hard, learned a lot, and
+              studied everything we could about what makes a practice healthy.
             </p>
             <p className="text-xl font-medium leading-snug text-navy md:text-2xl">
               The lessons we learned are what VantagePoint OS is built on.
@@ -58,8 +62,8 @@ export default function OurStoryPage() {
               <ul className="mt-5 space-y-3 border-y border-navy/10 py-5 text-navy">
                 {[
                   "Own your metrics.",
-                  "Market consistently.",
-                  "Put leadership training at the center of your team.",
+                  "Build your brand with meaningful, consistent marketing and outreach.",
+                  "Grow your culture, with leadership training for the whole team, owners included.",
                 ].map((pillar) => (
                   <li key={pillar} className="flex gap-4 font-medium">
                     <span
@@ -74,18 +78,20 @@ export default function OurStoryPage() {
             <p>
               Once we understood those three pillars and focused on them above
               everything else, our practice really took off. Our margins grew,
-              our whole team was happier, and new referral sources seemed to
-              show up every month.
+              our whole team was happier, and because we kept showing up in our
+              community, new referral sources followed.
             </p>
             <p>
               If the business side is what keeps you up at night, those three
-              pillars are how you get back on track, and back to the work you
-              opened the clinic to do: making people better.
+              pillars are how you get back on track. Less stress and more
+              confidence. A clear picture of what&apos;s going on, without
+              spending all your time chasing it. Stronger financials, and real
+              support.
             </p>
             <p>
-              We&apos;ve been there. We&apos;ve struggled, and we&apos;ve been
-              stressed. We persevered, and we finally built the practice we
-              always wanted. VantagePoint OS is here to help you do the same.
+              We&apos;ve sat in your chair, and we know how hard it can be. We
+              persevered, and we finally built the practice we always wanted.
+              VantagePoint OS is here to help you do the same.
             </p>
           </div>
           <footer className="mt-14 border-t border-navy/10 pt-8">
