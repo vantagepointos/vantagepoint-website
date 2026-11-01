@@ -18,9 +18,12 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 md:grid-cols-[minmax(0,1.4fr)_1fr_1fr] md:px-6">
         <div>
           <Link href="/" className="inline-flex rounded-sm" aria-label="VantagePoint OS, home">
-            <Logo className="h-9 w-auto" />
+            <Logo className="h-12 w-auto md:h-[3.375rem]" />
           </Link>
-          <p className="mt-6 max-w-xs text-sm leading-relaxed text-mist">
+          <p className="mt-4 max-w-xs text-base font-medium leading-snug text-mist">
+            Elevate your practice. Own your future.
+          </p>
+          <p className="mt-12 max-w-xs text-sm leading-relaxed text-mist">
             Built by PT owners, for PT owners.
           </p>
         </div>

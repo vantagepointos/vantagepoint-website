@@ -31,8 +31,8 @@ export default function OurStoryPage() {
           </h1>
           <div className="mt-10 space-y-6 text-lg leading-relaxed text-ink md:text-xl">
             <p>
-              In 2014, my wife and I finally decided to open our own physical
-              therapy practice. We started our first clinic with one goal: take
+              In 2014, my wife and I opened our own physical therapy practice.
+              We started our first clinic with one goal: take
               exceptional care of our patients in the community we call home.
               We were focused on the people walking through our doors, and
               before long, those patients felt like family. Our reputation
