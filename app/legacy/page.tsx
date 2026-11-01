@@ -74,17 +74,16 @@ export default function LegacyPage() {
           ))}
         </ul>
         <p className="mt-8 leading-relaxed text-ink">
-          Your $500 deposit reserves your Legacy spot and is credited toward
-          your setup fee. It&apos;s fully refundable if you cancel before
-          onboarding kickoff. Setup fees are otherwise non-refundable,
-          including if the go-live date moves, but if VantagePoint&nbsp;OS
-          doesn&apos;t launch, we refund all setup fees. Full terms are in your
-          Letter of Intent.
-        </p>
-        <p className="mt-5 leading-relaxed text-ink">
-          The deposit doesn&apos;t start your billing. It holds the seat while we
-          prepare the letter of intent and the steps toward go-live. Once
-          it&apos;s received, we&apos;ll be in touch to plan next steps.
+          Reserve your Legacy spot with a $500 deposit. Legacy is limited to
+          our first 10 practices. Your deposit holds your spot while we send
+          your Letter of Intent (LOI), usually within one business day, and
+          it&apos;s credited toward your setup fee. If you don&apos;t sign the
+          LOI within 30 days of paying, we refund your deposit automatically.
+          After you sign, you can still cancel for a full refund any time
+          before onboarding kickoff. After kickoff, setup fees are
+          non-refundable, including if the go-live date moves, but if
+          VantagePoint&nbsp;OS doesn&apos;t launch, we refund all setup fees.
+          Once signed, the LOI&apos;s terms control.
         </p>
 
         <p className="mt-10">
@@ -94,6 +93,16 @@ export default function LegacyPage() {
           >
             Place the $500 deposit
           </a>
+        </p>
+        <p className="mt-4 text-sm leading-relaxed text-ink">
+          By placing a deposit you agree to the{" "}
+          <a
+            href="#deposit-terms"
+            className="font-semibold text-navy underline decoration-navy/30 underline-offset-4"
+          >
+            Legacy Deposit Terms
+          </a>
+          .
         </p>
         <p className="mt-6 text-sm leading-relaxed text-ink">
           Questions before you do that are welcome. Call{" "}
@@ -105,6 +114,57 @@ export default function LegacyPage() {
           </a>
           .
         </p>
+
+        <section id="deposit-terms" className="mt-16 scroll-mt-28 border-t border-navy/10 pt-12">
+          <h2 className="text-2xl font-semibold tracking-tight text-navy">
+            Legacy Deposit Terms
+          </h2>
+          <ol className="mt-6 list-decimal space-y-5 pl-6 leading-relaxed text-ink">
+            <li>
+              Purpose. The $500 deposit reserves one of the 10 Legacy spots for
+              your practice, subject to signing the VantagePoint&nbsp;OS Legacy
+              Letter of Intent (LOI). It is not a subscription, and you
+              aren&apos;t committed to buy anything until you sign the LOI.
+            </li>
+            <li>
+              Credit. If you sign the LOI, the deposit is credited toward your
+              setup fee.
+            </li>
+            <li>
+              If you don&apos;t sign. If we don&apos;t receive a signed LOI
+              within 30 days after payment, we&apos;ll refund the deposit in
+              full to your original payment method and release the spot. You
+              can ask for a refund sooner by emailing{" "}
+              <a
+                href="mailto:gabe@vantagepointos.com"
+                className="font-semibold text-navy underline decoration-navy/30 underline-offset-4"
+              >
+                gabe@vantagepointos.com
+              </a>
+              .
+            </li>
+            <li>
+              After signing. The deposit is fully refundable on written request
+              until onboarding kickoff. After kickoff, the deposit and all
+              setup fees are non-refundable, including if the go-live date
+              changes, except that all setup fees are refunded if
+              VantagePoint&nbsp;OS doesn&apos;t launch.
+            </li>
+            <li>
+              Our right to decline. If we can&apos;t offer you a spot (for
+              example, all 10 are filled), we&apos;ll refund your deposit in
+              full.
+            </li>
+            <li>
+              Business purchase. You confirm you&apos;re buying for a business
+              and are authorized to act for the practice.
+            </li>
+            <li>
+              LOI controls. Once signed, the LOI governs and replaces these
+              terms.
+            </li>
+          </ol>
+        </section>
       </article>
     </main>
   );
