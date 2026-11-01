@@ -151,45 +151,46 @@ export default function Home() {
                 OS exists.
               </p>
             </div>
-            <ul className="mt-16 grid gap-10 md:grid-cols-2 md:gap-12">
-              <li>
+            <ul className="mt-16 grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-x-16 md:gap-y-12">
+              <li className="min-w-0">
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-ink">
                   North Star metrics
                 </p>
-                <h3 className="mt-3 text-lg font-semibold text-navy">
-                  Reports that don&apos;t agree, so the practice is hard to
-                  steer.
+                <h3 className="mt-3 text-lg font-semibold leading-snug text-pretty text-navy">
+                  Reports that don&apos;t agree, so
+                  <br />
+                  the practice is hard to steer.
                 </h3>
               </li>
-              <li>
+              <li className="min-w-0">
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-ink">
                   Practice health
                 </p>
-                <h3 className="mt-3 text-lg font-semibold text-navy">
+                <h3 className="mt-3 text-lg font-semibold leading-snug text-pretty text-navy">
                   So many metrics. Which ones actually move your practice, and
                   what do you do about them?
                 </h3>
               </li>
-              <li>
+              <li className="min-w-0">
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-ink">
                   A marketing cadence
                 </p>
-                <h3 className="mt-3 text-lg font-semibold text-navy">
+                <h3 className="mt-3 text-lg font-semibold leading-snug text-pretty text-navy">
                   Marketing that starts and stops
                 </h3>
-                <p className="mt-3 leading-relaxed text-ink">
+                <p className="mt-3 text-pretty leading-relaxed text-ink">
                   When marketing only happens when you have time, growth stalls.
                   A steady cadence keeps growth consistent.
                 </p>
               </li>
-              <li>
+              <li className="min-w-0">
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-ink">
                   Leadership at the center
                 </p>
-                <h3 className="mt-3 text-lg font-semibold text-navy">
+                <h3 className="mt-3 text-lg font-semibold leading-snug text-pretty text-navy">
                   A culture that lives only with you
                 </h3>
-                <p className="mt-3 leading-relaxed text-ink">
+                <p className="mt-3 text-pretty leading-relaxed text-ink">
                   When the culture lives only with you, you&apos;re always
                   filling the gaps. Culture can be taught and trained, so the
                   whole team can carry it.

@@ -31,7 +31,7 @@ export default function OurStoryPage() {
           </h1>
           <div className="mt-10 space-y-6 text-lg leading-relaxed text-ink md:text-xl">
             <p>
-              In 2014, my wife and I opened our own physical therapy practice.
+              In 2014, we opened our own physical therapy practice.
               We started our first clinic with one goal: take
               exceptional care of our patients in the community we call home.
               We were focused on the people walking through our doors, and
@@ -44,7 +44,7 @@ export default function OurStoryPage() {
               years, we struggled. Our margins were lower than we&apos;d like
               to admit, and that strain showed up in our culture too. We
               couldn&apos;t reward our team the way we wanted to. Our time went
-              to putting out fires. We were always doing our best, and never
+              toward putting out fires. We were always doing our best, and never
               quite feeling like we were succeeding at any of it. No matter how
               hard we worked, nothing seemed to change.
             </p>
@@ -96,8 +96,8 @@ export default function OurStoryPage() {
           </div>
           <footer className="mt-14 border-t border-navy/10 pt-8">
             <Logo variant="light" className="h-8 w-auto" />
-            <p className="mt-6 text-lg font-semibold text-navy">Gabe Harter, PT</p>
-            <p className="text-ink">Founder</p>
+            <p className="mt-6 text-lg font-semibold text-navy">Gabe &amp; Amanda Harter</p>
+            <p className="text-ink">Founders</p>
           </footer>
         </article>
         <ClosingCta supporting="If our story sounds familiar, let us show you how VantagePoint OS fits." />
