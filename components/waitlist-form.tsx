@@ -7,7 +7,7 @@ import {
   ZOHO_FORM_ACTION,
   ZOHO_HIDDEN_FIELDS,
 } from "@/lib/waitlist-options";
-import { trackConversion } from "@/lib/track";
+import { trackLead } from "@/lib/track";
 import {
   FIELD_FOCUS_ORDER,
   formatPhoneInput,
@@ -106,7 +106,7 @@ export function WaitlistForm() {
     }
 
     setErrors({});
-    trackConversion("waitlist_submit");
+    trackLead("waitlist_submit");
 
     const submitter = (event.nativeEvent as SubmitEvent).submitter;
     if (submitter instanceof HTMLButtonElement) {

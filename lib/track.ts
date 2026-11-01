@@ -1,18 +1,34 @@
-export type ConversionEvent = "waitlist_submit" | "book_visit";
+export type LeadEvent = "waitlist_submit" | "book_walkthrough" | "legacy_deposit";
 
-type Gtag = (command: "event", name: string) => void;
+type Gtag = (
+  command: "event",
+  name: string,
+  params?: Record<string, string>,
+) => void;
 
-/** No-ops unless an analytics env var is set. Nothing here sets cookies by itself. */
-export function trackConversion(name: ConversionEvent) {
+type Clarity = (command: string, ...args: unknown[]) => void;
+
+/**
+ * Sends a lead event when the matching tool is actually loaded.
+ * gtag and clarity are left alone when they are not defined.
+ * A booking confirmation inside the calendar iframe is not visible to this page.
+ */
+export function trackLead(name: LeadEvent) {
   if (typeof window === "undefined") return;
 
-  const measurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim();
   const gtag = (window as Window & { gtag?: Gtag }).gtag;
-  if (measurementId && typeof gtag === "function") {
+  if (typeof gtag === "function") {
+    gtag("event", "generate_lead", { method: name });
     gtag("event", name);
   }
 
-  if (process.env.NEXT_PUBLIC_VERCEL_ANALYTICS === "1") {
+  const clarity = (window as Window & { clarity?: Clarity }).clarity;
+  if (typeof clarity === "function") {
+    clarity("event", name);
+    clarity("set", "lead_method", name);
+  }
+
+  if (process.env.NODE_ENV === "production") {
     void import("@vercel/analytics").then(({ track }) => {
       track(name);
     });

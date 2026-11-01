@@ -33,7 +33,7 @@ export default function PrivacyPolicy() {
             Privacy Policy
           </h1>
           <p className="text-ink">
-            Last Updated: October 31, 2026
+            Last Updated: November 1, 2026
           </p>
         </div>
 
@@ -86,14 +86,30 @@ export default function PrivacyPolicy() {
               <BarChart3 className="h-6 w-6 text-navy" aria-hidden="true" /> 4. Analytics
             </h2>
             <p className="mb-4">
-              We use Vercel Web Analytics to understand site traffic. It doesn&apos;t use cookies and collects general usage data such as pages visited, referring site, device type and country. With your consent, we also use Microsoft Clarity, which uses cookies and similar technology to record how visitors use our site (clicks, scrolling and pages viewed) as heatmaps and session recordings. We set Clarity to mask what you type into forms. Microsoft processes this data under the{" "}
+              We use a few tools to understand how this site is used and to measure advertising. They are not used to collect what you type into forms, or patient or health information. Please don&apos;t send that kind of information through this website.
+            </p>
+            <p className="mb-4">
+              Google Analytics uses cookies. It tells us which pages are visited and whether someone joins the waitlist, books a walkthrough, or starts a Legacy deposit. You can block or delete cookies in your browser, or use{" "}
+              <a
+                href="https://tools.google.com/dlpage/gaoptout"
+                className="font-semibold text-navy underline decoration-navy/30 underline-offset-4"
+              >
+                Google&apos;s Analytics opt-out add-on
+              </a>
+              .
+            </p>
+            <p className="mb-4">
+              Microsoft Clarity uses cookies for heatmaps and session recordings, which show how people move through a page. It loads only after you accept cookies, and you can change that choice in Cookie settings. Form fields are masked, so Clarity does not collect what you type. Microsoft describes its handling of this data in the{" "}
               <a
                 href="https://privacy.microsoft.com/privacystatement"
                 className="font-semibold text-navy underline decoration-navy/30 underline-offset-4"
               >
                 Microsoft Privacy Statement
               </a>
-              . You can decline or withdraw consent at any time through Cookie settings. Our website doesn&apos;t collect patient or health information.
+              .
+            </p>
+            <p>
+              Vercel Web Analytics does not use cookies. It records general visit information such as the page, the referring site, the device type, and the country.
             </p>
           </section>
 

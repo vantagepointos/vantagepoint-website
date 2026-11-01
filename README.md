@@ -31,16 +31,17 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Environment variables
 
-All of these are optional. Leave them unset and the related tag is omitted. None of them turn on a cookie banner.
+Copy `.env.example` if you want a local file. Leave every value empty and nothing analytics-related loads in `next dev`. These are read at build time. Set them in the Vercel project for production.
 
 | Variable | When set |
 | --- | --- |
-| `NEXT_PUBLIC_GSC_VERIFICATION` | Adds the Google Search Console site-verification meta tag. |
-| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Loads GA4 (`G-…`) and sends `waitlist_submit` and `book_visit`. Uses cookies, so a consent banner belongs with it. |
-| `NEXT_PUBLIC_VERCEL_ANALYTICS` | Set to `1` to load Vercel Analytics and the same two conversion events. |
-| `NEXT_PUBLIC_CLARITY_PROJECT_ID` | Shows the cookie banner. Clarity loads only after Accept, and the choice is stored in localStorage. It never loads on `/waitlist`, `/legacy`, or any page with a form. The waitlist form and the booking calendar stay masked. |
+| `NEXT_PUBLIC_GA_ID` | Loads GA4 (`G-…`) with `next/script` after the page is interactive. Sends `generate_lead` plus `waitlist_submit`, `book_walkthrough`, and `legacy_deposit`. Uses cookies. |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Older name for the same GA4 ID. Used only when `NEXT_PUBLIC_GA_ID` is empty. |
+| `NEXT_PUBLIC_CLARITY_PROJECT_ID` | Shows the cookie banner. Clarity loads only after Accept, and the choice is stored in localStorage. It never loads on `/waitlist`, `/legacy`, or any page with a form. The waitlist form and the booking calendar stay masked. The same lead events are sent to Clarity when it is loaded. |
+| `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Adds the Google Search Console site-verification meta tag. |
+| `NEXT_PUBLIC_GSC_VERIFICATION` | Older name for the same Search Console token. Used only when `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` is empty. |
 
-Set them in the Vercel project for production. They are read at build time.
+Vercel Web Analytics and Speed Insights are included in the production layout. They do not load during `next dev`, and they do not use an ID or cookies. A confirmed calendar booking inside the Google Calendar iframe cannot be seen by this site, so it is not an event.
 
 ## Deploy on Vercel
 
