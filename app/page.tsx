@@ -126,7 +126,7 @@ export default function Home() {
                   href="/waitlist"
                   className="text-sm text-mist underline decoration-white/30 underline-offset-4 hover:text-white hover:decoration-white"
                 >
-                  Or join the waitlist for one of the first 20 spots
+                  Or join the waitlist
                 </Link>
               </p>
             </div>
