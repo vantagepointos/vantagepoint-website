@@ -33,7 +33,7 @@ export default function PrivacyPolicy() {
             Privacy Policy
           </h1>
           <p className="text-ink">
-            Last Updated: October 31, 2026
+            Last Updated: November 1, 2026
           </p>
         </div>
 
@@ -58,12 +58,9 @@ export default function PrivacyPolicy() {
               <li>
                 <strong className="text-navy">Account Information:</strong> Name, email address, phone number, and clinic details provided during registration.
               </li>
-              <li>
-                <strong className="text-navy">Third-Party Integrations:</strong> If you connect third-party accounts (such as Meta/Facebook, Instagram, or Google Business), we receive authentication tokens required to publish content on your behalf.
-              </li>
             </ul>
             <p>
-              We use third-party OAuth tokens (like the Meta Graph API) exclusively to publish social media posts to your connected business pages and retrieve engagement analytics to display within your VantageScale dashboard.
+              If you connect your Meta (Facebook and Instagram) accounts, VantageScale retrieves limited performance metrics, such as reach, impressions and clicks for your posts, and impressions, clicks, spend and leads for your ads, and displays them in your VantageScale dashboard. We access this data only with your permission and use it only to provide VantageScale to you. You can remove VantageScale&apos;s access at any time in your Meta account settings.
             </p>
             <div className="mt-6 rounded-2xl bg-paper px-4 py-4">
               <p className="text-center font-semibold text-navy">
@@ -105,7 +102,7 @@ export default function PrivacyPolicy() {
               <Lock className="h-6 w-6 text-navy" aria-hidden="true" /> 5. Meta (Facebook/Instagram) Data Deletion
             </h2>
             <p className="mb-4">
-              VantageScale uses Facebook Login and Meta Graph APIs to provide social media publishing features. If you want to delete your activity or disconnect your Facebook/Instagram account from VantageScale, please follow these exact steps:
+              If you connected a Meta account, you can remove VantageScale&apos;s access in your Facebook settings. If you want to delete your activity or disconnect your Facebook/Instagram account from VantageScale, please follow these exact steps:
             </p>
             <ol className="mb-6 list-decimal list-inside space-y-3 rounded-2xl bg-paper p-6">
               <li>

@@ -52,7 +52,7 @@ export default function PlatformPage() {
           VantagePoint&nbsp;OS
         </p>
         <h1 className="mt-4 text-4xl font-semibold tracking-[-0.035em] text-navy text-balance md:text-6xl md:leading-[1.05]">
-          Everything your practice needs. In one system.
+          Your numbers, your marketing and your team&apos;s training, in one place.
         </h1>
         <p className="mt-6 text-lg leading-relaxed text-ink md:text-xl">
           VantagePulse, VantageScale, and VantageLead. Built for outpatient
@@ -69,7 +69,7 @@ export default function PlatformPage() {
             VantagePulse
           </h2>
           <p className="mt-3 text-xl font-medium leading-snug text-navy">
-            The definitive view of practice health.
+            A clear view of practice health.
           </p>
           <p className="mt-4 text-lg leading-relaxed text-ink">
             Clear scoreboards for everyone who runs the day, so every clinician
@@ -77,6 +77,7 @@ export default function PlatformPage() {
           </p>
           <ul className="mt-8 space-y-3 text-navy">
             {[
+              "Your team logs a few key numbers each week. VantagePulse turns them into scoreboards, goals and bonus progress.",
               "Every clinician logs in to their own My Performance view",
               "Efficiency, units per visit, cancellation rate, NPS, bonus progress and revenue multiple, color-coded against your clinic's goals",
               "Front office measures, including arrival rates",
@@ -116,7 +117,7 @@ export default function PlatformPage() {
             </p>
             <ul className="mt-8 space-y-3 text-navy">
               {[
-                "Local search trends: see which pain and condition topics people in your county are searching for",
+                "Monthly local search demand for PT conditions in your county, ranked for content and ad opportunity.",
                 "Campaign builder: choose how many posts and how many weeks, and a full campaign is drafted in about a minute, ready for you to review",
                 "Email copy drafted for you, ready to review and schedule",
                 "Smart Funnels: pick a workshop, an open house or free screening, a campaign to bring past patients back, or a community education series. VantageScale drafts the landing page, email series, social posts and confirmation email. You review and publish.",
