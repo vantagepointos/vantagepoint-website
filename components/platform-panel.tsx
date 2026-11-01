@@ -1,5 +1,6 @@
 import {
   LeadVignette,
+  PREVIEW_CAPTION,
   PulseVignette,
   ScaleVignette,
 } from "@/components/product-preview";
@@ -22,11 +23,7 @@ export function PlatformPanel({
         <Vignette />
       </div>
       <figcaption className="mt-3 text-center text-xs text-ink">
-        <span className="sr-only">
-          Illustrative preview. The figures and rows are sample layout, not a
-          clinic&apos;s data.
-        </span>
-        <span aria-hidden="true">Illustrative data.</span>
+        {PREVIEW_CAPTION}
       </figcaption>
     </figure>
   );

@@ -84,8 +84,8 @@ export default function OurStoryPage() {
             <p>
               If the business side is what keeps you up at night, those three
               pillars are how you get back on track. Less stress and more
-              confidence. A clear picture of what&apos;s going on, without
-              spending all your time chasing it. Stronger financials, and real
+              confidence. A clear picture of what&apos;s going on, from a few
+              numbers your team tracks each week. Stronger financials, and real
               support.
             </p>
             <p>
