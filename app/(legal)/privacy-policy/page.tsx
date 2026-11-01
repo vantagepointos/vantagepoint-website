@@ -85,31 +85,22 @@ export default function PrivacyPolicy() {
             <h2 className={heading}>
               <BarChart3 className="h-6 w-6 text-navy" aria-hidden="true" /> 4. Analytics
             </h2>
-            <p className="mb-4">
-              We use a few tools to understand how this site is used and to measure advertising. They are not used to collect what you type into forms, or patient or health information. Please don&apos;t send that kind of information through this website.
-            </p>
-            <p className="mb-4">
-              Google Analytics uses cookies. It tells us which pages are visited and whether someone joins the waitlist, books a walkthrough, or starts a Legacy deposit. You can block or delete cookies in your browser, or use{" "}
+            <p>
+              Analytics. We use Vercel Web Analytics to understand site traffic. It doesn&apos;t use cookies and collects general usage data such as pages visited, referring site, device type and country. With your consent, we also use Google Analytics and Microsoft Clarity. These use cookies and similar technology to show us how visitors use our site, such as pages viewed, clicks and scrolling, including heatmaps and session recordings from Clarity. We set Clarity to mask what you type into forms. Google and Microsoft process this data under the{" "}
               <a
-                href="https://tools.google.com/dlpage/gaoptout"
+                href="https://policies.google.com/privacy"
                 className="font-semibold text-navy underline decoration-navy/30 underline-offset-4"
               >
-                Google&apos;s Analytics opt-out add-on
-              </a>
-              .
-            </p>
-            <p className="mb-4">
-              Microsoft Clarity uses cookies for heatmaps and session recordings, which show how people move through a page. It loads only after you accept cookies, and you can change that choice in Cookie settings. Form fields are masked, so Clarity does not collect what you type. Microsoft describes its handling of this data in the{" "}
+                Google Privacy Policy
+              </a>{" "}
+              and the{" "}
               <a
                 href="https://privacy.microsoft.com/privacystatement"
                 className="font-semibold text-navy underline decoration-navy/30 underline-offset-4"
               >
                 Microsoft Privacy Statement
               </a>
-              .
-            </p>
-            <p>
-              Vercel Web Analytics does not use cookies. It records general visit information such as the page, the referring site, the device type, and the country.
+              . You can decline or withdraw consent at any time through Cookie settings. These tools run only on our public website, never inside the VantagePoint&nbsp;OS platform, and our website doesn&apos;t collect patient or health information.
             </p>
           </section>
 

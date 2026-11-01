@@ -5,7 +5,6 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ClarityConsent } from "@/components/clarity-consent";
 import { ConversionClicks } from "@/components/conversion-clicks";
 import { JsonLd } from "@/components/json-ld";
-import { SiteAnalytics } from "@/components/site-analytics";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { PAGE_SEO } from "@/lib/page-seo";
@@ -86,7 +85,6 @@ export default function RootLayout({
           Skip to content
         </a>
         <JsonLd data={organizationJsonLd(PAGE_SEO.home.description)} />
-        <SiteAnalytics />
         <ConversionClicks />
         {process.env.NODE_ENV === "production" ? (
           <>

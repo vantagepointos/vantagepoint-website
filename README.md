@@ -35,9 +35,9 @@ Copy `.env.example` if you want a local file. Leave every value empty and nothin
 
 | Variable | When set |
 | --- | --- |
-| `NEXT_PUBLIC_GA_ID` | Loads GA4 (`G-…`) with `next/script` after the page is interactive. Sends `generate_lead` plus `waitlist_submit`, `book_walkthrough`, and `legacy_deposit`. Uses cookies. |
+| `NEXT_PUBLIC_GA_ID` | Shows the cookie banner. GA4 (`G-…`) loads only after Accept, and not again after Decline. Sends `generate_lead` plus `waitlist_submit`, `book_walkthrough`, and `legacy_deposit` only while it is loaded. |
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Older name for the same GA4 ID. Used only when `NEXT_PUBLIC_GA_ID` is empty. |
-| `NEXT_PUBLIC_CLARITY_PROJECT_ID` | Shows the cookie banner. Clarity loads only after Accept, and the choice is stored in localStorage. It never loads on `/waitlist`, `/legacy`, or any page with a form. The waitlist form and the booking calendar stay masked. The same lead events are sent to Clarity when it is loaded. |
+| `NEXT_PUBLIC_CLARITY_PROJECT_ID` | Shows the cookie banner. Clarity loads only after Accept, and not again after Decline. It also never loads on `/waitlist`, `/legacy`, or any page with a form. The waitlist form and the booking calendar stay masked. Lead events are sent to Clarity only while it is loaded. |
 | `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Adds the Google Search Console site-verification meta tag. |
 | `NEXT_PUBLIC_GSC_VERIFICATION` | Older name for the same Search Console token. Used only when `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` is empty. |
 
