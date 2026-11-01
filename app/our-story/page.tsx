@@ -27,7 +27,7 @@ export default function OurStoryPage() {
             Our story
           </p>
           <h1 className="mt-4 text-4xl font-semibold tracking-[-0.035em] text-navy text-balance md:text-6xl md:leading-[1.05]">
-            Why we built VantagePoint OS.
+            Why we built VantagePoint&nbsp;OS.
           </h1>
           <div className="mt-10 space-y-6 text-lg leading-relaxed text-ink md:text-xl">
             <p>
@@ -55,7 +55,7 @@ export default function OurStoryPage() {
               studied everything we could about what makes a practice healthy.
             </p>
             <p className="text-xl font-medium leading-snug text-navy md:text-2xl">
-              The lessons we learned are what VantagePoint OS is built on.
+              The lessons we learned are what VantagePoint&nbsp;OS is built on.
             </p>
             <div>
               <p>They come down to three pillars:</p>
@@ -91,7 +91,7 @@ export default function OurStoryPage() {
             <p>
               We&apos;ve sat in your chair, and we know how hard it can be. We
               persevered, and we finally built the practice we always wanted.
-              VantagePoint OS is here to help you do the same.
+              VantagePoint&nbsp;OS is here to help you do the same.
             </p>
           </div>
           <footer className="mt-14 border-t border-navy/10 pt-8">
@@ -100,7 +100,15 @@ export default function OurStoryPage() {
             <p className="text-ink">Founders</p>
           </footer>
         </article>
-        <ClosingCta supporting="If our story sounds familiar, let us show you how VantagePoint OS fits." />
+        <ClosingCta
+          supporting={
+            <>
+              If our story sounds familiar, let us show you{" "}
+              <br className="hidden sm:block" />
+              how <span className="whitespace-nowrap">VantagePoint&nbsp;OS</span> fits.
+            </>
+          }
+        />
       </main>
     </>
   );

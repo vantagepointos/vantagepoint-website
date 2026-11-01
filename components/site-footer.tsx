@@ -90,7 +90,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-gold/15">
         <p className="mx-auto max-w-6xl px-5 py-6 text-xs text-mist md:px-6">
-          &copy; {new Date().getFullYear()} VantagePoint OS
+          &copy; {new Date().getFullYear()} VantagePoint&nbsp;OS
         </p>
       </div>
     </footer>

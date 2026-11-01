@@ -43,10 +43,10 @@ export default function TermsOfService() {
               <Scale className="h-6 w-6 text-navy" aria-hidden="true" /> 1. Acceptance of Terms
             </h2>
             <p className="mb-4">
-              By accessing or using the VantagePoint OS platform (including VantageScale, VantagePulse, and VantageLead), you agree to be bound by these Terms of Service. If you do not agree to these terms, you may not use our services.
+              By accessing or using the VantagePoint&nbsp;OS platform (including VantageScale, VantagePulse, and VantageLead), you agree to be bound by these Terms of Service. If you do not agree to these terms, you may not use our services.
             </p>
             <p>
-              VantagePoint OS provides a suite of operational, marketing, and leadership tools specifically designed for physical therapy clinics and healthcare providers. 
+              VantagePoint&nbsp;OS provides a suite of operational, marketing, and leadership tools specifically designed for physical therapy clinics and healthcare providers. 
             </p>
           </section>
 
@@ -64,10 +64,10 @@ export default function TermsOfService() {
               <AlertTriangle className="h-6 w-6 text-navy" aria-hidden="true" /> 3. Third-Party Integrations (Meta/Google)
             </h2>
             <p className="mb-4">
-              Our platform integrates with third-party services, including Meta (Facebook/Instagram) and Google. By authenticating your accounts with VantagePoint OS, you agree to comply with the respective Terms of Service of those platforms.
+              Our platform integrates with third-party services, including Meta (Facebook/Instagram) and Google. By authenticating your accounts with VantagePoint&nbsp;OS, you agree to comply with the respective Terms of Service of those platforms.
             </p>
             <p>
-              VantagePoint OS is not responsible for any account suspensions, content removals, or penalties issued by Meta or Google due to the content you publish through our platform.
+              VantagePoint&nbsp;OS is not responsible for any account suspensions, content removals, or penalties issued by Meta or Google due to the content you publish through our platform.
             </p>
           </section>
 
@@ -76,7 +76,7 @@ export default function TermsOfService() {
               4. Limitation of Liability
             </h2>
             <p className="mb-4">
-              To the maximum extent permitted by law, VantagePoint OS and its founders shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or goodwill, arising from your use of the software. The platform is provided &quot;as is&quot; without warranties of any kind.
+              To the maximum extent permitted by law, VantagePoint&nbsp;OS and its founders shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or goodwill, arising from your use of the software. The platform is provided &quot;as is&quot; without warranties of any kind.
             </p>
             <p className="mt-6 font-semibold text-navy">Contact Information</p>
             <p>For legal inquiries, please contact: support@vantagepointos.com</p>

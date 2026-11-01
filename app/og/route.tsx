@@ -36,6 +36,7 @@ export function GET(request: Request) {
               letterSpacing: "0.16em",
               color: "#d6a445",
               fontWeight: 600,
+              whiteSpace: "nowrap",
             }}
           >
             VANTAGEPOINT OS

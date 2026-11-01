@@ -51,13 +51,13 @@ export default function LegacyPage() {
           <p>
             This page isn&apos;t on the public site. We&apos;re sharing it with you
             because you&apos;re one of the first ten practices we&apos;re inviting to
-            build VantagePoint OS with us.
+            build VantagePoint&nbsp;OS with us.
           </p>
           <p>
             Legacy pricing is locked at $699 per clinic per month for as long
             as your practice keeps an active subscription in good standing,
             including every clinic you add. It&apos;s our thank-you to the
-            practices that help build VantagePoint OS from the start. Legacy
+            practices that help build VantagePoint&nbsp;OS from the start. Legacy
             pricing doesn&apos;t transfer if the practice is sold.
           </p>
         </div>
@@ -77,7 +77,7 @@ export default function LegacyPage() {
           Your $500 deposit reserves your Legacy spot and is credited toward
           your setup fee. It&apos;s fully refundable if you cancel before
           onboarding kickoff. Setup fees are otherwise non-refundable,
-          including if the go-live date moves, but if VantagePoint OS
+          including if the go-live date moves, but if VantagePoint&nbsp;OS
           doesn&apos;t launch, we refund all setup fees. Full terms are in your
           Letter of Intent.
         </p>

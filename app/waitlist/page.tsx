@@ -25,7 +25,7 @@ export default function WaitlistPage() {
       />
       <div className="mx-auto max-w-xl">
         <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold">
-          VantagePoint OS
+          VantagePoint&nbsp;OS
         </p>
         <h1 className="mt-3 text-3xl font-semibold tracking-tight text-white md:text-4xl">
           Join the waitlist
@@ -36,7 +36,7 @@ export default function WaitlistPage() {
         <p className="mt-4 text-base leading-relaxed">
           Tell us a little about your clinics. We read every note ourselves and
           write back personally as onboarding opens. A walkthrough is still the
-          best way to see whether VantagePoint OS is the right fit.
+          best way to see whether VantagePoint&nbsp;OS is the right fit.
         </p>
         <p className="mt-4">
           <Link

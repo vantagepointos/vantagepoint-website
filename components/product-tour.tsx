@@ -67,7 +67,7 @@ export function ProductTour() {
         </Frame>
         <figcaption className="mt-4 text-center text-xs tracking-wide text-mist">
           <span className="sr-only">
-            Illustrative preview of an executive overview in VantagePoint OS.
+            Illustrative preview of an executive overview in VantagePoint&nbsp;OS.
             The figures are sample data, not a clinic.
           </span>
           <span aria-hidden="true">Illustrative data.</span>

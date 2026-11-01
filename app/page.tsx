@@ -76,7 +76,7 @@ const platforms = [
     points: [
       "Front Office Onboarding",
       "Provider Onboarding",
-      "Welcome to VantagePoint OS",
+      "Welcome to VantagePoint\u00A0OS",
     ],
   },
 ];

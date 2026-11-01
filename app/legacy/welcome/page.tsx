@@ -36,7 +36,7 @@ export default function LegacyWelcomePage() {
           We received your deposit. Thank you.
         </h1>
         <p className="mt-6 text-lg leading-relaxed text-ink">
-          You reserved a Legacy seat with VantagePoint OS. That matters to us,
+          You reserved a Legacy seat with VantagePoint&nbsp;OS. That matters to us,
           and we&apos;ll treat it that way.
         </p>
         <h2 className="mt-12 text-2xl font-semibold tracking-tight text-navy">
@@ -68,7 +68,7 @@ export default function LegacyWelcomePage() {
             href="/"
             className="text-sm font-semibold text-navy underline decoration-navy/30 underline-offset-4"
           >
-            Back to VantagePoint OS
+            Back to VantagePoint&nbsp;OS
           </Link>
         </p>
       </article>

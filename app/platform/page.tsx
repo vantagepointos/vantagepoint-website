@@ -49,7 +49,7 @@ export default function PlatformPage() {
       />
       <header className="mx-auto max-w-3xl px-6 pb-8 pt-20 md:pt-28">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink">
-          VantagePoint OS
+          VantagePoint&nbsp;OS
         </p>
         <h1 className="mt-4 text-4xl font-semibold tracking-[-0.035em] text-navy text-balance md:text-6xl md:leading-[1.05]">
           Everything your practice needs. In one system.
@@ -162,7 +162,7 @@ export default function PlatformPage() {
               {[
                 "Front Office Onboarding",
                 "Provider Onboarding",
-                "Welcome to VantagePoint OS",
+                "Welcome to VantagePoint\u00A0OS",
               ].map((item) => (
                 <li key={item} className="flex gap-3">
                   <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-navy" aria-hidden="true" />
@@ -172,7 +172,7 @@ export default function PlatformPage() {
             </ul>
             <p className="mt-6 leading-relaxed text-ink">
               The first release is three paths every team needs, front office,
-              providers, and how the team uses VantagePoint OS, with more
+              providers, and how the team uses VantagePoint&nbsp;OS, with more
               tracks and leadership training on the way.
             </p>
             <p className="mt-6">

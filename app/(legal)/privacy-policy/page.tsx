@@ -43,7 +43,7 @@ export default function PrivacyPolicy() {
               <FileText className="h-6 w-6 text-navy" aria-hidden="true" /> 1. Introduction
             </h2>
             <p>
-              Welcome to VantagePoint OS. We respect your privacy and are committed to protecting the personal and business data you share with us. This Privacy Policy explains how we collect, use, and safeguard your information when you use our suite of applications, including VantageScale, VantagePulse, and VantageLead.
+              Welcome to VantagePoint&nbsp;OS. We respect your privacy and are committed to protecting the personal and business data you share with us. This Privacy Policy explains how we collect, use, and safeguard your information when you use our suite of applications, including VantageScale, VantagePulse, and VantageLead.
             </p>
           </section>
 
@@ -115,7 +115,7 @@ export default function PrivacyPolicy() {
                 Look for <strong className="text-navy">Apps and Websites</strong> in the menu. You will see all of the apps and websites linked to your account.
               </li>
               <li>
-                Search for and click on <strong className="text-navy">VantagePoint OS</strong> (or VantageScale).
+                Search for and click on <strong className="text-navy">VantagePoint&nbsp;OS</strong> (or VantageScale).
               </li>
               <li>
                 Scroll down and click <strong className="text-navy">Remove</strong>.

@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { BookWalkthrough } from "@/components/buttons";
 import { PhoneLink } from "@/components/phone-link";
 import { CLOSING_LINE, CLOSING_SUPPORT } from "@/lib/site";
@@ -5,7 +6,7 @@ import { CLOSING_LINE, CLOSING_SUPPORT } from "@/lib/site";
 export function ClosingCta({
   supporting = CLOSING_SUPPORT,
 }: {
-  supporting?: string;
+  supporting?: ReactNode;
 }) {
   return (
     <section className="on-navy bg-night text-white" aria-labelledby="closing-heading">

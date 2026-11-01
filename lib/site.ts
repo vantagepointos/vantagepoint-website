@@ -40,7 +40,7 @@ export const WAITLIST_MEMBERSHIP_COPY =
   "The first twenty practices to join become our Legacy and Founding members, with their pricing locked in.";
 
 export const WAITLIST_THANKS_COPY =
-  "You're on the list. We look forward to learning about your practice and showing you what VantagePoint OS can do for it.";
+  "You're on the list. We look forward to learning about your practice and showing you what VantagePoint\u00A0OS can do for it.";
 
 export const PRIMARY_NAV = [
   { href: "/platform", label: "Platform" },
@@ -60,7 +60,7 @@ export const PUBLIC_SITEMAP_PATHS = [
 /** Third pillar named in the home hero and the default meta description. */
 export const HERO_PILLAR_THREE = "culture";
 
-export const HOME_DESCRIPTION = `VantagePoint OS is the operating system for outpatient PT owners, built around your metrics, your marketing, and your ${HERO_PILLAR_THREE}.`;
+export const HOME_DESCRIPTION = `VantagePoint\u00A0OS is the operating system for outpatient PT owners, built around your metrics, your marketing, and your ${HERO_PILLAR_THREE}.`;
 
 /** Home hero. Swap any line here without touching the page. */
 export const HERO_HOOK =
@@ -68,13 +68,13 @@ export const HERO_HOOK =
 
 export const HERO_HEADLINE = "There's a better way to run a PT practice.";
 
-export const HERO_SUB = `VantagePoint OS is the operating system for outpatient PT owners, built around the three things that make or break a practice: your metrics, your marketing, and your ${HERO_PILLAR_THREE}.`;
+export const HERO_SUB = `VantagePoint\u00A0OS is the operating system for outpatient PT owners, built around the three things that make or break a practice: your metrics, your marketing, and your ${HERO_PILLAR_THREE}.`;
 
 export const STORY_TEASER_HEADING =
   "Built by PT owners who've sat in your chair.";
 
 export const STORY_TEASER_BODY =
-  "We know what it's like to give your patients everything and still lose sleep over the business. VantagePoint OS is the system we wish we'd had, built so you can spend your time where it matters most to you: with your patients, your team, or the next stage of your practice.";
+  "We know what it's like to give your patients everything and still lose sleep over the business. VantagePoint\u00A0OS is the system we wish we'd had, built so you can spend your time where it matters most to you: with your patients, your team, or the next stage of your practice.";
 
 /**
  * Direct URL of the product-tour video file (for example an mp4).

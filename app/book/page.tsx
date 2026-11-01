@@ -24,14 +24,13 @@ export default function BookPage() {
       />
       <div className="mx-auto max-w-4xl px-6 pb-24 pt-20 md:pb-32 md:pt-28">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink">
-          VantagePoint OS
+          VantagePoint&nbsp;OS
         </p>
         <h1 className="mt-4 text-4xl font-semibold tracking-[-0.035em] text-navy text-balance md:text-6xl md:leading-[1.05]">
           Book a walkthrough
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink md:text-xl">
-          Pick a time that works for you. We&apos;ll walk through VantagePoint
-          OS together and show you how it fits your practice.
+          Pick a time that works for you. We&apos;ll walk through VantagePoint&nbsp;OS together and show you how it fits your practice.
         </p>
         <p className="mt-6 max-w-2xl text-sm leading-relaxed text-navy">
           Don&apos;t see a time that works? Call us at{" "}
