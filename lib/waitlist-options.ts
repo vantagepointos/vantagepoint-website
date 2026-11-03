@@ -33,7 +33,7 @@ export const ZOHO_HIDDEN_FIELDS = {
 
 export const RATING_OPTIONS = [
   { value: "Legacy (first 10)", label: "Legacy (first 10)" },
-  { value: "Founders (11-20)", label: "Founders (11-20)" },
+  { value: "Founding members (11-20)", label: "Founding members (11-20)" },
   { value: "General", label: "General" },
 ] as const;
 
