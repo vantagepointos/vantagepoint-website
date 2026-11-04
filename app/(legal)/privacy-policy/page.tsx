@@ -33,7 +33,7 @@ export default function PrivacyPolicy() {
             Privacy Policy
           </h1>
           <p className="text-ink">
-            Last Updated: October 31, 2026
+            Last Updated: November 1, 2026
           </p>
         </div>
 
@@ -85,15 +85,22 @@ export default function PrivacyPolicy() {
             <h2 className={heading}>
               <BarChart3 className="h-6 w-6 text-navy" aria-hidden="true" /> 4. Analytics
             </h2>
-            <p className="mb-4">
-              We use Vercel Web Analytics to understand site traffic. It doesn&apos;t use cookies and collects general usage data such as pages visited, referring site, device type and country. With your consent, we also use Microsoft Clarity, which uses cookies and similar technology to record how visitors use our site (clicks, scrolling and pages viewed) as heatmaps and session recordings. We set Clarity to mask what you type into forms. Microsoft processes this data under the{" "}
+            <p>
+              Analytics. We use Vercel Web Analytics to understand site traffic. It doesn&apos;t use cookies and collects general usage data such as pages visited, referring site, device type and country. With your consent, we also use Google Analytics and Microsoft Clarity. These use cookies and similar technology to show us how visitors use our site, such as pages viewed, clicks and scrolling, including heatmaps and session recordings from Clarity. We set Clarity to mask what you type into forms. Google and Microsoft process this data under the{" "}
+              <a
+                href="https://policies.google.com/privacy"
+                className="font-semibold text-navy underline decoration-navy/30 underline-offset-4"
+              >
+                Google Privacy Policy
+              </a>{" "}
+              and the{" "}
               <a
                 href="https://privacy.microsoft.com/privacystatement"
                 className="font-semibold text-navy underline decoration-navy/30 underline-offset-4"
               >
                 Microsoft Privacy Statement
               </a>
-              . You can decline or withdraw consent at any time through Cookie settings. Our website doesn&apos;t collect patient or health information.
+              . You can decline or withdraw consent at any time through Cookie settings. These tools run only on our public website, never inside the VantagePoint&nbsp;OS platform, and our website doesn&apos;t collect patient or health information.
             </p>
           </section>
 

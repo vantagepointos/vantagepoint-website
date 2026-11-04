@@ -3,28 +3,23 @@
 import Script from "next/script";
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { usePathname } from "next/navigation";
+import { clarityProjectId, gaMeasurementId } from "@/lib/analytics-config";
+import {
+  CONSENT_CHANGE_EVENT,
+  CONSENT_STORAGE_KEY,
+  OPEN_COOKIE_SETTINGS,
+  globalPrivacyControl,
+} from "@/lib/consent";
 
-const STORAGE_KEY = "vp-clarity-consent";
-const CHANGE_EVENT = "vp-clarity-change";
-export const OPEN_COOKIE_SETTINGS = "vp-open-cookie-settings";
-
-const rawClarityId = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID?.trim() ?? "";
-const clarityProjectId = /^[a-z0-9]+$/i.test(rawClarityId) ? rawClarityId : "";
+const clarityId = clarityProjectId();
+const measurementId = gaMeasurementId();
 
 type Choice = "accepted" | "rejected";
-
-function globalPrivacyControl() {
-  return (
-    typeof navigator !== "undefined" &&
-    "globalPrivacyControl" in navigator &&
-    (navigator as Navigator & { globalPrivacyControl?: boolean }).globalPrivacyControl === true
-  );
-}
 
 function readChoice(): Choice | null {
   if (globalPrivacyControl()) return "rejected";
   try {
-    const value = localStorage.getItem(STORAGE_KEY);
+    const value = localStorage.getItem(CONSENT_STORAGE_KEY);
     return value === "accepted" || value === "rejected" ? value : null;
   } catch {
     return null;
@@ -32,10 +27,10 @@ function readChoice(): Choice | null {
 }
 
 function subscribeChoice(onChange: () => void) {
-  window.addEventListener(CHANGE_EVENT, onChange);
+  window.addEventListener(CONSENT_CHANGE_EVENT, onChange);
   window.addEventListener("storage", onChange);
   return () => {
-    window.removeEventListener(CHANGE_EVENT, onChange);
+    window.removeEventListener(CONSENT_CHANGE_EVENT, onChange);
     window.removeEventListener("storage", onChange);
   };
 }
@@ -44,12 +39,39 @@ function subscribeMounted() {
   return () => {};
 }
 
+function expireCookie(name: string) {
+  const host = window.location.hostname;
+  document.cookie = `${name}=; Max-Age=0; path=/`;
+  document.cookie = `${name}=; Max-Age=0; path=/; domain=${host}`;
+  if (host.includes(".")) {
+    document.cookie = `${name}=; Max-Age=0; path=/; domain=.${host}`;
+  }
+}
+
 function stopClarity() {
   document.querySelectorAll('script[src*="clarity.ms"]').forEach((node) => node.remove());
   const clarity = (window as Window & { clarity?: (command: string, ...args: unknown[]) => void }).clarity;
   if (typeof clarity === "function") {
     clarity("consentv2", { ad_Storage: "denied", analytics_Storage: "denied" });
+    delete (window as Window & { clarity?: unknown }).clarity;
   }
+}
+
+function stopGa() {
+  const host = window as Window & { gtag?: (...args: unknown[]) => void; dataLayer?: unknown[] };
+  if (typeof host.gtag === "function") {
+    host.gtag("consent", "update", {
+      analytics_storage: "denied",
+      ad_storage: "denied",
+    });
+  }
+  document.querySelectorAll('script[src*="googletagmanager.com/gtag"]').forEach((node) => node.remove());
+  document.getElementById("ga4")?.remove();
+  delete host.gtag;
+  document.cookie.split(";").forEach((part) => {
+    const name = part.split("=")[0]?.trim();
+    if (name === "_ga" || name === "_gid" || name?.startsWith("_ga_")) expireCookie(name);
+  });
 }
 
 function pageBlocksClarity(pathname: string) {
@@ -66,12 +88,19 @@ export function ClarityConsent() {
   const dialogRef = useRef<HTMLDivElement>(null);
   const blocked = mounted && pageBlocksClarity(pathname);
   const gpc = mounted && globalPrivacyControl();
-  const loadClarity = Boolean(clarityProjectId) && choice === "accepted" && !gpc && !blocked;
-  const open = Boolean(clarityProjectId) && mounted && (forcedOpen || (choice === null && !gpc));
+  const accepted = choice === "accepted" && !gpc;
+  const loadClarity = Boolean(clarityId) && accepted && !blocked;
+  const loadGa = Boolean(measurementId) && accepted;
+  const showBanner = Boolean(clarityId || measurementId);
+  const open = showBanner && mounted && (forcedOpen || (choice === null && !gpc));
 
   useEffect(() => {
     if (!loadClarity) stopClarity();
   }, [loadClarity]);
+
+  useEffect(() => {
+    if (!loadGa) stopGa();
+  }, [loadGa]);
 
   useEffect(() => {
     function reopen() {
@@ -88,22 +117,33 @@ export function ClarityConsent() {
   function choose(next: Choice) {
     const effective: Choice = globalPrivacyControl() ? "rejected" : next;
     try {
-      localStorage.setItem(STORAGE_KEY, effective);
+      localStorage.setItem(CONSENT_STORAGE_KEY, effective);
     } catch {
       // Private mode can block storage. The button still closes the bar.
     }
-    window.dispatchEvent(new Event(CHANGE_EVENT));
+    window.dispatchEvent(new Event(CONSENT_CHANGE_EVENT));
     setForcedOpen(false);
   }
 
-  if (!clarityProjectId) return null;
+  if (!showBanner) return null;
 
   return (
     <>
       {loadClarity ? (
         <Script id="microsoft-clarity" strategy="afterInteractive">
-          {`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","${clarityProjectId}");`}
+          {`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","${clarityId}");`}
         </Script>
+      ) : null}
+      {loadGa ? (
+        <>
+          <Script
+            src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
+            strategy="afterInteractive"
+          />
+          <Script id="ga4" strategy="afterInteractive">
+            {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${measurementId}');`}
+          </Script>
+        </>
       ) : null}
       {open ? (
         <div
@@ -124,7 +164,7 @@ export function ClarityConsent() {
                 onClick={() => choose("rejected")}
                 className="inline-flex min-h-11 items-center justify-center rounded-full border border-white/30 px-5 text-sm font-semibold text-white hover:bg-white/10"
               >
-                Reject
+                Decline
               </button>
               <button
                 type="button"

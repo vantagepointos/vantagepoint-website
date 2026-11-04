@@ -1,8 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ClarityConsent } from "@/components/clarity-consent";
+import { ConversionClicks } from "@/components/conversion-clicks";
 import { JsonLd } from "@/components/json-ld";
-import { SiteAnalytics } from "@/components/site-analytics";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { PAGE_SEO } from "@/lib/page-seo";
@@ -20,7 +22,9 @@ const montserrat = Montserrat({
 
 const homeTitle = documentTitle(PAGE_SEO.home.title);
 const homeImage = `/og?title=${encodeURIComponent(PAGE_SEO.home.title)}`;
-const searchConsole = process.env.NEXT_PUBLIC_GSC_VERIFICATION?.trim();
+const searchConsole =
+  process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim() ||
+  process.env.NEXT_PUBLIC_GSC_VERIFICATION?.trim();
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -81,7 +85,13 @@ export default function RootLayout({
           Skip to content
         </a>
         <JsonLd data={organizationJsonLd(PAGE_SEO.home.description)} />
-        <SiteAnalytics />
+        <ConversionClicks />
+        {process.env.NODE_ENV === "production" ? (
+          <>
+            <Analytics />
+            <SpeedInsights />
+          </>
+        ) : null}
         <ClarityConsent />
         <SiteHeader />
         <div className="flex flex-1 flex-col">{children}</div>

@@ -1,11 +1,10 @@
 "use client";
 
-import { OPEN_COOKIE_SETTINGS } from "@/components/clarity-consent";
-
-const projectId = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID?.trim() ?? "";
+import { cookieConsentEnabled } from "@/lib/analytics-config";
+import { OPEN_COOKIE_SETTINGS } from "@/lib/consent";
 
 export function CookieSettingsLink({ className }: { className: string }) {
-  if (!/^[a-z0-9]+$/i.test(projectId)) return null;
+  if (!cookieConsentEnabled()) return null;
   return (
     <button
       type="button"

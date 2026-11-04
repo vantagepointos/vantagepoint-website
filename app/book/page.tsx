@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { BookVisit } from "@/components/book-visit";
 import { JsonLd } from "@/components/json-ld";
 import { PAGE_SEO } from "@/lib/page-seo";
 import { pageMetadata } from "@/lib/seo";
@@ -15,7 +14,6 @@ export const metadata: Metadata = pageMetadata({
 export default function BookPage() {
   return (
     <main id="main" className="bg-paper">
-      <BookVisit />
       <JsonLd
         data={breadcrumbJsonLd([
           { name: "Home", path: "/" },
