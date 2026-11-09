@@ -39,10 +39,11 @@ const platforms = [
     name: "VantagePulse",
     href: "/platform#pulse",
     markClass: "h-auto w-[min(100%,26.125rem)]",
-    tagline: "The definitive view of practice health.",
+    tagline: "A clear view of practice health.",
     summary:
       "Clear scoreboards for everyone who runs the day, so every clinician knows their numbers, cares about them, and wants to move them.",
     points: [
+      "Your team logs a few key numbers each week. VantagePulse turns them into scoreboards, goals and bonus progress.",
       "Every clinician logs in to their own My Performance view",
       "Efficiency, units per visit, cancellation rate, NPS, bonus progress and revenue multiple, color-coded against your clinic's goals",
       "Front office measures, including arrival rates",
@@ -58,7 +59,7 @@ const platforms = [
     summary:
       "A steady marketing cadence without the busywork. See what people in your county are searching for, choose what to market, then plan, review and schedule your campaign.",
     points: [
-      "Local search trends: see which pain and condition topics people in your county are searching for",
+      "Monthly local search demand for PT conditions in your county, ranked for content and ad opportunity.",
       "Campaign builder: choose how many posts and how many weeks, and a full campaign is drafted in about a minute, ready for you to review",
       "Email copy drafted for you, ready to review and schedule",
       "Smart Funnels: ready-made campaigns for a workshop, an event, bringing past patients back, or community education",
@@ -147,8 +148,7 @@ export default function Home() {
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-ink md:text-xl">
                 You opened a clinic to make people&apos;s lives better. Then
-                the business started running you. That&apos;s why VantagePoint
-                OS exists.
+                the business started running you. That&apos;s why VantagePoint&nbsp;OS exists.
               </p>
             </div>
             <ul className="mt-16 grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-x-16 md:gap-y-12">
@@ -157,7 +157,7 @@ export default function Home() {
                   North Star metrics
                 </p>
                 <h3 className="mt-3 text-lg font-semibold leading-snug text-pretty text-navy">
-                  Reports that don&apos;t agree, so
+                  Too many reports, no shared scoreboard, so
                   <br />
                   the practice is hard to steer.
                 </h3>

@@ -33,7 +33,7 @@ export default function TermsOfService() {
             Terms of Service
           </h1>
           <p className="text-ink">
-            Last Updated: October 31, 2026
+            Last Updated: November 1, 2026
           </p>
         </div>
 
@@ -61,13 +61,10 @@ export default function TermsOfService() {
 
           <section className={card}>
             <h2 className={heading}>
-              <AlertTriangle className="h-6 w-6 text-navy" aria-hidden="true" /> 3. Third-Party Integrations (Meta/Google)
+              <AlertTriangle className="h-6 w-6 text-navy" aria-hidden="true" /> 3. Third-Party Services
             </h2>
-            <p className="mb-4">
-              Our platform integrates with third-party services, including Meta (Facebook/Instagram) and Google. By authenticating your accounts with VantagePoint&nbsp;OS, you agree to comply with the respective Terms of Service of those platforms.
-            </p>
             <p>
-              VantagePoint&nbsp;OS is not responsible for any account suspensions, content removals, or penalties issued by Meta or Google due to the content you publish through our platform.
+              Third-Party Services. The Services can connect to third-party services you choose to link, such as Meta (Facebook and Instagram), and we use trusted vendors to help deliver the Services, such as email, mail, hosting and AI providers. Your use of a third-party service is governed by that provider&apos;s terms. We aren&apos;t responsible for third-party services, and integrations may change, be limited by the provider, or become unavailable.
             </p>
           </section>
 

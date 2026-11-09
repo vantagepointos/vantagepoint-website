@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
-import { OverviewPreview } from "@/components/product-preview";
+import { OverviewPreview, PREVIEW_CAPTION } from "@/components/product-preview";
 import { PRODUCT_VIDEO_POSTER, PRODUCT_VIDEO_URL } from "@/lib/site";
 
 function subscribeToReducedMotion(onChange: () => void) {
@@ -66,11 +66,7 @@ export function ProductTour() {
           <OverviewPreview />
         </Frame>
         <figcaption className="mt-4 text-center text-xs tracking-wide text-mist">
-          <span className="sr-only">
-            Illustrative preview of an executive overview in VantagePoint&nbsp;OS.
-            The figures are sample data, not a clinic.
-          </span>
-          <span aria-hidden="true">Illustrative data.</span>
+          {PREVIEW_CAPTION}
         </figcaption>
       </figure>
     );
@@ -115,6 +111,9 @@ export function ProductTour() {
         </div>
       ) : null}
     </Frame>
+    <figcaption className="mt-4 text-center text-xs tracking-wide text-mist">
+      {PREVIEW_CAPTION}
+    </figcaption>
     </figure>
   );
 }

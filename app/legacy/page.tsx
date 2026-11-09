@@ -78,7 +78,8 @@ export default function LegacyPage() {
           our first 10 practices. Your deposit holds your spot while we send
           your Letter of Intent (LOI), usually within one business day, and
           it&apos;s credited toward your setup fee. If you don&apos;t sign the
-          LOI within 30 days of paying, we refund your deposit automatically.
+          LOI within 30 days of paying, we&apos;ll refund your deposit in
+          full, no request needed.
           After you sign, you can still cancel for a full refund any time
           before onboarding kickoff. After kickoff, setup fees are
           non-refundable, including if the go-live date moves, but if

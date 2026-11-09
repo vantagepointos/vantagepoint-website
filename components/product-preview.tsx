@@ -3,6 +3,9 @@
  * numbers and they are not taken from the product screenshots.
  */
 
+export const PREVIEW_CAPTION =
+  "Illustrative data. Your team logs a few numbers each week, and VantagePulse turns them into goals and pace.";
+
 type Tone = "met" | "close" | "below";
 
 const TONE: Record<Tone, string> = {
@@ -147,7 +150,7 @@ const MY_PERFORMANCE: { label: string; value: string; goal: string; tone: Tone }
   { label: "Rev Multiple", value: "3.2x", goal: "Goal: >= 3.0", tone: "met" },
   { label: "Efficiency", value: "91%", goal: "Goal: >= 85%", tone: "met" },
   { label: "Units/Visit", value: "3.2", goal: "Goal: >= 3.5", tone: "below" },
-  { label: "Cancel Rate", value: "6%", goal: "Goal: >= 8%", tone: "met" },
+  { label: "Cancel Rate", value: "6%", goal: "Goal: <= 8%", tone: "met" },
   { label: "NPS Score", value: "74", goal: "Goal: >= 70", tone: "met" },
 ];
 
