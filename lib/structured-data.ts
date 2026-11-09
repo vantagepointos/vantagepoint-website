@@ -2,6 +2,13 @@ import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 export const ORGANIZATION_ID = `${SITE_URL}/#organization`;
 
+/**
+ * Home structured-data description. Matches the public positioning
+ * without adding an AI capability claim.
+ */
+export const HOME_STRUCTURED_DESCRIPTION =
+  "A business operating system for outpatient PT owners, built around practice metrics, marketing, and culture.";
+
 export function organizationJsonLd(description: string) {
   return {
     "@context": "https://schema.org",

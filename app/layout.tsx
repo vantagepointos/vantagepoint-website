@@ -9,7 +9,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { PAGE_SEO } from "@/lib/page-seo";
 import { documentTitle } from "@/lib/seo";
-import { organizationJsonLd } from "@/lib/structured-data";
+import { HOME_STRUCTURED_DESCRIPTION, organizationJsonLd } from "@/lib/structured-data";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
@@ -84,7 +84,7 @@ export default function RootLayout({
         <a className="skip-link" href="#main">
           Skip to content
         </a>
-        <JsonLd data={organizationJsonLd(PAGE_SEO.home.description)} />
+        <JsonLd data={organizationJsonLd(HOME_STRUCTURED_DESCRIPTION)} />
         <ConversionClicks />
         {process.env.NODE_ENV === "production" ? (
           <>

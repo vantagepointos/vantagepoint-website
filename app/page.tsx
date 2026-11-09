@@ -5,8 +5,7 @@ import { HomeWaitlistSection } from "@/components/home-waitlist-section";
 import { PlatformMark } from "@/components/logo";
 import { JsonLd } from "@/components/json-ld";
 import { ProductTour } from "@/components/product-tour";
-import { PAGE_SEO } from "@/lib/page-seo";
-import { softwareAppJsonLd } from "@/lib/structured-data";
+import { HOME_STRUCTURED_DESCRIPTION, softwareAppJsonLd } from "@/lib/structured-data";
 import {
   HERO_HEADLINE,
   HERO_HOOK,
@@ -87,7 +86,7 @@ export default function Home() {
       <JsonLd
         data={softwareAppJsonLd({
           name: "VantagePoint OS",
-          description: PAGE_SEO.home.description,
+          description: HOME_STRUCTURED_DESCRIPTION,
           path: "/",
         })}
       />
@@ -248,7 +247,7 @@ export default function Home() {
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-ink">
                 VantagePulse, VantageScale, and VantageLead, built to work
-                together.
+                together. Powered by AI.
               </p>
             </div>
             <div className="mt-16 divide-y divide-navy/10 border-y border-navy/10">
