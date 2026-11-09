@@ -68,7 +68,8 @@ export const HERO_HOOK =
 
 export const HERO_HEADLINE = "There's a better way to run a PT practice.";
 
-export const HERO_SUB = `VantagePoint\u00A0OS is the operating system for outpatient PT owners, built around the three things that make or break a practice: your metrics, your marketing, and your ${HERO_PILLAR_THREE}.`;
+export const HERO_SUB =
+  "VantagePoint\u00A0OS is the AI-powered business operating system for outpatient PT owners, built around the three things that make or break a practice: your metrics, your marketing, and your culture.";
 
 export const STORY_TEASER_HEADING =
   "Built by PT owners who've sat in your chair.";

@@ -2,14 +2,14 @@
 
 export const PAGE_SEO = {
   home: {
-    title: "PT Practice Growth Platform: Metrics, Marketing & Leadership",
+    title: "AI-Powered Business OS for PT Owners",
     description:
-      "Operating system for outpatient physical therapy owners. Clear practice metrics, a steady marketing cadence, and leadership training for the team.",
+      "An AI-powered business operating system for outpatient PT owners, built around practice metrics, marketing, and culture. Explore VantagePoint OS.",
   },
   platform: {
-    title: "PT Practice Growth Platform: Three Platforms, One System",
+    title: "PT Metrics, Marketing & Team Training",
     description:
-      "VantagePulse, VantageScale, and VantageLead for outpatient PT owners. Practice health, a marketing cadence, and leadership training in one system.",
+      "Explore VantagePulse, VantageScale, and VantageLead: practice metrics, marketing tools, and team onboarding for outpatient physical therapy owners.",
   },
   lead: {
     title: "PT Staff Onboarding Training",
@@ -22,9 +22,9 @@ export const PAGE_SEO = {
       "In 2014, we opened our first physical therapy clinic. The lessons from building three clinics are what VantagePoint OS is built on.",
   },
   book: {
-    title: "Book a PT Practice Walkthrough",
+    title: "Book a Business OS Walkthrough",
     description:
-      "Pick a time to walk through VantagePoint OS and see how metrics, marketing, and leadership training fit your physical therapy practice.",
+      "See how VantagePoint OS brings practice metrics, marketing, and team training together. Book a walkthrough for your outpatient PT practice.",
   },
   waitlist: {
     title: "Join the PT Owner Waitlist",
